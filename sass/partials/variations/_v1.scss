@@ -1,0 +1,76 @@
+// Project Name and Version Header 
+
+$version-number: "1.0";
+
+/// Global Variables
+$standard-spacing:10px;
+$inline-images: true;
+
+$link-color: #F4651C;
+$link-color-over: saturate($link-color, 10%);
+$link-color-visited: desaturate($link-color, 20%);
+
+/// Design Variables
+// sample 5 colors and 3 textures (add figures to html for more)
+$colors: $link-color, #FDF6DD, #A3D0C1, #0C2550, #FEE406;
+$textures: "concrete.png", "asphalt.png";
+$adjectives:  urban, funky, attitude, gritty;
+
+$body-background-color: #222;
+$body-background-image: "asphalt.png";
+$body-background-gradient-position-1: left;
+$body-background-gradient-1: rgba(0,0,0,.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%;
+$body-background-gradient-position-2: right;
+$body-background-gradient-2: $body-background-gradient-1;
+
+$page-background-color: #FDF6DD;
+$page-box-shadow: 5px 5px 10px rgba(0,0,0,.75), -5px 5px 10px rgba(0,0,0,.75);
+$page-background-image: false;
+$page-corners: 5px;
+$page-margin: 0 auto ($standard-spacing * 4) auto;
+
+
+// Logo is added as a background to a transparent image. Adjust height and width and source
+$logo-margin: 0 $standard-spacing $standard-spacing  0;
+$logo-width: 200px;
+$logo-height: 150px;
+$logo-box-shadow: 5px 5px 10px rgba(0,0,0,.75);
+
+$header-height:$logo-height + ($standard-spacing * 2);
+$header-padding: $standard-spacing;
+$header-background-color: #F4651C;
+$header-background-image: false;
+
+// Project name and version font size / line-height
+$project-name-font-size: 1em;
+$project-name-line-height: 1.5em;
+$version-font-size: .9em;
+$version-line-height: 1em;
+
+$header-h1-text-shadow: -1px 0px 1px rgba(0,0,0,.25), 0px 1px 1px rgba(255,255,255,.75);
+
+$main-text-shadow: 0px 1px 1px rgba(255,255,255,.35);
+
+
+$aside-width: 400px;
+$aside-margin: 0 0 $standard-spacing 0;
+$aside-background-color: rgba(#FEE406,1);
+$aside-border: $standard-spacing solid rgba(255,255,255,.35);
+$aside-outline: 1px solid rgba(#FEE406,.25);
+
+// Figure (colors and textures boxes)
+$figure-border:  1px #888 solid;
+
+
+$button-corners: 10px;
+$button-background-color: #F4651C;
+$button-text-shadow: 0px 1px 1px rgba(0,0,0,.5);
+$button-border: 2px #eee solid;
+$button-box-shadow: 1px 1px 2px rgba(0,0,0,.5);
+$button-text-color-over: adjust-lightness($button-text-color, 10%);
+$button-background-color-over: tint($button-background-color, 10%);
+
+$footer-background-color: #A3D0C1;
+$footer-background-image: false;
+$footer-text-color: rgba(#333,.75);
+$footer-text-shadow:none;

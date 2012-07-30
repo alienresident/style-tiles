@@ -1,0 +1,73 @@
+// Project Name and Version Header 
+$version-number: "3.0";
+
+/// Design Variables
+$link-color: #e57e17;
+$link-color-over: saturate($link-color, 10%);
+$link-color-visited: desaturate($link-color, 20%);
+
+// sample 5 colors and 3 textures (add figures to html for more)
+$colors: $link-color, #cc7014, #444, #191919, #0d0d0d;
+$textures: "dark-concrete.png", "scratched-metal2.png";
+$adjectives:  current, clean, sleek, technical ;
+
+$body-background-color: #333;
+$body-background-image: "dark-concrete.png";
+$body-background-gradient-position-1: left;
+$body-background-gradient-1: rgba(darken($body-background-color, 30%),.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%;
+$body-background-gradient-position-2: right;
+$body-background-gradient-2: $body-background-gradient-1;
+$body-background-repeat: repeat;
+$body-text-color: #eee;
+
+$page-background-color: #141414;
+$page-box-shadow: 5px 5px 10px rgba(0,0,0,.75), -5px 5px 10px rgba(0,0,0,.75);
+$page-background-image: false;
+$page-corners: 5px;
+$page-margin: 0 auto ($standard-spacing * 4) auto;
+$page-text-color: #ccc;
+
+// Logo is added as a background to a transparent image. Adjust height and width and source
+$logo-margin: 0 $standard-spacing $standard-spacing  0;
+$logo-box-shadow: false;
+
+$header-height: $logo-height + ($standard-spacing * 2);
+$header-padding: $standard-spacing;
+$header-background-color: #0d0d0d;
+$header-background-image: false;
+$header-background-gradient-position-1: top;
+$header-background-gradient-1: rgba(#444,.35) 0%, rgba(#222,.35) 50%, rgba(#000,.35) 75%;
+$header-background-gradient-position-2: bottom;
+$header-background-gradient-2: rgba(#000,1) 0%, rgba(#111,.25) 8%, rgba(#111,0) 15%;
+$header-text-color: #eee;
+
+$heading-h1-font-style: false;
+$heading-h1-font-color: #888;
+$heading-h1-text-shadow: -1px 0px 1px rgba(0,0,0,.75);
+$main-text-shadow: 1px 0px 1px rgba(127,127,127,.5);
+
+$aside-width: 400px;
+$aside-margin: 0 0 $standard-spacing 0;
+$aside-background-color: #191919;
+$aside-background-image: false;
+$aside-border: $standard-spacing solid rgba(127,127,127,.02);
+$aside-border-radius: 10px;
+$aside-outline: 0px solid rgba(127,127,127,.25);
+$aside-text-color: #818181;
+
+$button-corners: 10px;
+$button-background-color: #cc7014;
+$button-gradient: true;
+$button-text-color: #e5e5e5;
+$button-font-size: 1.2em;
+$button-text-shadow: 0px 1px 3px rgba(0,0,0,.75);
+$button-border: 0px #e3e3e3 solid;
+$button-box-shadow: 1px 1px 2px rgba(0,0,0,.5);
+$button-text-color-over: adjust-lightness($button-text-color, 10%);
+$button-background-color-over: tint($button-background-color, 10%);
+
+$footer-background-color: #090909;
+$footer-background-image: false;
+$footer-text-color: rgba(255,255,255,.75);
+$footer-text-shadow: -1px 0px 1px rgba(0,0,0,.5), 0px 1px 1px rgba(255,255,255,.35);
+

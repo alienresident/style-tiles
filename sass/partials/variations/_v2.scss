@@ -1,0 +1,80 @@
+// Project Name and Version Header 
+$version-number: "2.0";
+
+/// Design Variables
+// sample 5 colors and 3 textures (add figures to html for more)
+$colors: #BEE8E0, #373C40, #2E2621, #73320B, #FF5E00;
+$textures: "concrete.png", "scratched-metal2.png";
+$adjectives:  current, clean, sleek, technical ;
+
+
+$link-color: #73320B;
+
+$body-background-color: #222;
+$body-background-image: "scratched-metal2.png";
+$body-background-gradient-position-1: left;
+$body-background-gradient-1: rgba(0,0,0,.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%;
+$body-background-gradient-position-2: right;
+$body-background-gradient-2: $body-background-gradient-1;
+$body-background-repeat: repeat;
+
+$page-background-color: #BEE8E0;
+$page-box-shadow: 5px 5px 10px rgba(0,0,0,.75), -5px 5px 10px rgba(0,0,0,.75);
+$page-background-image: false;
+$page-corners: 5px;
+$page-margin: 0 auto ($standard-spacing * 4) auto;
+
+// Logo is added as a background to a transparent image. Adjust height and width and source
+$logo-margin: 0 $standard-spacing $standard-spacing  0;
+$logo-box-shadow: false;
+
+$header-height: $logo-height + ($standard-spacing * 2);
+$header-padding: $standard-spacing;
+$header-background-color: #2E2621;
+$header-background-image: false;
+$header-background-gradient-position-1: top;
+$header-background-gradient-1: rgba(#666,.35) 0%, rgba(#222,.35) 10%, rgba(#222,.35) 75%;
+$header-background-gradient-position-2: bottom;
+$header-background-gradient-2: rgba(#000,1) 0%, rgba(#111,.25) 8%, rgba(#111,0) 15%;
+$header-text-color: #eee;
+
+// Project name and version font size / line-height
+
+
+$heading-h1-font-style: bold;
+$heading-h1-font-color: #444;
+
+$main-text-shadow: 0px 1px 1px rgba(255,255,255,.35);
+
+
+$aside-margin: 0 0 $standard-spacing 0;
+$aside-background-color: #FF5E00;
+$aside-background-image: false;
+$aside-border: none;
+$aside-border-radius: 5px;
+$aside-outline: 1px solid rgba(200,200,200,.25);
+
+// Figure (colors and textures boxes)
+$figure-width: 40px;
+$figure-height: 40px;
+$texture-width: $figure-width * 2;
+$texture-height: $figure-height * 2;
+$figure-border: 1px #888 solid;
+
+$figure-caption-text-size: 12px;
+
+$button-corners: 10px;
+$button-background-color: #73320B;
+$button-gradient: true;
+$button-text-color: #e5e5e5;
+$button-font-size: 1.2em;
+$button-text-shadow: 0px 1px 1px rgba(0,0,0,.5);
+$button-border: 1px shade($button-background-color, 10%) solid;
+$button-box-shadow: inset 2px 4px 5px rgba(0,0,0,.5);
+$button-text-color-over: adjust-lightness($button-text-color, 10%);
+$button-background-color-over: tint($button-background-color, 10%);
+
+$footer-background-color: #2E2621;
+$footer-background-image: false;
+$footer-text-color: rgba(255,255,255,.75);
+$footer-text-shadow: -1px 0px 1px rgba(0,0,0,.5), 0px 1px 1px rgba(255,255,255,.35);

@@ -1,0 +1,55 @@
+// Project Name and Version Header 
+
+$project-name: "Super Awesome Project";
+$version-number: "1.0, 2.0, 3.0";
+
+$para-1: $project-name" is a sample project for Style Tiles—HTML & CSS version: powered by SASS and Compass.";
+
+$para-2: "Style Tiles are a design deliverable consisting of fonts, colors and interface elements that communicate the essence of a visual brand for the web.  Style tiles are for when a moodboard is too vague and a comp is too literal. Style tiles establish a direct connection with actual interface elements without defining layout.";
+
+$para-3:"View the styles tiles:";
+
+/// Global Variables
+$standard-spacing:20px;
+
+/// Design Variables
+$link-color: #F4651C;
+$link-color-over: saturate($link-color, 10%);
+$link-color-visited: desaturate($link-color, 20%);
+
+$body-background-color: #666;
+$body-background-image: false;
+$body-background-gradient-1: false;
+$body-background-gradient-2: false;
+
+$page-background-color: #eee;
+$page-box-shadow: false;
+$page-background-image: false;
+$page-corners: false;
+$page-margin: 0 auto ($standard-spacing * 4) auto;
+
+
+// Logo is added as a background to a transparent image. Adjust height and width and source
+$logo-margin: 0 $standard-spacing $standard-spacing  0;
+$logo-file: "sample-logo.png";
+$logo-box-shadow: false;
+
+$header-height: $logo-height + ($standard-spacing * 2);
+$header-padding: $standard-spacing;
+$header-background-color: rgba(#666, .5);
+$header-background-image: false;
+
+// Project name and version font size / line-height
+$project-name-font-size: 1em;
+$project-name-line-height: 1.5em;
+$version-font-size: .9em;
+$version-line-height: 1em;
+
+$heading-h1-text-shadow: false;
+
+$main-text-shadow: 0px 1px 1px rgba(255,255,255,.35);
+
+$footer-background-color: rgba(#dfdfdf, .75);
+$footer-text-color: rgba(225,225,225,.5);
+$footer-background-image: false;
+
