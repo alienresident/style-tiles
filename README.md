@@ -18,10 +18,10 @@ You can zip up all the html files and the css folder folder with the images. By 
 + sass/screen-v3.scss to sass/screen-v4.scss
 + sass/paritals/screen/\_v3.scss to sass/paritals/screen/\_v4.scss
 
-Then change <link rel="stylesheet" href="css/screen-v3.css"> to
-<link rel="stylesheet" href="css/screen-v4.css"> in v4.html.
+Then change `<link rel="stylesheet" href="css/screen-v3.css">` to
+`<link rel="stylesheet" href="css/screen-v4.css">` in v4.html.
 Change 
 @import "partials/variations/\_v3"; to @import "partials/variations/\_v4"; in sass/screen-v4.scss
 Then edit the variables you want to change in sass/paritals/screen/\_v4.scss.
-Finally add or change the link on the index page <li><a href="v3.html">Version 3</a></li> to <li><a href="v4.html">Version 4</a></li>
+Finally add or change the link on the index page `<li><a href="v3.html">Version 3</a></li>` to `<li><a href="v4.html">Version 4</a></li>`
 
