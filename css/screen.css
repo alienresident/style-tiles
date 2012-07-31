@@ -248,47 +248,47 @@ section:nth-of-type(1) header hgroup h2:after {
 }
 
 /* line 67, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section {
+section:nth-of-type(2) {
   clear: both;
   padding: 20px;
 }
 /* line 70, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section article {
+section:nth-of-type(2) article {
   padding: 40px;
   width: 540px;
   float: left;
 }
 /* line 76, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section header h1 {
+section:nth-of-type(2) header h1 {
   margin: 20px 0;
   color: #333333;
 }
-/* line 82, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section header + p {
+/* line 83, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+section:nth-of-type(2) p:nth-of-type(1) {
   display: block;
 }
 /* line 15, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
-section + section header + p:before {
+section:nth-of-type(2) p:nth-of-type(1):before {
   content: "Super Awesome Project" " is a sample project for Style Tiles—HTML & CSS version: powered by SASS and Compass.";
 }
 /* line 87, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section h2 + p {
+section:nth-of-type(2) p:nth-of-type(2) {
   display: block;
 }
 /* line 15, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
-section + section h2 + p:before {
+section:nth-of-type(2) p:nth-of-type(2):before {
   content: "Style Tiles are a design deliverable consisting of fonts, colors and interface elements that communicate the essence of a visual brand for the web.  Style tiles are for when a moodboard is too vague and a comp is too literal. Style tiles establish a direct connection with actual interface elements without defining layout.";
 }
 /* line 91, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section h2 + p + h2 + p {
+section:nth-of-type(2) p:nth-of-type(3) {
   display: block;
 }
 /* line 15, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
-section + section h2 + p + h2 + p:before {
+section:nth-of-type(2) p:nth-of-type(3):before {
   content: "View the styles tiles:";
 }
-/* line 94, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section h2 + p + h2 + p + p + p a {
+/* line 95, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+section:nth-of-type(2) p:nth-of-type(5) a {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -305,8 +305,8 @@ section + section h2 + p + h2 + p + p + p a {
   font-size: 1.2em;
   text-transform: capitalize;
 }
-/* line 97, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section h2 + p + h2 + p + p + p a:hover, section + section h2 + p + h2 + p + p + p a:focus, section + section h2 + p + h2 + p + p + p a:active {
+/* line 98, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+section:nth-of-type(2) p:nth-of-type(5) a:hover, section:nth-of-type(2) p:nth-of-type(5) a:focus, section:nth-of-type(2) p:nth-of-type(5) a:active {
   color: white !important;
   text-decoration: none;
   background: #7508bd;

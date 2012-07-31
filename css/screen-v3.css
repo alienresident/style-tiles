@@ -259,48 +259,48 @@ section:nth-of-type(1) header hgroup h2:after {
 }
 
 /* line 67, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section {
+section:nth-of-type(2) {
   clear: both;
   padding: 10px;
 }
 /* line 70, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section article {
+section:nth-of-type(2) article {
   padding: 20px;
   width: 540px;
   float: left;
 }
 /* line 76, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section header h1 {
+section:nth-of-type(2) header h1 {
   margin: 10px 0;
   text-shadow: -1px 0px 1px rgba(0, 0, 0, 0.75);
   color: #888888;
 }
-/* line 82, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section header + p {
+/* line 83, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+section:nth-of-type(2) p:nth-of-type(1) {
   display: block;
 }
 /* line 15, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
-section + section header + p:before {
+section:nth-of-type(2) p:nth-of-type(1):before {
   content: "There's a voice that keeps on calling me. Down the road, that's where I'll always be. Every stop I make, I make a new friend. Can't stay for long, just turn around and I'm gone again. Maybe tomorrow, I'll want to settle down, Until tomorrow, I'll just keep moving on.";
 }
 /* line 87, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section h2 + p {
+section:nth-of-type(2) p:nth-of-type(2) {
   display: block;
 }
 /* line 15, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
-section + section h2 + p:before {
+section:nth-of-type(2) p:nth-of-type(2):before {
   content: "Ten years ago a crack commando unit was sent to prison by a military court for a crime they didn't commit. These men promptly escaped from a maximum security stockade to the Los Angeles underground. Today, still wanted by the government, they survive as soldiers of fortune. If you have a problem and no one else can help, and if you can find them, maybe you can hire the A-team.";
 }
 /* line 91, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section h2 + p + h2 + p {
+section:nth-of-type(2) p:nth-of-type(3) {
   display: block;
 }
 /* line 15, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
-section + section h2 + p + h2 + p:before {
+section:nth-of-type(2) p:nth-of-type(3):before {
   content: "Top Cat! The most effectual Top Cat! Who's intellectual close friends get to call him T.C., providing it's with dignity. Top Cat! The indisputable leader of the gang. He's the boss, he's a pip, he's the championship. He's the most tip top, Top Cat.";
 }
-/* line 94, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section h2 + p + h2 + p + p + p a {
+/* line 95, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+section:nth-of-type(2) p:nth-of-type(5) a {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -321,8 +321,8 @@ section + section h2 + p + h2 + p + p + p a {
   font-size: 1.2em;
   text-transform: capitalize;
 }
-/* line 97, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
-section + section h2 + p + h2 + p + p + p a:hover, section + section h2 + p + h2 + p + p + p a:focus, section + section h2 + p + h2 + p + p + p a:active {
+/* line 98, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+section:nth-of-type(2) p:nth-of-type(5) a:hover, section:nth-of-type(2) p:nth-of-type(5) a:focus, section:nth-of-type(2) p:nth-of-type(5) a:active {
   color: white !important;
   text-decoration: none;
   background: #d17e2b;

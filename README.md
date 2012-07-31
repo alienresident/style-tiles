@@ -1,5 +1,7 @@
 # Create HTML and CSS Style Tiles with Sass & Compass #
 
+**This is currently under development and is still very alpha**
+
 ## Background ##
 I loved Samantha Warren's idea of [style tiles](http://styletil.es/). It seemed like the best answer from getting away from pixel perfect comps. However as I'm designing in the browser more and more I didn't want to go back into pixel based AdobeLand — Photoshop or Fireworks. Especially now that I am doing Responsive Web Design, I wanted to be designing in CSS and HTML. I thought this would be a perfect project for Sass and Compass. So here's style tiles in HTML & CSS! It's still a work in progress and I am open to ideas how to improve it.
 
@@ -37,3 +39,14 @@ Then you'll need to make some easy edits
 
 ### What's variables are available ###
 TK
+
+
+## Planned Features ##
+
++ Custom font support
+
+Initially will tie into Google Fonts. Perhaps some other type services.
+
++ Typographical Variables
+
+This will go in very soon currently the type size and choice is still static values in the `sass/partials/\_typogrpahy`. 
