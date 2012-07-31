@@ -12,16 +12,19 @@ There's an index page that links to the 3 version pages. You can zip them up wit
 ### Deploying the Styles Tiles ###
 You can zip up all the html files and the css folder folder with the images. By Default all the images will be inlined in the stylesheets. However if you don't want to inline your images. Set $inline-images to false in the sass/caore/\_variables.scss and include the images folder.
  
-### Adding more Version ###
- More pages can be easily added to by duplicating these files:
+### Adding more Versions ###
+More pages can be easily added by duplicating these files
+
 + v3.html to v4.html
 + sass/screen-v3.scss to sass/screen-v4.scss
 + sass/paritals/screen/\_v3.scss to sass/paritals/screen/\_v4.scss
 
-Then change `<link rel="stylesheet" href="css/screen-v3.css">` to
+Then you'll need to make some easy edits
+
++ change `<link rel="stylesheet" href="css/screen-v3.css">` to
 `<link rel="stylesheet" href="css/screen-v4.css">` in v4.html.
-Change 
++ change 
 @import "partials/variations/\_v3"; to @import "partials/variations/\_v4"; in sass/screen-v4.scss
-Then edit the variables you want to change in sass/paritals/screen/\_v4.scss.
-Finally add or change the link on the index page `<li><a href="v3.html">Version 3</a></li>` to `<li><a href="v4.html">Version 4</a></li>`
++ edit the variables you want to change in sass/paritals/screen/\_v4.scss.
++ finally add or change the link on the index page `<li><a href="v3.html">Version 3</a></li>` to `<li><a href="v4.html">Version 4</a></li>`
 
