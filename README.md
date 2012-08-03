@@ -3,15 +3,23 @@
 **This is currently under development and is still very alpha!** Feedback is very welcome!
 
 ## Background ##
-I loved Samantha Warren's idea of [style tiles](http://styletil.es/). It seemed like the best answer from getting away from pixel perfect comps. However as I'm designing in the browser more and more I didn't want to go back into pixel based AdobeLand — Photoshop or Fireworks. Especially now that I am doing Responsive Web Design, I wanted to be designing in CSS and HTML. I thought this would be a perfect project for Sass and Compass. So here's style tiles in HTML & CSS! It's still a work in progress and I am open to ideas how to improve it.
+I loved Samantha Warren's idea of [style tiles](http://styletil.es/). It seemed like the best answer to moving away from time-draining pixel perfect comps. However, as I'm designing in the browser more and more I didn't want to go back into pixel based AdobeLand — Photoshop or Fireworks. Especially now that I am doing Responsive Web Design, I wanted to be designing in CSS and HTML. I thought this would be a perfect project for Sass and Compass. So here's style tiles in HTML & CSS! It's still a work in progress and I am open to ideas how to improve it.
 
 ## Design Philosophy ##
 Style Tiles should be easily deployed i.e. sent to the client. 
 
-+ HTML and CSS where possible
-+ All changes should be sass variables
+Build for rapid iteration
+
++ Everything should be changeable using sass variables
++ No need to edit the HTML
++ Content should also be variables using `content: ""` in `:before` or `:after` pseudo classes
+
+Use only HTML and CSS where possible
+
 + No server-side technologies
-+ Modern browser support only (this is not production code)
++ Modern browser support only (this isn't production code)
++ Simplest HTML5 code possible
++ Use CSS3 selectors and pseudo-classes (avoid classes or ids)
 
 Therefore it shouldn't be reliant on any server side technologies. Style Tiles should be deployable as simple HTML and CSS (perhaps JavaScript if there's becomes a good reason). Style Tiles should be able to run in any folder on a desktop or any web server. Style Tiles need to be viewed in modern browsers: Firefox and Webkit based browsers. Wherever possible I am using CSS rather than some server solution. 
 
@@ -39,7 +47,6 @@ Then you'll need to make some easy edits
 
 ### What's variables are available ###
 TK
-
 
 ## Planned Features ##
 
