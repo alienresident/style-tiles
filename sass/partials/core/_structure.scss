@@ -6,38 +6,30 @@
 body {
   @include background($body-background-color, $body-background-image, $inline-images, $body-background-gradient-1, $body-background-gradient-position-1, $body-background-gradient-2, $body-background-gradient-position-2);
   background-repeat: $body-background-repeat;
+  @include background-size($body-background-size);
 }
 
 a { 
- &, &:link {
-    color: $link-color;
-    text-decoration: none;
-  }   
-  &:visited {  
-    color: $link-color-visited;
-    text-decoration: none;
-  }  
-  // Hover/active link styles. Don't forget :focus for accessibility 
-  &:hover,
-  &:focus,
-  &:active { 
-    color: $link-color-over;
-    text-decoration: underline;
-  }
+ @include set-link-colors($link-color);
 }
 body > div {
   width: $page-width;
   margin: $page-margin;
-  @include ts-box-shadow($page-box-shadow);
-  @include background($page-background-color, $page-background-image, $inline-images);
-  color:$page-text-color;
-  @include ts-text-shadow($main-text-shadow);
+  @include st-box-shadow($page-box-shadow);
+  @include background($page-background-color, $page-background-image, $inline-images, $page-background-gradient-1, $page-background-gradient-position-1, $page-background-gradient-2, $page-background-gradient-position-2);
+  background-repeat: $page-background-repeat;
+  @include background-size($page-background-size);
+  color: $page-text-color;
+  @include st-text-shadow($main-text-shadow);
+  @include border-radius($page-corners);
 }
 section:nth-of-type(1) {
   header {
     height: $header-height;
     padding: $header-padding;
     @include background($header-background-color, $header-background-image, $inline-images, $header-background-gradient-1, $header-background-gradient-position-1, $header-background-gradient-2, $header-background-gradient-position-2);
+    background-repeat: $header-background-repeat;
+    @include background-size($header-background-size);
     color: $header-text-color;
     figure {
       width: $logo-width;
@@ -47,7 +39,7 @@ section:nth-of-type(1) {
       float: $logo-float;
       margin: $logo-margin;
       padding: $standard-spacing;
-      @include ts-box-shadow($logo-box-shadow);
+      @include st-box-shadow($logo-box-shadow);
     }
      hgroup {
        text-align: $header-text-align;
@@ -75,7 +67,7 @@ section:nth-of-type(2){
   header {
     h1 {
       margin: $standard-spacing 0;
-      @include ts-text-shadow($heading-h1-text-shadow);
+      @include st-text-shadow($heading-h1-text-shadow);
       @include bold-italic-uppercase($heading-h1-font-style);
       color: $heading-h1-font-color;
     }
@@ -106,13 +98,14 @@ section:nth-of-type(2){
 aside {
   display: block;
   margin: $aside-margin;
-  background: $aside-background-color;
-  @include background($aside-background-color, $aside-background-image, $inline-images);
-  border: $aside-border;
+  @include background($aside-background-color, $aside-background-image, $inline-images, $aside-background-gradient-1, $aside-background-gradient-position-1, $aside-background-gradient-2, $aside-background-gradient-position-2);
+  background-repeat: $aside-background-repeat;
+  @include background-size($aside-background-size);
   @include border-radius($aside-border-radius);
   outline: $aside-outline;
+  border: $aside-border;
   padding: $standard-spacing;
-  color:$aside-text-color;
+  color: $aside-text-color;
   &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) {
     float: left;
     width: $aside-width;
@@ -152,7 +145,7 @@ footer {
   @include content-before-after($footer-text, false, true);
   @include background($footer-background-color, $footer-background-image, $inline-images);
    color:$footer-text-color;
-   @include ts-text-shadow($footer-text-shadow);
+   @include st-text-shadow($footer-text-shadow);
    figure {
      width: $footer-logo-width;
      height: $footer-logo-height;

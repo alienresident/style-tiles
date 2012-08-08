@@ -3,8 +3,6 @@ $version-number: "3.0";
 
 /// Design Variables
 $link-color: #e57e17;
-$link-color-over: saturate($link-color, 10%);
-$link-color-visited: desaturate($link-color, 20%);
 
 // sample 5 colors and 3 textures (add figures to html for more)
 $colors: $link-color, #cc7014, #444, #191919, #0d0d0d;

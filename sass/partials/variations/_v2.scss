@@ -10,17 +10,18 @@ $adjectives:  current, clean, sleek, technical ;
 
 $link-color: #73320B;
 
-$body-background-color: #222;
-$body-background-image: "scratched-metal2.png";
-$body-background-gradient-position-1: left;
-$body-background-gradient-1: rgba(0,0,0,.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%;
-$body-background-gradient-position-2: right;
+$body-background-color: #fff;
+$body-background-image: false; //repalce with linen tile
+$body-background-gradient-position-1: 90deg;
+$body-background-gradient-1: rgba(242,40,40,.5) 24%, rgba(0,180,255,.35) 25%,rgba(0,180,255,.35) 50%, rgba(0,0,83,.5) 51%, rgba(0,0,83,.5) 74%, transparent 75%;
+$body-background-gradient-position-2: 0deg;
 $body-background-gradient-2: $body-background-gradient-1;
+$body-background-size: 80px 80px;
 $body-background-repeat: repeat;
 
-$page-background-color: #BEE8E0;
-$page-box-shadow: 5px 5px 10px rgba(0,0,0,.75), -5px 5px 10px rgba(0,0,0,.75);
+$page-background-color: #fff;
 $page-background-image: false;
+$page-box-shadow: 5px 5px 10px rgba(0,0,0,.75), -5px 5px 10px rgba(0,0,0,.75);
 $page-corners: 5px;
 $page-margin: 0 auto ($standard-spacing * 4) auto;
 
@@ -48,11 +49,17 @@ $main-text-shadow: 0px 1px 1px rgba(255,255,255,.35);
 
 
 $aside-margin: 0 0 $standard-spacing 0;
-$aside-background-color: #FF5E00;
+$aside-background-color: #fff;
 $aside-background-image: false;
-$aside-border: none;
+$aside-background-gradient-position-1: 135deg;
+$aside-background-gradient-1: rgba(242,40,40,.5) 24%, rgba(0,180,255,.35) 25%,rgba(0,180,255,.35) 50%, rgba(0,0,83,.5) 51%, rgba(0,0,83,.5) 74%, transparent 75%;
+$aside-background-gradient-position-2: 45deg;
+$aside-background-gradient-2: $aside-background-gradient-1;
+$aside-background-size: 60px 60px;
+$aside-background-repeat: repeat;
+$aside-border: 1px dashed rgba(255,255,255,.25);
 $aside-border-radius: 5px;
-$aside-outline: 1px solid rgba(200,200,200,.25);
+$aside-outline: 1px dashed rgba(0,20,2,.5);
 
 // Figure (colors and textures boxes)
 $figure-width: 40px;

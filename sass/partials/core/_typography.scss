@@ -1,15 +1,5 @@
-/*
-  960 Grid System ~ Text CSS.
-  Learn more ~ http://960.gs/
-
-  Licensed under GPL and MIT.
-*/
-
-/* `Basic HTML
-----------------------------------------------------------------------------------------------------*/
-
 body {
-  font: 14px/1.5em 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font: normal 100% / #{$base-line-height} $primary-font;
 }
 
 pre,
@@ -17,38 +7,31 @@ code {
   font-family: 'DejaVu Sans Mono', Monaco, Consolas, monospace;
 }
 
-hr {
-  border: 0 #ccc solid;
-  border-top-width: 1px;
-  clear: both;
-  height: 0;
-}
-
 /* `Headings
 ----------------------------------------------------------------------------------------------------*/
 
 h1 {
-  font-size: 1.714em; /* 24px */
+  font-size: calc-em(24px, $base-font-size); /* 24px */
 }
 
 h2 {
-  font-size: 1.571em; /* 22px */
+  font-size: calc-em(22px, $base-font-size); /* 22px */
 }
 
 h3 {
-  font-size: 1.429em; /* 20px */
+  font-size: calc-em(20px, $base-font-size); /* 20px */
 }
 
 h4 {
-  font-size: 1.286em; /* 18px */
+  font-size: calc-em(18px, $base-font-size); /* 18px */
 }
 
 h5 {
-  font-size: 1.143em; /* 16px */
+  font-size: calc-em(16px, $base-font-size); /* 16px */
 }
 
 h6 {
-  font-size: 1.071em; /* 15px */
+  font-size: calc-em(15px, $base-font-size); /* 15px */
 }
 
 /* `Spacing

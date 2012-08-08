@@ -2,9 +2,9 @@
 
 // Remove some legacy support since it's not really needed for style tiles (tell your clients to view style tiles a modern browser or send them a screenshot)
 $support-for-original-webkit-gradients: false;
-$legacy-support-for-mozilla: true; 
-$experimental-support-for-microsoft: true;
-$experimental-support-for-opera: true;
+$legacy-support-for-mozilla: false; 
+$experimental-support-for-microsoft: false;
+$experimental-support-for-opera: false;
 
 // Project Name and Version Header 
 $project-name: "Super Awesome Project";// You'll want to override this!
@@ -18,41 +18,54 @@ $article-width: 540px;
 $aside-width: 300px;
 $inline-images: true; // inline all images so you don't need to send them with the style sheet(s)
 
+
+// Typography 
+$primary-font: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+$base-font-size: 16px;
+$base-line-height:1.5em;
+$body-font-size: calc-em(14px, $base-font-size);
+
 /// Design Variables
-$link-color: #57068c;
-$link-color-over: saturate($link-color, 10%);
-$link-color-visited: desaturate($link-color, 20%);
+$link-color: #00f;
+
 
 // sample 5 colors and 3 textures (add figures to html for more)
-$colors: $link-color, #666666, #999999, #aaaaaa, #cccccc;
+$colors: #333, #666666, #999999, #aaaaaa, #cccccc;
 $textures: "concrete.png", "dark-concrete.png", "asphalt.png";
-$adjectives:  current, conservative, whimiscal, contradictory;
+$adjectives:  current, conservative, whimiscal, contradictory; //
 
-$body-background-color: #efefef; // good for older browsers
-$body-background-image: "asphalt.png";
-$body-background-gradient-position-1: left;
-$body-background-gradient-1: rgba(0,0,0,.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%;
-$body-background-gradient-position-2: right;
-$body-background-gradient-2: $body-background-gradient-1;
-$body-background-repeat: repeat;
+$body-background-color: #efefef; // for older browsers that don't support gradients
+$body-background-image: false; // e.g "asphalt.png"
+$body-background-gradient-position-1: false; // e.g. top OR 45deg
+$body-background-gradient-1: false; // rgba(0,0,0,.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%
+$body-background-gradient-position-2: false; // e.g. right OR 0deg
+$body-background-gradient-2: false; // $body-background-gradient-1 Or another gradient
+$body-background-size: false; // 40px 40px OR contain
+$body-background-repeat: repeat; // no-repeat OR repeat-x etc
 
-$page-background-color: #f2f2f2;
-$page-box-shadow: 5px 5px 10px rgba(0,0,0,.75), -5px 5px 10px rgba(0,0,0,.75);
-$page-background-image: "concrete.png";
-$page-corners: 5px;
-$page-margin: 0 auto ($standard-spacing * 4) auto;
-$page-text-color: #333;
+$page-background-color: #f2f2f2; // for older browsers that don't support gradients or just a solid color
+$page-background-image: false; // e.g "asphalt.png"
+$page-background-gradient-position-1: false; // e.g. top OR 45deg
+$page-background-gradient-1: false; // rgba(0,0,0,.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%
+$page-background-gradient-position-2: false; // e.g. right OR 0deg
+$page-background-gradient-2: false;
+$page-background-size: false; 
+$page-background-repeat: repeat;
+$page-box-shadow: false; // e.g. 5px 5px 10px rgba(0,0,0,.75), -5px 5px 10px rgba(0,0,0,.75)
+$page-corners: false; //  0 10px
+$page-margin: 0 auto ($standard-spacing * 4) auto; // 
+$page-text-color: #333; 
 
 // Logo is added as a background to a transparent image. Adjust height and width and source
-$logo-margin: 0 $standard-spacing $standard-spacing  0;
-$logo-width: 200px;
+$logo-margin: 0 $standard-spacing $standard-spacing  0; // TRBL: Top Right Bottom Left
+$logo-width: 200px; 
 $logo-height: 150px;
-$logo-float: left;
-$logo-file: "sample-logo.png";
-$logo-box-shadow: false;
+$logo-float: left; // right OR none
+$logo-file: "sample-logo.png"; // e.g. "sample-logo.png"
+$logo-box-shadow: false; // e.g. 5px 5px 10px rgba(0,0,0,.75)
 
 
-$header-height: $logo-height + ($standard-spacing * 2);
+$header-height: $logo-height + ($standard-spacing * 2); // allow some breathing room around the logo
 $header-padding: $standard-spacing;
 $header-background-color: false;
 $header-background-image: false;
@@ -60,23 +73,31 @@ $header-background-gradient-position-1: false;
 $header-background-gradient-1: false;
 $header-background-gradient-position-2: false;
 $header-background-gradient-2: false;
+$header-background-size: false;
+$header-background-repeat: repeat;
 $header-text-color: false;
-$header-text-align: right;
+$header-text-align: right; // align the Project Name and Version Number text
 
 // Project name and version font size / line-height
-$project-name-font-size: 1em;
+$project-name-font-size: 1em; // Override the default H1 size
 $project-name-line-height: 1.5em;
-$version-font-size: .9em;
+$version-font-size: .9em; // Override the default H2 size
 $version-line-height: 1em;
 
-$heading-h1-text-shadow: -1px 0px 1px rgba(0,0,0,.25), 0px 1px 1px rgba(255,255,255,.75);
-$heading-h1-font-style: false;
-$heading-h1-font-color: $page-text-color;
-$main-text-shadow: 0px 1px 1px rgba(255,255,255,.35);
+$heading-h1-text-shadow: false; // e.g. -1px 0px 1px rgba(0,0,0,.25), 0px 1px 1px rgba(255,255,255,.75)
+$heading-h1-font-style: false; 
+$heading-h1-font-color: $page-text-color; // 
+$main-text-shadow: false; //  0px 1px 1px rgba(255,255,255,.35)
 
 $aside-margin: 0 0 $standard-spacing 0;
 $aside-background-color: rgba(255,255,255,.25);
 $aside-background-image: false;
+$aside-background-gradient-position-1: false;
+$aside-background-gradient-1: false;
+$aside-background-gradient-position-2: false;
+$aside-background-gradient-2: false;
+$aside-background-size: false;
+$aside-background-repeat: repeat;
 $aside-border: $standard-spacing solid rgba(255,255,255,.35);
 $aside-border-radius: 3px;
 $aside-outline: 1px solid rgba(200,200,200,.25);
@@ -85,24 +106,24 @@ $aside-text-color: #333;
 // Figure (colors and textures boxes)
 $figure-width: 40px;
 $figure-height: 40px;
-$texture-width: $figure-width * 2;
-$texture-height: $figure-height * 2;
-$figure-border:  1px #888 solid;
+$texture-width: $figure-width * 2; // double the color size to show the textures better
+$texture-height: $figure-height * 2; // same
+$figure-border:  1px #888 solid; // only if there's a color
 
-$figure-caption-text-size: 12px;
+$figure-caption-text-size: 12px; // if you want to credit eternal texture sources or add notes
 
-$button-corners: 10px;
+$button-corners: 10px;  //
 $button-background-color: #57068c;
-$button-gradient: false;
+$button-gradient: false; // automatic gradients
 $button-text-color: #eee;
 $button-font-size: 1.2em;
-$button-text-shadow: 0px 1px 1px rgba(0,0,0,.5);
-$button-border: 2px #eee solid;
-$button-box-shadow: 1px 1px 2px rgba(0,0,0,.5);
+$button-text-shadow: false; // e.g 0px 1px 1px rgba(0,0,0,.5)
+$button-border: 1px #eee solid;
+$button-box-shadow: none; // e.g. 1px 1px 2px rgba(0,0,0,.5)
 $button-text-color-over: adjust-lightness($button-text-color, 10%);
 $button-background-color-over: adjust-lightness($button-background-color, 10%);
 
-$footer-background-color: rgba(0,0,0,.75);
+$footer-background-color: false ; // e.g. rgba(0,0,0,.75)
 $footer-background-image: false;
 
 $footer-text-color: rgba(255,255,255,.75);

@@ -1,4 +1,28 @@
-@mixin ts-text-shadow($text-shadow) {
+@mixin set-link-colors($link-color, $mode: saturation default, $amount-1: 10%, $amount-2: -20%) {
+  $link-color-over: adjust-saturation($link-color, $amount-1);
+  $link-color-visited: adjust-saturation($link-color, $amount-2);
+  @if $mode == lightness { 
+    $link-color-over: adjust-lightness($link-color, $amount-1);
+    $link-color-visited: adjust-lightness($link-color, $amount-2);
+  }
+  &, &:link {
+    color: $link-color;
+    text-decoration: none;
+  }   
+  &:visited {  
+    color: $link-color-visited;
+    text-decoration: none;
+  }  
+  // Hover/active link styles. Don't forget :focus for accessibility 
+  &:hover,
+  &:focus,
+  &:active { 
+    color: $link-color-over;
+    text-decoration: underline;
+  }
+}
+
+@mixin st-text-shadow($text-shadow) {
   @if $text-shadow { @include text-shadow( $text-shadow); }
 }
 
@@ -7,7 +31,7 @@
   @if $leading { line-height: $leading; }
 }
 
-@mixin ts-box-shadow($box-shadow) {
+@mixin st-box-shadow($box-shadow) {
   @if $box-shadow { @include box-shadow($box-shadow) }
 }
 
@@ -17,16 +41,21 @@
 }
 // This is a mess and needs to be cleaned up/abstracted
 @mixin background($background-color, $background-image: false, $inline-images:false, $body-background-gradient-1: false, $body-background-gradient-position-1: false, $body-background-gradient-2: false, $body-background-gradient-position-2: false) {
+  
   @if $background-color { background-color: $background-color; }
   
-  @if $background-image and $body-background-gradient-1 and $body-background-gradient-2 and $inline-images { @include background-image(linear-gradient($body-background-gradient-position-1, $body-background-gradient-1), linear-gradient($body-background-gradient-position-2, $body-background-gradient-2), inline-image("../images/#{$background-image}")); }
-  @else if $background-image and $body-background-gradient-1 and $inline-images { @include background-image(linear-gradient($body-background-gradient-position-1, $body-background-gradient-1), inline-image("../images/#{$background-image}")); } 
-  @else if $background-image and $inline-images { @include background-image(inline-image("../images/#{$background-image}")); }
-  @else if $body-background-gradient-1 and $body-background-gradient-2 { @include background-image(linear-gradient($body-background-gradient-position-1, $body-background-gradient-1), linear-gradient($body-background-gradient-position-2, $body-background-gradient-2)); }
-  @else if $body-background-gradient-1 { @include background-image(linear-gradient($body-background-gradient-position-1, $body-background-gradient-1)); }           
-  @else if $background-image and $inline-images { @include background-image(inline-image("../images/#{$background-image}")); }
-  @else if $background-image and $body-background-gradient-1 and $body-background-gradient-2 { @include background-image(linear-gradient($body-background-gradient-position-1, $body-background-gradient-1), linear-gradient($body-background-gradient-position-2, $body-background-gradient-2), url("../images/#{$background-image}")); }
-  @else if $background-image { @include background-image( url("../images/#{$background-image}")); } 
+  @if $inline-images and $background-image { $background-image: inline-image("../images/#{$background-image}"); }
+  @else if $background-image { $background-image: url("../images/#{$background-image}"); }  
+  
+  @if $background-image and $body-background-gradient-1 and $body-background-gradient-2 { @include background-image(linear-gradient( $body-background-gradient-position-1, $body-background-gradient-1 ), linear-gradient( $body-background-gradient-position-2, $body-background-gradient-2 ), $background-image); }
+  @else if $background-image and $body-background-gradient-1 { @include background-image(linear-gradient( $body-background-gradient-position-1, $body-background-gradient-1 ), $background-image); } 
+  @else if $body-background-gradient-1 and $body-background-gradient-2 { @include background-image(linear-gradient( $body-background-gradient-position-1, $body-background-gradient-1 ), linear-gradient( $body-background-gradient-position-2, $body-background-gradient-2 )); }
+  @else if $body-background-gradient-1 { @include background-image(linear-gradient( $body-background-gradient-position-1, $body-background-gradient-1 )); }
+  @else if $background-image { @include background-image($background-image) }
+}
+
+@mixin background-size($background-size: false) {
+  @if $background-size { background-size: $background-size; }
 }
 
 @mixin reset-margin-padding-border($margin :default, $padding: false, $border: false) {
@@ -72,16 +101,22 @@
   }
 }
 
-@mixin button-style($button-background-color, $button-text-color, $button-corners: false, $button-border: false, $button-font-size: false, $button-gradient: false) {
-  @include border-radius($button-corners);
+@mixin button-style($button-background-color, $button-text-color, $button-corners: false, $button-border: false, $button-font-size: false, $button-gradient: false, $button-box-shadow: false) {
+  @if $button-corners { @include border-radius($button-corners) };
   color: $button-text-color !important;
   @if $button-gradient { 
     background: $button-background-color;
-    @include background-image(linear-gradient( tint($button-background-color, 20%)  5%, $button-background-color 20%, $button-background-color 80%, shade($button-background-color, 20%) 100%)); } 
+    @include background-image(linear-gradient( tint($button-background-color, 20%) 5%, $button-background-color 20%, $button-background-color 80%, shade($button-background-color, 20%) 100%)); 
+    } 
   @else { background: $button-background-color; }
   padding: ($standard-spacing / 2)  $standard-spacing;
-  @include ts-text-shadow($button-text-shadow);
-  @include box-shadow($button-box-shadow);
-  border: $button-border;
-  font-size: $button-font-size;
+  @if $button-text-shadow { @include st-text-shadow($button-text-shadow) };
+  @if $button-box-shadow { @include box-shadow($button-box-shadow) };
+  @if $button-border { border: $button-border };
+  @if $button-font-size { font-size: $button-font-size};
+}
+
+// Functions
+@function calc-em($target-px, $context) {
+  @return ($target-px / $context) * 1em;
 }

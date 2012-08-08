@@ -3,10 +3,10 @@
 @import "compass/css3";
 
 // Import the base and style-tiles
-@import "partials/core/_typography";
 @import "partials/core/_content";
 @import "partials/core/_mixins";
 @import "partials/core/_variables";
+@import "partials/core/_typography";
 
 // Override default variables with version specific variables 
 @import "partials/variations/_index";
