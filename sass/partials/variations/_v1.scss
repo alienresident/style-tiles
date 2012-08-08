@@ -2,6 +2,7 @@
 
 $version-number: "1.0";
 
+$footer-text: 'Designed by Grey Boxes';
 /// Global Variables
 $standard-spacing:20px;
 
@@ -14,35 +15,16 @@ $adjectives:  current, conservative, whimiscal, contradictory;
 $body-background-color: #666;
 
 $page-background-color: #eee;
-$page-box-shadow: 5px 5px 10px rgba(0,0,0,.75), -5px 5px 10px rgba(0,0,0,.75);
-$page-background-image: false;
-$page-corners: 5px;
 $page-margin: 0 auto ($standard-spacing * 4) auto;
 
 
 // Logo is added as a background to a transparent image. Adjust height and width and source
-
-$header-height:$logo-height + ($standard-spacing * 2);
-$header-padding: $standard-spacing;
 $header-background-color: #aaa;
-$header-background-image: false;
 
-// Project name and version font size / line-height
-$project-name-font-size: 1em;
-$project-name-line-height: 1.5em;
-$version-font-size: .9em;
-$version-line-height: 1em;
-
-$header-h1-text-shadow: -1px 0px 1px rgba(0,0,0,.25), 0px 1px 1px rgba(255,255,255,.75);
-
-$main-text-shadow: 0px 1px 1px rgba(255,255,255,.35);
-
-
-$aside-width: 400px;
+$aside-width: 360px;
 $aside-margin: 0 0 $standard-spacing 0;
-$aside-background-color: rgba(#bbb,1);
-$aside-border: $standard-spacing solid rgba(255,255,255,.35);
-$aside-outline: 1px solid rgba(#FEE406,.25);
+$aside-background-color: #bbb;
+$aside-border: none;
 
 // Figure (colors and textures boxes)
 $figure-border:  1px #888 solid;

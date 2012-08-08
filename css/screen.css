@@ -301,9 +301,9 @@ aside {
   margin: 0 0 10px 0;
   background-color: rgba(255, 255, 255, 0.25);
   background-repeat: repeat;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: false;
+  -moz-border-radius: false;
+  border-radius: false;
   outline: 1px solid rgba(200, 200, 200, 0.25);
   border: 10px solid rgba(255, 255, 255, 0.35);
   padding: 20px;

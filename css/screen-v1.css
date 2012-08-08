@@ -182,22 +182,18 @@ a:hover, a:focus, a:active {
 body > div {
   width: 960px;
   margin: 0 auto 80px auto;
-  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75), -5px 5px 10px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75), -5px 5px 10px rgba(0, 0, 0, 0.75);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75), -5px 5px 10px rgba(0, 0, 0, 0.75);
   background-color: #eeeeee;
   background-repeat: repeat;
   color: #333333;
-  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.35);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: false;
+  -moz-border-radius: false;
+  border-radius: false;
 }
 
 /* line 27, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 section:nth-of-type(1) header {
-  height: 190px;
-  padding: 20px;
+  height: 170px;
+  padding: 10px;
   background-color: #aaaaaa;
   background-repeat: repeat;
   color: false;
@@ -305,18 +301,18 @@ aside {
   margin: 0 0 20px 0;
   background-color: #bbbbbb;
   background-repeat: repeat;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  outline: 1px solid rgba(254, 228, 6, 0.25);
-  border: 20px solid rgba(255, 255, 255, 0.35);
+  -webkit-border-radius: false;
+  -moz-border-radius: false;
+  border-radius: false;
+  outline: 1px solid rgba(200, 200, 200, 0.25);
+  border: none;
   padding: 20px;
   color: #333333;
 }
 /* line 109, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 aside:nth-of-type(1), aside:nth-of-type(2), aside:nth-of-type(3) {
   float: left;
-  width: 400px;
+  width: 360px;
 }
 /* line 114, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 aside:nth-of-type(3) ul {
@@ -417,7 +413,7 @@ footer {
 }
 /* line 40, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
 footer:after {
-  content: "Designed by Rock Stars";
+  content: "Designed by Grey Boxes";
 }
 /* line 149, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 footer figure {

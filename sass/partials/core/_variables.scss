@@ -99,7 +99,7 @@ $aside-background-gradient-2: false;
 $aside-background-size: false;
 $aside-background-repeat: repeat;
 $aside-border: $standard-spacing solid rgba(255,255,255,.35);
-$aside-border-radius: 3px;
+$aside-border-radius: false; // 3px
 $aside-outline: 1px solid rgba(200,200,200,.25);
 $aside-text-color: #333;
 
