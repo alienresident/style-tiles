@@ -1,25 +1,25 @@
 @mixin set-link-colors($link-color, $mode: saturation default, $amount-1: 10%, $amount-2: -20%) {
+  
   $link-color-over: adjust-saturation($link-color, $amount-1);
   $link-color-visited: adjust-saturation($link-color, $amount-2);
+  
   @if $mode == lightness { 
     $link-color-over: adjust-lightness($link-color, $amount-1);
     $link-color-visited: adjust-lightness($link-color, $amount-2);
   }
-  &, &:link {
-    color: $link-color;
-    text-decoration: none;
-  }   
-  &:visited {  
-    color: $link-color-visited;
-    text-decoration: none;
-  }  
-  // Hover/active link styles. Don't forget :focus for accessibility 
-  &:hover,
-  &:focus,
-  &:active { 
-    color: $link-color-over;
-    text-decoration: underline;
+  @if $mode == hue { 
+    $link-color-over: adjust-lightness($link-color, $amount-1);
+    $link-color-visited: adjust-lightness($link-color, $amount-2);
   }
+  
+  @include hover-link;
+  @include link-colors( $link-color,
+                        $hover: $link-color-over,
+                        $active: $link-color-over,
+                        $visited: $link-color-visited,
+                        $focus: $link-color-over
+                      );
+
 }
 
 @mixin st-text-shadow($text-shadow) {
@@ -44,8 +44,8 @@
   
   @if $background-color { background-color: $background-color; }
   
-  @if $inline-images and $background-image { $background-image: inline-image("../images/#{$background-image}"); }
-  @else if $background-image { $background-image: url("../images/#{$background-image}"); }  
+  @if $inline-images and $background-image { $background-image: inline-image("#{$background-image}"); }
+  @else if $background-image { $background-image: image-url("#{$background-image}"); }  
   
   @if $background-image and $body-background-gradient-1 and $body-background-gradient-2 { @include background-image(linear-gradient( $body-background-gradient-position-1, $body-background-gradient-1 ), linear-gradient( $body-background-gradient-position-2, $body-background-gradient-2 ), $background-image); }
   @else if $background-image and $body-background-gradient-1 { @include background-image(linear-gradient( $body-background-gradient-position-1, $body-background-gradient-1 ), $background-image); } 

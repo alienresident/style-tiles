@@ -165,20 +165,30 @@ body {
   background-repeat: repeat;
 }
 
-/* line 8, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
-a, a:link {
-  color: #e57e17;
+/* line 12, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+a {
   text-decoration: none;
+  color: #e57e17;
 }
-/* line 12, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
+/* line 4, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
+a:hover {
+  text-decoration: underline;
+}
+/* line 18, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:visited {
   color: #cc7e30;
-  text-decoration: none;
 }
-/* line 19, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
-a:hover, a:focus, a:active {
+/* line 21, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:focus {
   color: #f27e0a;
-  text-decoration: underline;
+}
+/* line 24, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:hover {
+  color: #f27e0a;
+}
+/* line 27, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:active {
+  color: #f27e0a;
 }
 
 /* line 15, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
