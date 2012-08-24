@@ -323,6 +323,7 @@ section:nth-of-type(2) p:nth-of-type(5) a:hover, section:nth-of-type(2) p:nth-of
 aside {
   display: block;
   margin: 0 0 10px 0;
+  padding: 0;
   background-color: #191919;
   background-repeat: repeat;
   -webkit-border-radius: 10px;
@@ -330,15 +331,17 @@ aside {
   border-radius: 10px;
   outline: 0px solid rgba(127, 127, 127, 0.25);
   border: 10px solid rgba(127, 127, 127, 0.02);
-  padding: 10px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   color: #818181;
 }
-/* line 109, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+/* line 110, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 aside:nth-of-type(1), aside:nth-of-type(2), aside:nth-of-type(3) {
   float: left;
   width: 400px;
 }
-/* line 114, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+/* line 115, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 aside:nth-of-type(3) ul {
   list-style: none;
   display: inline;
@@ -359,12 +362,12 @@ aside:nth-of-type(3) ul li:nth-of-type(3):after {
 aside:nth-of-type(3) ul li:nth-of-type(4):after {
   content: "technical";
 }
-/* line 120, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+/* line 121, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 aside figure {
   float: left;
   margin: 0 10px 0 0;
 }
-/* line 124, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+/* line 125, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 aside:nth-of-type(1) figure {
   width: 40px;
   height: 40px;
@@ -394,7 +397,7 @@ aside:nth-of-type(1) figure:nth-of-type(5) {
   border: 1px #888888 solid;
   background: #0d0d0d;
 }
-/* line 129, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+/* line 130, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 aside:nth-of-type(2) figure {
   width: 80px;
   height: 80px;
@@ -410,7 +413,7 @@ aside:nth-of-type(2) figure:nth-of-type(2) {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRFGRkZFhYWFxcXFxYWFRUVGBcXFhUVExMTrmhmNQAABNdJREFUeNrsXImCqjoMTVOC///Hz2YvAk8cFLzSGR1krSE52Q4Dt2HrGEs3arFV49zeac+5zTco+MKoWO+jXR3bixDw/gt5l/LcGGCfQQRIrxyIr0lgv1GARQdNhHT/Dvze3hBZrMRvJOLl/XgriMwp/rZ1JPehbdfToiyCnIPvlLzTfQAffrwEPj6B+skJUDdQ7/CxEqDpBK7R7ILtCdSe1OrEnNiOgF/Nbuwjb23LapFqcnISlN3dDs0o2+5kK8Rk+bp7YaECIukfijl0MweduU4U/qKEdW6Yi6rPeIKmhEPZfdT/RZ/sjMo7LD6DMgnQ2wqcOM3jofjXB71DCbeMASo9jqRbSb3epAODWaQZSM12/oxRbb9oOusgoGlQCRHLNASTWKYJwTYYqHKI45Foi6U03AEktABKHDAjsAiQcV92VkB+k2IpIIO6FVKvQrPXOxwHDrcCveFouQWBuklz0OFQIwyOH0VYDazl1loc3IdjolT+mewUKdHqvNpJouK6dZRN7phTMxZehCdicyysCGfCDONe8HF/BqkTKOGQNeCQ3BA1fWP1B7JoVJWaJBcEhUoMqBSMA1+px7Gi9ztz6IuKuHY9uRCQXhgtkfT4tTO2dGUxRQ155BhKpmmBMMURhJgsVoJSjOh6KMsqfYgZTl0zhPcx52KZdicf/1Y0BSk0YfhRkShIVYAwZ/IeQmqegh7gsxMTx2K3It8WiEINpJOBHein9h1ZucqGgNcyGj+pf/PQEvuajrWG5rIYeZUpyuHecEwQGosBrIGxAbdTXZ1bDBhPkP64OJ4ICX92AuOKI370yF8ngemcHxC2XDqQU3fLJxxWiQJcueYiNST3Dr4gkM6gTo5zWj5fyvpU1X6wVHvemPCawJtwaB5EHY0uJTyBDlxAdHzDIidhpPkZaofQix65SEbJfXWdDj6MPCvLKUI6EXqvURzaZYbH14o57ZTK6LPDw4x/wgxP0L7foV3nReJmhC2LJluWkrGsI/+VTVJT/pAElqqJ44UD1wRgXAnofgMHjgcibWdAX5gVJpGX6Qm8M6KkA2ugeHMlWipWx1tyF1HLxTOU6a6o+AKiawKnmED9WjN8jJelrSPtEUqtTlLOJVmn9DLD1L43Ep1npNHXCo4qeReKLBh+nX+RKLFHMChotme0rTm/WBDbXD0bv9cbBlEWtHNJQo0O8pxxe1IT0Svp4D3x8Y39mK8v023Vw6tQeRUqXxtlhnTudAEjhOhnNC7XpPrIDbX0xAMkaoHyqbXnFs+iaNJyxC0oV1j+zZnRGiCukpDqhFjeeCArEli/9jMluYLBTVvm5d73O0ONqAaFeK9WYenl2CQhC0J0ZBoOCi8nIqKOnJN94Q4s5pVb6zqwr2AR+xg4LSaqWVesTiRNqeLIw2HpqTHrDgmDeo2UoBRd41pT32jKZW4Cy5QottJyWZy2hv9aETevohRr5XwLbzE7F6eq+adUPGOGBjnRTqUhuWDsSFpII/Kimj65J7Q9QpOvttoK0HvI5RDtArJreM8AvKew43NGf44HfiokS1zBo+KBKs9Y5Hjgg1L/+SpZJ42/TMC83mYVzHchTcA2L+lD5TDGPeruMeFOMn1OBU8Vlt/iqf729vB0/7j0TwDa0JNs++8BYz7l7T8BBgBwmGDAhNlHBAAAAABJRU5ErkJggg==');
 }
 
-/* line 135, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+/* line 136, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 figcaption {
   clear: both;
   display: block;
@@ -421,7 +424,7 @@ figcaption:before {
   content: "";
 }
 
-/* line 141, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+/* line 142, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 footer {
   clear: both;
   text-align: right;
@@ -432,9 +435,9 @@ footer {
 }
 /* line 40, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
 footer:after {
-  content: "Designed by Rock Stars";
+  content: "\2606\20 Designed by Rock Stars \2606";
 }
-/* line 149, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
+/* line 150, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 footer figure {
   width: 66px;
   height: 24px;

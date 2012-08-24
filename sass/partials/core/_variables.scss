@@ -9,7 +9,7 @@ $experimental-support-for-opera: false;
 // Project Name and Version Header 
 $project-name: "Super Awesome Project";// You'll want to override this!
 $version-number: "1.0" default;
-$footer-text: 'Designed by Rock Stars'; // You'll want to override this!
+$footer-text: '\2606\20 Designed by Rock Stars \2606'; // You'll want to override this!
 
 /// Global Variables
 $standard-spacing: 10px;
@@ -90,6 +90,7 @@ $heading-h1-font-color: $page-text-color; //
 $main-text-shadow: false; //  0px 1px 1px rgba(255,255,255,.35)
 
 $aside-margin: 0 0 $standard-spacing 0;
+$aside-padding: 0;
 $aside-background-color: rgba(255,255,255,.25);
 $aside-background-image: false;
 $aside-background-gradient-position-1: false;
@@ -98,6 +99,7 @@ $aside-background-gradient-position-2: false;
 $aside-background-gradient-2: false;
 $aside-background-size: false;
 $aside-background-repeat: repeat;
+$aside-box-shadow: none;
 $aside-border: $standard-spacing solid rgba(255,255,255,.35);
 $aside-border-radius: false; // 3px
 $aside-outline: 1px solid rgba(200,200,200,.25);

@@ -98,13 +98,14 @@ section:nth-of-type(2){
 aside {
   display: block;
   margin: $aside-margin;
+  padding: $aside-padding;
   @include background($aside-background-color, $aside-background-image, $inline-images, $aside-background-gradient-1, $aside-background-gradient-position-1, $aside-background-gradient-2, $aside-background-gradient-position-2);
   background-repeat: $aside-background-repeat;
   @include background-size($aside-background-size);
   @include border-radius($aside-border-radius);
   outline: $aside-outline;
   border: $aside-border;
-  padding: $standard-spacing;
+  @include st-box-shadow($aside-box-shadow);
   color: $aside-text-color;
   &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) {
     float: left;

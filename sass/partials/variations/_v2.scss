@@ -20,12 +20,13 @@ $body-background-size: 80px 80px;
 $body-background-repeat: repeat;
 
 $page-background-color: #fff;
-$page-background-image: false;
+$page-background-image: "denim.jpg";
 $page-box-shadow: 5px 5px 10px rgba(0,0,0,.75), -5px 5px 10px rgba(0,0,0,.75);
 $page-corners: 5px;
 $page-margin: 0 auto ($standard-spacing * 4) auto;
+$page-text-color: #ccc;
 
-// Logo is added as a background to a transparent image. Adjust height and width and source
+// Logo is added as a background. Adjust height and width and source
 $logo-margin: 0 $standard-spacing $standard-spacing  0;
 $logo-box-shadow: false;
 
@@ -43,21 +44,23 @@ $header-text-color: #eee;
 
 
 $heading-h1-font-style: bold;
-$heading-h1-font-color: #444;
+$heading-h1-font-color: #ccc;
 
-$main-text-shadow: 0px 1px 1px rgba(255,255,255,.35);
+$main-text-shadow: 0px 1px 0px rgba(255,255,255,.5);
 
 
 $aside-margin: 0 0 $standard-spacing 0;
-$aside-background-color: #fff;
-$aside-background-image: false;
+$aside-padding: $standard-spacing;
+$aside-background-color: none;
+$aside-background-image: "denim.jpg";
 $aside-background-gradient-position-1: 135deg;
-$aside-background-gradient-1: rgba(242,40,40,.5) 24%, rgba(0,180,255,.35) 25%,rgba(0,180,255,.35) 50%, rgba(0,0,83,.5) 51%, rgba(0,0,83,.5) 74%, transparent 75%;
+$aside-background-gradient-1: false;
 $aside-background-gradient-position-2: 45deg;
-$aside-background-gradient-2: $aside-background-gradient-1;
-$aside-background-size: 60px 60px;
+$aside-background-gradient-2: false;
+$aside-background-size: false;
 $aside-background-repeat: repeat;
-$aside-border: 1px dashed rgba(255,255,255,.25);
+$aside-box-shadow: 3px 6px 5px rgba(0,0,0,.5), -3px -1px 5px rgba(0,0,0,.5);
+$aside-border: 1px dashed rgba(255,160,20,.5);
 $aside-border-radius: 5px;
 $aside-outline: 1px dashed rgba(0,20,2,.5);
 
