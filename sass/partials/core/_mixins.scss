@@ -39,7 +39,7 @@
   @if $before { &:before { content: $content; } }
   @if $after { &:after { content: $content; } }
 }
-// This is a mess and needs to be cleaned up/abstracted
+
 @mixin background($background-color, $background-image: false, $inline-images:false, $body-background-gradient-1: false, $body-background-gradient-position-1: false, $body-background-gradient-2: false, $body-background-gradient-position-2: false) {
   
   @if $background-color { background-color: $background-color; }
@@ -85,8 +85,8 @@
   @each $texture in $textures {
     &:nth-of-type(#{$i}) {
       border: $figure-border;
-      @if $inline-images { @include background-image(inline-image("../images/#{$texture}")); }
-      @else { background-image: url("../images/#{$texture}"); }
+      @if $inline-images { @include background-image(inline-image("#{$texture}")); }
+      @else { background-image: image-url("#{$texture}"); }
     }
     $i: $i + 1;
   }
