@@ -10,14 +10,14 @@ $para-2: "Style Tiles are a design deliverable consisting of fonts, colors and i
 $para-3:"View the styles tiles:";
 
 /// Global Variables
-$standard-spacing:calc-em(20px, $base-font-size);
+$standard-spacing: calc-em(20px, $base-font-size);
 
 /// Design Variables
-$link-color: #F4651C;
+$link-color: #405b6b;
 
-$body-background-color: #666;
+$body-background-color: #dfe1d1;
 
-$page-background-color: #eee;
+$page-background-color: #eaeaea;
 $page-margin: 0 auto ($standard-spacing * 4) auto;
 
 // Logo is added as a background to a transparent image. Adjust height and width and source
@@ -25,11 +25,11 @@ $logo-file: "sample-logo.png";
 
 $header-height: $logo-height + ($standard-spacing * 2);
 $header-padding: $standard-spacing;
-$header-background-color: rgba(#666, .5);
+$header-background-color: rgba(#929ca5, 1);
 
 $main-text-shadow: 0 calc-em(1px, $base-font-size) calc-em(1px, $base-font-size) rgba(255,255,255,.35);
 
-$footer-background-color: rgba(#dfdfdf, .75);
-$footer-text-color: rgba(225,225,225,.25);
+$footer-background-color: rgba(#a2af45, 1);
+$footer-text-color: rgba($link-color,.75);
 $footer-background-image: false;
 

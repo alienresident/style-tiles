@@ -30,7 +30,7 @@ $link-color: #00f;
 
 
 // sample 5 colors and 3 textures (add figures to html for more)
-$colors: #333, #666666, #999999, #aaaaaa, #cccccc;
+$colors: #929ca5, #a2af45, #405b6b,  #dfe1d1, #e5e5e5;
 $textures: "concrete.png", "dark-concrete.png", "asphalt.png";
 $adjectives:  current, conservative, whimiscal, contradictory; //
 
@@ -127,6 +127,12 @@ $button-background-color-over: adjust-lightness($button-background-color, 10%);
 
 $footer-background-color: false ; // e.g. rgba(0,0,0,.75)
 $footer-background-image: false;
+$footer-background-gradient-position-1: false;
+$footer-background-gradient-1: false;
+$footer-background-gradient-position-2: false;
+$footer-background-gradient-2: false;
+$footer-background-size: false;
+$footer-background-repeat: repeat;
 
 $footer-text-color: rgba(255,255,255,.75);
 $footer-text-align: right;

@@ -144,8 +144,8 @@ footer {
   text-align: $footer-text-align;
   padding: $standard-spacing;
   @include content-before-after($footer-text, false, true);
-  @include background($footer-background-color, $footer-background-image, $inline-images);
-   color:$footer-text-color;
+  @include background($footer-background-color, $footer-background-image, $inline-images, $footer-background-gradient-1, $footer-background-gradient-position-1, $footer-background-gradient-2, $footer-background-gradient-position-2);
+   color: $footer-text-color;
    @include st-text-shadow($footer-text-shadow);
    figure {
      width: $footer-logo-width;
