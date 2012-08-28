@@ -90,7 +90,7 @@ $heading-h1-font-color: $page-text-color; //
 $main-text-shadow: false; //  0px 1px 1px rgba(255,255,255,.35)
 
 $aside-margin: 0 0 $standard-spacing 0;
-$aside-padding: 0;
+$aside-padding: $standard-spacing;
 $aside-background-color: rgba(255,255,255,.25);
 $aside-background-image: false;
 $aside-background-gradient-position-1: false;

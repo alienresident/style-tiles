@@ -323,7 +323,7 @@ section:nth-of-type(2) p:nth-of-type(5) a:hover, section:nth-of-type(2) p:nth-of
 aside {
   display: block;
   margin: 0 0 10px 0;
-  padding: 0;
+  padding: 10px;
   background-color: #191919;
   background-repeat: repeat;
   -webkit-border-radius: 10px;

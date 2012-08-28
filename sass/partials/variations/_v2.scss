@@ -8,7 +8,7 @@ $textures: "concrete.png", "scratched-metal2.png";
 $adjectives:  current, clean, sleek, technical ;
 
 
-$link-color: #73320B;
+$link-color: #FF5E00;
 
 $body-background-color: #fff;
 $body-background-image: false; //repalce with linen tile
@@ -32,11 +32,11 @@ $logo-box-shadow: false;
 
 $header-height: $logo-height + ($standard-spacing * 2);
 $header-padding: $standard-spacing;
-$header-background-color: #2E2621;
+$header-background-color: rgba(0,0,0,.25);
 $header-background-image: false;
-$header-background-gradient-position-1: top;
+$header-background-gradient-position-1: bottom;
 $header-background-gradient-1: rgba(#666,.35) 0%, rgba(#222,.35) 10%, rgba(#222,.35) 75%;
-$header-background-gradient-position-2: bottom;
+$header-background-gradient-position-2: top;
 $header-background-gradient-2: rgba(#000,1) 0%, rgba(#111,.25) 8%, rgba(#111,0) 15%;
 $header-text-color: #eee;
 
@@ -74,7 +74,7 @@ $figure-border: 1px #888 solid;
 $figure-caption-text-size: 12px;
 
 $button-corners: 10px;
-$button-background-color: #73320B;
+$button-background-color: #FF5E00;
 $button-gradient: true;
 $button-text-color: #e5e5e5;
 $button-font-size: 1.2em;
@@ -84,7 +84,7 @@ $button-box-shadow: inset 2px 4px 5px rgba(0,0,0,.5);
 $button-text-color-over: adjust-lightness($button-text-color, 10%);
 $button-background-color-over: tint($button-background-color, 10%);
 
-$footer-background-color: #2E2621;
+$footer-background-color: rgba(0,0,0,.25);
 $footer-background-image: false;
 $footer-text-color: rgba(255,255,255,.75);
 $footer-text-shadow: -1px 0px 1px rgba(0,0,0,.5), 0px 1px 1px rgba(255,255,255,.35);

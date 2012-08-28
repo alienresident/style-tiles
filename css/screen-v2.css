@@ -169,7 +169,7 @@ body {
 /* line 12, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 a {
   text-decoration: none;
-  color: #73320b;
+  color: #ff5e00;
 }
 /* line 4, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_hover-link.scss */
 a:hover {
@@ -177,19 +177,19 @@ a:hover {
 }
 /* line 18, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:visited {
-  color: #663518;
+  color: #e66519;
 }
 /* line 21, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:focus {
-  color: #793005;
+  color: #ff5e00;
 }
 /* line 24, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:hover {
-  color: #793005;
+  color: #ff5e00;
 }
 /* line 27, /Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 a:active {
-  color: #793005;
+  color: #ff5e00;
 }
 
 /* line 15, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
@@ -213,10 +213,10 @@ body > div {
 section:nth-of-type(1) header {
   height: 170px;
   padding: 10px;
-  background-color: #2e2621;
-  background-image: -webkit-linear-gradient(top, rgba(102, 102, 102, 0.35) 0%, rgba(34, 34, 34, 0.35) 10%, rgba(34, 34, 34, 0.35) 75%), -webkit-linear-gradient(bottom, #000000 0%, rgba(17, 17, 17, 0.25) 8%, rgba(17, 17, 17, 0) 15%);
-  background-image: -moz-linear-gradient(top, rgba(102, 102, 102, 0.35) 0%, rgba(34, 34, 34, 0.35) 10%, rgba(34, 34, 34, 0.35) 75%), -moz-linear-gradient(bottom, #000000 0%, rgba(17, 17, 17, 0.25) 8%, rgba(17, 17, 17, 0) 15%);
-  background-image: linear-gradient(top, rgba(102, 102, 102, 0.35) 0%, rgba(34, 34, 34, 0.35) 10%, rgba(34, 34, 34, 0.35) 75%), linear-gradient(bottom, #000000 0%, rgba(17, 17, 17, 0.25) 8%, rgba(17, 17, 17, 0) 15%);
+  background-color: rgba(0, 0, 0, 0.25);
+  background-image: -webkit-linear-gradient(bottom, rgba(102, 102, 102, 0.35) 0%, rgba(34, 34, 34, 0.35) 10%, rgba(34, 34, 34, 0.35) 75%), -webkit-linear-gradient(top, #000000 0%, rgba(17, 17, 17, 0.25) 8%, rgba(17, 17, 17, 0) 15%);
+  background-image: -moz-linear-gradient(bottom, rgba(102, 102, 102, 0.35) 0%, rgba(34, 34, 34, 0.35) 10%, rgba(34, 34, 34, 0.35) 75%), -moz-linear-gradient(top, #000000 0%, rgba(17, 17, 17, 0.25) 8%, rgba(17, 17, 17, 0) 15%);
+  background-image: linear-gradient(bottom, rgba(102, 102, 102, 0.35) 0%, rgba(34, 34, 34, 0.35) 10%, rgba(34, 34, 34, 0.35) 75%), linear-gradient(top, #000000 0%, rgba(17, 17, 17, 0.25) 8%, rgba(17, 17, 17, 0) 15%);
   background-repeat: repeat;
   color: #eeeeee;
 }
@@ -304,13 +304,13 @@ section:nth-of-type(2) p:nth-of-type(5) a {
   -moz-border-radius: 10px;
   border-radius: 10px;
   color: #e5e5e5 !important;
-  background: #73320b;
-  background-image: -webkit-linear-gradient(#8f5b3b 5%, #73320b 20%, #73320b 80%, #5c2808 100%);
-  background-image: -moz-linear-gradient(#8f5b3b 5%, #73320b 20%, #73320b 80%, #5c2808 100%);
-  background-image: linear-gradient(#8f5b3b 5%, #73320b 20%, #73320b 80%, #5c2808 100%);
+  background: #ff5e00;
+  background-image: -webkit-linear-gradient(#ff7e33 5%, #ff5e00 20%, #ff5e00 80%, #cc4b00 100%);
+  background-image: -moz-linear-gradient(#ff7e33 5%, #ff5e00 20%, #ff5e00 80%, #cc4b00 100%);
+  background-image: linear-gradient(#ff7e33 5%, #ff5e00 20%, #ff5e00 80%, #cc4b00 100%);
   padding: 5px 10px;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
-  border: 1px #672d09 solid;
+  border: 1px #e55400 solid;
   font-size: 1.2em;
   text-transform: capitalize;
 }
@@ -318,7 +318,7 @@ section:nth-of-type(2) p:nth-of-type(5) a {
 section:nth-of-type(2) p:nth-of-type(5) a:hover, section:nth-of-type(2) p:nth-of-type(5) a:focus, section:nth-of-type(2) p:nth-of-type(5) a:active {
   color: white !important;
   text-decoration: none;
-  background: #814623;
+  background: #ff6e19;
 }
 
 /* line 98, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
@@ -432,7 +432,7 @@ footer {
   clear: both;
   text-align: right;
   padding: 10px;
-  background-color: #2e2621;
+  background-color: rgba(0, 0, 0, 0.25);
   color: rgba(255, 255, 255, 0.75);
   text-shadow: -1px 0px 1px rgba(0, 0, 0, 0.5), 0px 1px 1px rgba(255, 255, 255, 0.35);
 }
