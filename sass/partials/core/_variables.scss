@@ -12,10 +12,10 @@ $version-number: "1.0" default;
 $footer-text: '\2606\20 Designed by Rock Stars \2606'; // You'll want to override this!
 
 /// Global Variables
-$standard-spacing: 10px;
-$page-width: 960px;
-$article-width: 540px;
-$aside-width: 300px;
+$standard-spacing: calc-em(10px, $base-font-size);
+$page-width: calc-em(960px, $base-font-size);
+$article-width: calc-em(540px, $base-font-size);
+$aside-width: calc-em(300px, $base-font-size);
 $inline-images: true; // inline all images so you don't need to send them with the style sheet(s)
 
 
@@ -58,8 +58,8 @@ $page-text-color: #333;
 
 // Logo is added as a background to a transparent image. Adjust height and width and source
 $logo-margin: 0 $standard-spacing $standard-spacing  0; // TRBL: Top Right Bottom Left
-$logo-width: 200px; 
-$logo-height: 150px;
+$logo-width: calc-em(200px, $base-font-size); 
+$logo-height: calc-em(150px, $base-font-size);
 $logo-float: left; // right OR none
 $logo-file: "sample-logo.png"; // e.g. "sample-logo.png"
 $logo-box-shadow: false; // e.g. 5px 5px 10px rgba(0,0,0,.75)
@@ -102,25 +102,25 @@ $aside-background-repeat: repeat;
 $aside-box-shadow: none;
 $aside-border: $standard-spacing solid rgba(255,255,255,.35);
 $aside-border-radius: false; // 3px
-$aside-outline: 1px solid rgba(200,200,200,.25);
+$aside-outline: calc-em(1px, $base-font-size) solid rgba(200,200,200,.25);
 $aside-text-color: #333;
 
 // Figure (colors and textures boxes)
-$figure-width: 40px;
-$figure-height: 40px;
+$figure-width: calc-em(40px, $base-font-size);
+$figure-height: calc-em(40px, $base-font-size);
 $texture-width: $figure-width * 2; // double the color size to show the textures better
 $texture-height: $figure-height * 2; // same
-$figure-border:  1px #888 solid; // only if there's a color
+$figure-border:  calc-em(1px, $base-font-size) #888 solid; // only if there's a color
 
-$figure-caption-text-size: 12px; // if you want to credit eternal texture sources or add notes
+$figure-caption-text-size: calc-em(12px, $base-font-size); // if you want to credit eternal texture sources or add notes
 
-$button-corners: 10px;  //
+$button-corners: calc-em(10px, $base-font-size);  //
 $button-background-color: #57068c;
 $button-gradient: false; // automatic gradients
 $button-text-color: #eee;
 $button-font-size: 1.2em;
 $button-text-shadow: false; // e.g 0px 1px 1px rgba(0,0,0,.5)
-$button-border: 1px #eee solid;
+$button-border: calc-em(1px, $base-font-size) #eee solid;
 $button-box-shadow: none; // e.g. 1px 1px 2px rgba(0,0,0,.5)
 $button-text-color-over: adjust-lightness($button-text-color, 10%);
 $button-background-color-over: adjust-lightness($button-background-color, 10%);
@@ -130,8 +130,8 @@ $footer-background-image: false;
 
 $footer-text-color: rgba(255,255,255,.75);
 $footer-text-align: right;
-$footer-text-shadow: -1px 0px 1px rgba(0,0,0,.5), 0px 1px 1px rgba(255,255,255,.35);
+$footer-text-shadow: calc-em(-1px, $base-font-size) 0 calc-em(1px, $base-font-size) rgba(0,0,0,.5), 0 calc-em(1px, $base-font-size) calc-em(1px, $base-font-size) rgba(255,255,255,.35);
 
 $footer-logo-file: false;
-$footer-logo-width: 66px;
-$footer-logo-height: 24px;
+$footer-logo-width: calc-em(66px, $base-font-size);
+$footer-logo-height: calc-em(24px, $base-font-size);

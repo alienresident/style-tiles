@@ -2,89 +2,69 @@
 $version-number: "2.0";
 
 /// Design Variables
+$link-color: #e57e17;
+
 // sample 5 colors and 3 textures (add figures to html for more)
-$colors: #BEE8E0, #373C40, #2E2621, #73320B, #FF5E00;
-$textures: "concrete.png", "scratched-metal2.png";
+$colors: $link-color, #cc7014, #444, #191919, #0d0d0d;
+$textures: "dark-concrete.png", "scratched-metal2.png";
 $adjectives:  current, clean, sleek, technical ;
 
-
-$link-color: #FF5E00;
-
-$body-background-color: #fff;
-$body-background-image: false; //repalce with linen tile
-$body-background-gradient-position-1: 90deg;
-$body-background-gradient-1: rgba(242,40,40,.5) 24%, rgba(0,180,255,.35) 25%,rgba(0,180,255,.35) 50%, rgba(0,0,83,.5) 51%, rgba(0,0,83,.5) 74%, transparent 75%;
-$body-background-gradient-position-2: 0deg;
+$body-background-color: #333;
+$body-background-image: "dark-concrete.png";
+$body-background-gradient-position-1: left;
+$body-background-gradient-1: rgba(darken($body-background-color, 30%),.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%;
+$body-background-gradient-position-2: right;
 $body-background-gradient-2: $body-background-gradient-1;
-$body-background-size: 80px 80px;
 $body-background-repeat: repeat;
+$body-text-color: #eee;
 
-$page-background-color: #fff;
-$page-background-image: "denim.jpg";
-$page-box-shadow: 5px 5px 10px rgba(0,0,0,.75), -5px 5px 10px rgba(0,0,0,.75);
-$page-corners: 5px;
+$page-background-color: #141414;
+$page-box-shadow: calc-em(5px, $base-font-size) calc-em(5px, $base-font-size) calc-em(10px, $base-font-size) rgba(0,0,0,.75), calc-em(-5px, $base-font-size) calc-em(5px, $base-font-size) calc-em(10px, $base-font-size) rgba(0,0,0,.75);
+$page-background-image: false;
+$page-corners: calc-em(5px, $base-font-size);
 $page-margin: 0 auto ($standard-spacing * 4) auto;
 $page-text-color: #ccc;
 
-// Logo is added as a background. Adjust height and width and source
+// Logo is added as a background to a transparent image. Adjust height and width and source
 $logo-margin: 0 $standard-spacing $standard-spacing  0;
 $logo-box-shadow: false;
 
 $header-height: $logo-height + ($standard-spacing * 2);
 $header-padding: $standard-spacing;
-$header-background-color: rgba(0,0,0,.25);
+$header-background-color: #0d0d0d;
 $header-background-image: false;
-$header-background-gradient-position-1: bottom;
-$header-background-gradient-1: rgba(#666,.35) 0%, rgba(#222,.35) 10%, rgba(#222,.35) 75%;
-$header-background-gradient-position-2: top;
+$header-background-gradient-position-1: top;
+$header-background-gradient-1: rgba(#444,.35) 0%, rgba(#222,.35) 50%, rgba(#000,.35) 75%;
+$header-background-gradient-position-2: bottom;
 $header-background-gradient-2: rgba(#000,1) 0%, rgba(#111,.25) 8%, rgba(#111,0) 15%;
 $header-text-color: #eee;
 
-// Project name and version font size / line-height
+$heading-h1-font-style: false;
+$heading-h1-font-color: #888;
+$heading-h1-text-shadow: calc-em(-1px, $base-font-size) 0 calc-em(1px, $base-font-size) rgba(0,0,0,.75);
+$main-text-shadow: calc-em(1px, $base-font-size) 0 calc-em(1px, $base-font-size) rgba(127,127,127,.5);
 
-
-$heading-h1-font-style: bold;
-$heading-h1-font-color: #ccc;
-
-$main-text-shadow: 0px 1px 0px rgba(255,255,255,.5);
-
-
+$aside-width: calc-em(400px, $base-font-size);
 $aside-margin: 0 0 $standard-spacing 0;
-$aside-padding: $standard-spacing;
-$aside-background-color: none;
-$aside-background-image: "denim.jpg";
-$aside-background-gradient-position-1: 135deg;
-$aside-background-gradient-1: false;
-$aside-background-gradient-position-2: 45deg;
-$aside-background-gradient-2: false;
-$aside-background-size: false;
-$aside-background-repeat: repeat;
-$aside-box-shadow: 3px 6px 5px rgba(0,0,0,.5), -3px -1px 5px rgba(0,0,0,.5);
-$aside-border: 1px dashed rgba(255,160,20,.5);
-$aside-border-radius: 5px;
-$aside-outline: 1px dashed rgba(0,20,2,.5);
+$aside-background-color: #191919;
+$aside-background-image: false;
+$aside-border: $standard-spacing solid rgba(127,127,127,.02);
+$aside-border-radius: calc-em(10px, $base-font-size);
+$aside-outline: 0 solid rgba(127,127,127,.25);
+$aside-text-color: #818181;
 
-// Figure (colors and textures boxes)
-$figure-width: 40px;
-$figure-height: 40px;
-$texture-width: $figure-width * 2;
-$texture-height: $figure-height * 2;
-$figure-border: 1px #888 solid;
-
-$figure-caption-text-size: 12px;
-
-$button-corners: 10px;
-$button-background-color: #FF5E00;
+$button-corners: calc-em(10px, $base-font-size);
+$button-background-color: #cc7014;
 $button-gradient: true;
 $button-text-color: #e5e5e5;
 $button-font-size: 1.2em;
-$button-text-shadow: 0px 1px 1px rgba(0,0,0,.5);
-$button-border: 1px shade($button-background-color, 10%) solid;
-$button-box-shadow: inset 2px 4px 5px rgba(0,0,0,.5);
+$button-text-shadow: 0 calc-em(1px, $base-font-size) calc-em(3px, $base-font-size) rgba(0,0,0,.75);
+$button-border: 0 #e3e3e3 solid;
+$button-box-shadow: calc-em(1px, $base-font-size) calc-em(1px, $base-font-size) calc-em(2px, $base-font-size) rgba(0,0,0,.5);
 $button-text-color-over: adjust-lightness($button-text-color, 10%);
 $button-background-color-over: tint($button-background-color, 10%);
 
-$footer-background-color: rgba(0,0,0,.25);
+$footer-background-color: #090909;
 $footer-background-image: false;
 $footer-text-color: rgba(255,255,255,.75);
-$footer-text-shadow: -1px 0px 1px rgba(0,0,0,.5), 0px 1px 1px rgba(255,255,255,.35);
+$footer-text-shadow: calc-em(-1px, $base-font-size) 0 calc-em(1px, $base-font-size) rgba(0,0,0,.5), 0 calc-em(1px, $base-font-size) calc-em(1px, $base-font-size) rgba(255,255,255,.35);

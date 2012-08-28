@@ -1,52 +1,91 @@
 // Project Name and Version Header 
-
 $version-number: "1.0";
-
-$footer-text: 'Designed by Grey Boxes';
-
-$para-1: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor.";
-
-$para-2: "Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna.";
-
-$para-3: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh ultricies vehicula ut id elit.";
-
-/// Global Variables
-$standard-spacing:20px;
-//$inline-images: false;
 
 /// Design Variables
 // sample 5 colors and 3 textures (add figures to html for more)
-$colors: $link-color, #666666, #999999, #aaaaaa, #eee;
-$textures: "concrete.png", "dark-concrete.png", "asphalt.png";
-$adjectives:  dull, conservative, boring, desaturated;
+$colors: #BEE8E0, #373C40, #2E2621, #73320B, #FF5E00;
+$textures: "concrete.png", "scratched-metal2.png";
+$adjectives:  current, clean, sleek, technical ;
 
-$body-background-color: #666;
 
-$page-background-color: #eee;
+$link-color: #FF5E00;
+
+$body-background-color: #fff;
+$body-background-image: "cotton-shirt.png"; //repalce with linen tile
+$body-background-gradient-position-1: 90deg;
+$body-background-gradient-1: rgba(242,40,40,.5) 24%, rgba(0,180,255,.35) 25%,rgba(0,180,255,.35) 50%, rgba(0,0,83,.5) 51%, rgba(0,0,83,.5) 74%, transparent 75%;
+$body-background-gradient-position-2: 0deg;
+$body-background-gradient-2: $body-background-gradient-1;
+$body-background-size: calc-em(80px, $base-font-size) calc-em(80px, $base-font-size);
+$body-background-repeat: repeat;
+
+$page-background-color: #fff;
+$page-background-image: "denim.jpg";
+$page-box-shadow: calc-em(5px, $base-font-size) calc-em(5px, $base-font-size) calc-em(10px, $base-font-size) rgba(0,0,0,.75), calc-em(-5px, $base-font-size) calc-em(5px, $base-font-size) calc-em(10px, $base-font-size) rgba(0,0,0,.75);
+$page-corners: calc-em(5px, $base-font-size);
 $page-margin: 0 auto ($standard-spacing * 4) auto;
+$page-text-color: #ccc;
+
+// Logo is added as a background. Adjust height and width and source
+$logo-margin: 0 $standard-spacing $standard-spacing  0;
+$logo-box-shadow: false;
+
+$header-height: $logo-height + ($standard-spacing * 2);
+$header-padding: $standard-spacing;
+$header-background-color: false;
+$header-background-image: false;
+$header-background-gradient-position-1: bottom;
+$header-background-gradient-1: false;
+$header-background-gradient-position-2: top;
+$header-background-gradient-2: false;
+$header-text-color: #eee;
+
+// Project name and version font size / line-height
 
 
-// Logo is added as a background to a transparent image. Adjust height and width and source
-$header-background-color: #aaa;
+$heading-h1-font-style: bold;
+$heading-h1-font-color: #eee;
 
-$aside-width: 360px;
+$main-text-shadow: 0 0.0625em 0 rgba(255,255,255,.5);
+
+
 $aside-margin: 0 0 $standard-spacing 0;
-$aside-background-color: #bbb;
-$aside-border: none;
+$aside-padding: $standard-spacing;
+$aside-background-color: none;
+$aside-background-image: "denim.jpg";
+$aside-background-gradient-position-1: 135deg;
+$aside-background-gradient-1: false;
+$aside-background-gradient-position-2: 45deg;
+$aside-background-gradient-2: false;
+$aside-background-size: false;
+$aside-background-repeat: repeat;
+$aside-box-shadow: calc-em(3px, $base-font-size) calc-em(6px, $base-font-size) calc-em(5px, $base-font-size) rgba(0,0,0,.5), calc-em(-3px, $base-font-size) calc-em(-1px, $base-font-size) calc-em(5px, $base-font-size) rgba(0,0,0,.5);
+$aside-border: calc-em(1px, $base-font-size) dashed rgba(255,160,20,.5);
+$aside-border-radius: calc-em(5px, $base-font-size);
+$aside-outline: calc-em(1px, $base-font-size) dashed rgba(0,20,2,.5);
+$aside-text-color: #aaa;
 
 // Figure (colors and textures boxes)
-$figure-border:  1px #888 solid;
+$figure-width: calc-em(40px, $base-font-size);
+$figure-height: calc-em(40px, $base-font-size);
+$texture-width: $figure-width * 2;
+$texture-height: $figure-height * 2;
+$figure-border: calc-em(1px, $base-font-size) #888 solid;
 
+$figure-caption-text-size: calc-em(12px, $base-font-size);
 
-$button-corners: 10px;
-$button-background-color: #999;
-$button-text-shadow: 0px 1px 1px rgba(0,0,0,.5);
-$button-border: 2px #eee solid;
-$button-box-shadow: 1px 1px 2px rgba(0,0,0,.5);
+$button-corners: calc-em(10px, $base-font-size);
+$button-background-color: #FF5E00;
+$button-gradient: true;
+$button-text-color: #e5e5e5;
+$button-font-size: 1.2em;
+$button-text-shadow: 0 calc-em(1px, $base-font-size) calc-em(1px, $base-font-size) rgba(0,0,0,.5);
+$button-border: calc-em(1px, $base-font-size) shade($button-background-color, 10%) solid;
+$button-box-shadow: inset calc-em(2px, $base-font-size) calc-em(4px, $base-font-size) calc-em(5px, $base-font-size) rgba(0,0,0,.5);
 $button-text-color-over: adjust-lightness($button-text-color, 10%);
 $button-background-color-over: tint($button-background-color, 10%);
 
-$footer-background-color: #bbb;
+$footer-background-color: rgba(0,0,0,.25);
 $footer-background-image: false;
-$footer-text-color: rgba(#333,.75);
-$footer-text-shadow:none;
+$footer-text-color: rgba(255,255,255,.75);
+$footer-text-shadow: calc-em(1px, $base-font-size) 0 calc-em(1px, $base-font-size) rgba(0,0,0,.5), 0 calc-em(1px, $base-font-size) calc-em(1px, $base-font-size) rgba(255,255,255,.35);

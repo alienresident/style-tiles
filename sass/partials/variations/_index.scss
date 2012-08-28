@@ -10,7 +10,7 @@ $para-2: "Style Tiles are a design deliverable consisting of fonts, colors and i
 $para-3:"View the styles tiles:";
 
 /// Global Variables
-$standard-spacing:20px;
+$standard-spacing:calc-em(20px, $base-font-size);
 
 /// Design Variables
 $link-color: #F4651C;
@@ -27,7 +27,7 @@ $header-height: $logo-height + ($standard-spacing * 2);
 $header-padding: $standard-spacing;
 $header-background-color: rgba(#666, .5);
 
-$main-text-shadow: 0px 1px 1px rgba(255,255,255,.35);
+$main-text-shadow: 0 calc-em(1px, $base-font-size) calc-em(1px, $base-font-size) rgba(255,255,255,.35);
 
 $footer-background-color: rgba(#dfdfdf, .75);
 $footer-text-color: rgba(225,225,225,.25);
