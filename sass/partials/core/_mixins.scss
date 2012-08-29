@@ -30,6 +30,14 @@
   @if $leading { line-height: $leading; }
 }
 
+@mixin st-font-face($font-name, $font-ttf, $font-woff, $font-eot: false, $font-svg: false, $inline-font-files: false) {
+  @if $inline-font-files and $font-name { @include font-face($font-name, inline-font-files($font-ttf, $font-woff, $font-eot, $font-svg)); }
+  @else if $font-name { @include font-face($font-name, font-files($font-ttf, $font-woff, $font-eot, $font-svg)); }
+}
+@mixin st-font-faced($font-name: false) {
+  @if $font-name { font-family: $font-name; }
+}
+
 @mixin st-box-shadow($box-shadow) {
   @if $box-shadow { @include box-shadow($box-shadow) }
 }

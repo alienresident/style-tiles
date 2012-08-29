@@ -2,6 +2,7 @@
 * { 
   @include box-sizing(border-box);
 }
+@include st-font-face($font-name, $font-ttf, $font-woff, $font-eot, $font-svg);
 
 body {
   @include background($body-background-color, $body-background-image, $inline-images, $body-background-gradient-1, $body-background-gradient-position-1, $body-background-gradient-2, $body-background-gradient-position-2);
@@ -69,8 +70,18 @@ section:nth-of-type(2){
       margin: $standard-spacing 0;
       @include st-text-shadow($heading-h1-text-shadow);
       @include bold-italic-uppercase($heading-h1-font-style);
+      @if $heading-h1-font-size { font-size:$heading-h1-font-size; }
+      @include st-font-faced($heading-h1-font-name);
       color: $heading-h1-font-color;
     }
+    h2 {
+      @include st-text-shadow($heading-h2-text-shadow);
+      @include bold-italic-uppercase($heading-h2-font-style);
+      @if $heading-h2-font-size { font-size:$heading-h2-font-size; }
+      @include st-font-faced($heading-h2-font-name);
+      color: $heading-h2-font-color; 
+    }
+    @if $heading-h1-font-name { @include content-before-after("font: "$heading-h1-font-name, false, true) };
   }
   p:nth-of-type(1) {
     display: block;

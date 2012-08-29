@@ -25,6 +25,14 @@ $base-font-size: 16px;
 $base-line-height:1.5em;
 $body-font-size: calc-em(14px, $base-font-size);
 
+// @font-face fonts
+$font-name: false;
+$font-ttf: false;
+$font-woff: false;
+$font-eot: false;
+$font-svg: false;
+
+
 /// Design Variables
 $link-color: #00f;
 
@@ -84,10 +92,19 @@ $project-name-line-height: 1.5em;
 $version-font-size: .9em; // Override the default H2 size
 $version-line-height: 1em;
 
-$heading-h1-text-shadow: false; // e.g. -1px 0px 1px rgba(0,0,0,.25), 0px 1px 1px rgba(255,255,255,.75)
-$heading-h1-font-style: false; 
-$heading-h1-font-color: $page-text-color; // 
-$main-text-shadow: false; //  0px 1px 1px rgba(255,255,255,.35)
+$heading-h1-text-shadow: false;
+$heading-h1-font-style: false;
+$heading-h1-font-color: none;
+$heading-h1-font-name: false;
+$heading-h1-font-size: false;
+
+$heading-h2-text-shadow: false;
+$heading-h2-font-style: false;
+$heading-h2-font-color: none;
+$heading-h2-font-name: false;
+$heading-h2-font-size: false;
+
+$main-text-shadow: false; //  
 
 $aside-margin: 0 0 $standard-spacing 0;
 $aside-padding: $standard-spacing;
