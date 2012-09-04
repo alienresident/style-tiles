@@ -9,11 +9,11 @@ $adjectives:  current, clean, sleek, technical ;
 
 $link-color: #FF5E00;
 
-$font-name: 'PacificoRegular';
-$font-ttf: 'Pacifico/Pacifico-webfont.ttf';
-$font-woff:'Pacifico/Pacifico-webfont.woff';
-$font-eot:'Pacifico/Pacifico-webfont.eot';
-$font-svg:'Pacifico/Pacifico-webfont.svg';
+$font-name: 'peraltaregular';
+$font-ttf: 'Peralta/peralta-regular-webfont.ttf';
+$font-woff: 'Peralta/peralta-regular-webfont.woff';
+$font-eot: 'Peralta/peralta-regular-webfont.eot';
+$font-svg: 'Peralta/peralta-regular-webfont.svg';
 
 $body-background-color: #fff;
 $body-background-image: "cotton-shirt.png"; //repalce with linen tile
@@ -47,8 +47,10 @@ $header-text-color: #eee;
 
 $heading-h1-font-color: rgba(255,160,20,.85);
 $heading-h1-font-name: $font-name;
-$heading-h1-font-size: calc-em(40px, $base-font-size);
+$heading-h1-font-size: calc-em(32px, $base-font-size);
 $main-text-shadow: 0 calc-em(1px, $base-font-size) 0 rgba(255,255,255,.35);
+
+$heading-h2-font-name: $font-name;
 
 $aside-margin: 0 0 ($standard-spacing * 2) 0;
 $aside-padding: $standard-spacing;

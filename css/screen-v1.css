@@ -157,8 +157,10 @@ figure {
 }
 
 @font-face {
-  font-family: "PacificoRegular";
-  src: url('../fonts/Pacifico/Pacifico-webfont.ttf') format('truetype'), url('../fonts/Pacifico/Pacifico-webfont.woff') format('woff'), url('../fonts/Pacifico/Pacifico-webfont.eot') format('embedded-opentype'), url('../fonts/Pacifico/Pacifico-webfont.svg') format('svg');
+  font-family: "peraltaregular";
+  src: url('../fonts/Peralta/peralta-regular-webfont.eot');
+  src: url('../fonts/Peralta/peralta-regular-webfont.eot?#iefix') format('eot'), url('../fonts/Peralta/peralta-regular-webfont.ttf') format('truetype'), url('../fonts/Peralta/peralta-regular-webfont.woff') format('woff'), url('../fonts/Peralta/peralta-regular-webfont.svg') format('svg');
+  font-weight: normal;
 }
 
 /* line 7, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
@@ -272,17 +274,18 @@ section:nth-of-type(2) article {
 /* line 69, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 section:nth-of-type(2) header h1 {
   margin: 0.625em 0;
-  font-size: 2.5em;
-  font-family: "PacificoRegular";
+  font-size: 2em;
+  font-family: "peraltaregular";
   color: rgba(255, 160, 20, 0.85);
 }
 /* line 77, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 section:nth-of-type(2) header h2 {
+  font-family: "peraltaregular";
   color: none;
 }
 /* line 47, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
 section:nth-of-type(2) header:after {
-  content: "font: " "PacificoRegular";
+  content: "font: " "peraltaregular";
 }
 /* line 86, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 section:nth-of-type(2) p:nth-of-type(1) {
