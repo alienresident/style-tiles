@@ -6,15 +6,15 @@
 I loved Samantha Warren's idea of [style tiles](http://styletil.es/). It seemed like the best answer to moving away from time-draining pixel perfect comps. However, as I'm designing in the browser more and more I didn't want to go back into pixel based AdobeLand — Photoshop or Fireworks. Especially now that I am doing Responsive Web Design, I wanted to be designing in CSS and HTML. I thought this would be a perfect project for Sass and Compass. So here's style tiles in HTML & CSS! It's still a work in progress and I am open to ideas how to improve it.
 
 ## Design Philosophy ##
-Style Tiles should be easily deployed i.e. sent to the client. 
+Style Tiles should be extremely easily deployed (i.e. easy to send to the client and easy for them to view). 
 
-Build for rapid iteration
+#### Build for rapid iteration ####
 
 + Everything should be changeable using sass variables
 + No need to edit the HTML
 + Content should also be variables using `content: ""` in `:before` or `:after` pseudo classes (where possible—links don't work here)
 
-Use only HTML and CSS where possible
+#### Use only HTML and CSS where possible ####
 
 + No server-side technologies
 + Modern browser support only (this isn't production code)
