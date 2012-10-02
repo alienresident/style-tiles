@@ -12,7 +12,7 @@ Style Tiles should be extremely easily deployed (i.e. easy to send to the client
 
 + Everything should be changeable using sass variables
 + No need to edit the HTML
-+ Content should also be variables using `content: ""` in `:before` or `:after` pseudo classes (where possible—links don't work here)
++ Copy should also be variables (where possible—links don't work)  using the CSS `content: ""` property with  `:before` or `:after` pseudo classes 
 
 #### Use only HTML and CSS where possible ####
 
