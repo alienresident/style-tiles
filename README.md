@@ -1,5 +1,5 @@
-# Create HTML and CSS Style Tiles with Sass & Compass #
-
+#Sassy Style Tiles#
+## Create HTML and CSS Style Tiles with Sass & Compass ##
 **This is currently under development and is still very alpha!** Feedback is very welcome!
 
 ## Background ##

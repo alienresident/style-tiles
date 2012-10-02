@@ -37,6 +37,7 @@ section:nth-of-type(1) {
       height: $logo-height;
       @include background(false, $logo-file, $inline-images);
       background-repeat: no-repeat;
+      @include background-size($logo-background-size);
       float: $logo-float;
       margin: $logo-margin;
       padding: $standard-spacing;

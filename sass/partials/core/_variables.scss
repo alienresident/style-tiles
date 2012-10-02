@@ -71,7 +71,7 @@ $logo-height: calc-em(150px, $base-font-size);
 $logo-float: left; // right OR none
 $logo-file: "sample-logo.png"; // e.g. "sample-logo.png"
 $logo-box-shadow: false; // e.g. 5px 5px 10px rgba(0,0,0,.75)
-
+$logo-background-size: $logo-width $logo-height;
 
 $header-height: $logo-height + ($standard-spacing * 2); // allow some breathing room around the logo
 $header-padding: $standard-spacing;
