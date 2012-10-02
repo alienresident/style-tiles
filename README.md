@@ -12,19 +12,19 @@ Build for rapid iteration
 
 + Everything should be changeable using sass variables
 + No need to edit the HTML
-+ Content should also be variables using `content: ""` in `:before` or `:after` pseudo classes
++ Content should also be variables using `content: ""` in `:before` or `:after` pseudo classes (where possible—links don't work here)
 
 Use only HTML and CSS where possible
 
 + No server-side technologies
 + Modern browser support only (this isn't production code)
-+ Simplest HTML5 code possible
++ Simple & clean HTML5
 + Use CSS3 selectors and pseudo-classes (avoid classes or ids)
 
-Therefore it shouldn't be reliant on any server side technologies. Style Tiles should be deployable as simple HTML and CSS (perhaps JavaScript if there's becomes a good reason). Style Tiles should be able to run in any folder on a desktop or any web server. Style Tiles need to be viewed in modern browsers: Firefox and Webkit based browsers. Wherever possible I am using CSS rather than some server solution. 
+Style Tiles should be deployable as simple HTML and CSS (perhaps JavaScript if there's becomes a good reason). Style Tiles should be able to run in any folder on a desktop or any web server. Style Tiles need to be viewed in modern browsers: Firefox and Webkit based browsers. Wherever possible I am using CSS rather than some server solution. Therefore can't be reliant on any server side technologies.
 
 ## How It Works ##
-There's an index page that links to the 3 version pages. Each page has it's own stylesheet. The HTML is the same expect for the stylesheet
+There's an index page that links to the 3 version pages. Each page has it's own stylesheet. The HTML is the exactly the same expect for the stylesheet link.
 
 ### Deploying the Styles Tiles ###
 You can zip up all the html files and the css folder folder with the images. By Default all the images will be inlined in the stylesheets. However if you don't want to inline your images. Set `$inline-images` to `false` in the sass/core/\_variables.scss and include the images folder.
@@ -45,15 +45,13 @@ Then you'll need to make some easy edits
 + edit the variables you want to change in sass/paritals/screen/\_v4.scss.
 + finally add or change the link on the index page `<li><a href="v3.html">Version 3</a></li>` to `<li><a href="v4.html">Version 4</a></li>`
 
-### What's variables are available ###
-TK
+### What variables are available? ###
+A full list of all variables:
+sass/paritals/core/\_variables.scss
 
 ## Planned Features ##
 
 + Custom font support
 
-Initially will tie into Google Fonts. Perhaps some other type services.
-
-+ Typographical Variables
-
-This will go in very soon currently the type size and choice is still static values in the `sass/partials/\_typogrpahy`. 
+Currently, the examples utilize a few open source (available at Google Fonts). Would like to be able to inline the fonts. Perhaps some other type services.
+ 
