@@ -10,7 +10,7 @@ $textures: "dark-concrete.png", "scratched-metal2.png";
 $adjectives:  current, clean, sleek, technical ;
 
 $body-background-color: #333;
-$body-background-image: "dark-concrete.png";
+$body-background-image: "textures/dark-concrete.png";
 $body-background-gradient-position-1: left;
 $body-background-gradient-1: rgba(darken($body-background-color, 30%),.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%;
 $body-background-gradient-position-2: right;
@@ -29,7 +29,6 @@ $page-text-color: #ccc;
 $logo-margin: 0 $standard-spacing $standard-spacing  0;
 $logo-box-shadow: false;
 
-$header-height: $logo-height + ($standard-spacing * 2);
 $header-padding: $standard-spacing;
 $header-background-color: #0d0d0d;
 $header-background-image: false;

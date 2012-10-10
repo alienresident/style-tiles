@@ -2,7 +2,7 @@
 * { 
   @include box-sizing(border-box);
 }
-@include st-font-face($font-name, $font-ttf, $font-woff, $font-eot, $font-svg);
+@include st-font-face($font-name, $font-woff, $font-ttf, $inline-fonts, $font-weight, $font-style);
 
 body {
   @include background($body-background-color, $body-background-image, $inline-images, $body-background-gradient-1, $body-background-gradient-position-1, $body-background-gradient-2, $body-background-gradient-position-2);
@@ -33,11 +33,9 @@ section:nth-of-type(1) {
     @include background-size($header-background-size);
     color: $header-text-color;
     figure {
-      width: $logo-width;
-      height: $logo-height;
+      @include image-dimensions($logo-file);
       @include background(false, $logo-file, $inline-images);
       background-repeat: no-repeat;
-      @include background-size($logo-background-size);
       float: $logo-float;
       margin: $logo-margin;
       padding: $standard-spacing;

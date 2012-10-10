@@ -30,9 +30,10 @@
   @if $leading { line-height: $leading; }
 }
 
-@mixin st-font-face($font-name, $font-woff, $font-ttf, $font-eot: false, $font-svg: false, $font-style:normal, $inline-font-files: false) {
-  @if $inline-font-files and $font-name { @include font-face($font-name, inline-font-files($font-woff, $font-ttf, $font-svg), $font-eot, $font-style); }
-  @else if $font-name { @include font-face($font-name, font-files($font-woff, $font-ttf, $font-svg), $font-eot, $font-style); }
+@mixin st-font-face($font-name, $font-woff, $font-ttf, $inline-fonts: false, $font-style:normal, $font-weight:normal, $eot:false) {
+  @if $inline-fonts and $font-name { @include font-face($font-name, inline-font-files($font-woff, woff, $font-ttf, truetype), $eot, $font-weight, $font-style); }
+  @else if $font-name { @include font-face($font-name, font-files($font-woff, woff, $font-ttf, truetype), $eot, $font-weight, $font-style); }
+  
 }
 @mixin st-font-faced($font-name: false) {
   @if $font-name { font-family: $font-name; }
@@ -92,8 +93,8 @@
   @each $texture in $textures {
     &:nth-of-type(#{$i}) {
       border: $figure-border;
-      @if $inline-images { @include background-image(inline-image("#{$texture}")); }
-      @else { background-image: image-url("#{$texture}"); }
+      @if $inline-images { @include background-image(inline-image("textures/#{$texture}")); }
+      @else { background-image: image-url("textures/#{$texture}"); }
     }
     $i: $i + 1;
   }
@@ -123,7 +124,16 @@
   @if $button-font-size { font-size: $button-font-size};
 }
 
+@mixin image-dimensions($image-url) {
+  $image-height: calc-em(image-height($image-url), $base-font-size) ;
+  $image-width: calc-em(image-width($image-url), $base-font-size);
+  height: $image-height;
+  width: $image-width;
+  @include background-size($image-width $image-height);
+}
+
 // Functions
 @function calc-em($target-px, $context) {
   @return ($target-px / $context) * 1em;
 }
+

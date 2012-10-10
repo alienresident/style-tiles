@@ -1,11 +1,11 @@
 // Project Name and Version Header 
 
-$project-name: "Super Awesome Project";
+$project-name: "Sassy Style Tiles";
 $version-number: "1.0, 2.0, 3.0";
 
-$para-1: $project-name" is a sample project for Style Tiles—HTML & CSS version: powered by SASS and Compass.";
+$para-1: $project-name "! HTML & CSS style tiles powered by SASS and Compass.";
 
-$para-2: "Style Tiles are a design deliverable consisting of fonts, colors and interface elements that communicate the essence of a visual brand for the web.  Style tiles are for when a moodboard is too vague and a comp is too literal. Style tiles establish a direct connection with actual interface elements without defining layout.";
+$para-2: "Style Tiles are a design deliverable consisting of fonts, colors and interface elements that communicate the essence of a visual brand for the web. Style tiles are for when a moodboard is too vague and a comp is too literal. Style tiles establish a direct connection with actual interface elements without defining layout.";
 
 $para-3:"View the styles tiles:";
 
@@ -16,14 +16,12 @@ $standard-spacing: calc-em(20px, $base-font-size);
 $link-color: #405b6b;
 
 $body-background-color: #dfe1d1;
-
 $page-background-color: #eaeaea;
 $page-margin: 0 auto ($standard-spacing * 4) auto;
 
 // Logo is added as a background to a transparent image. Adjust height and width and source
-$logo-file: "sample-logo.png";
+$logo-file: "logos/sassy-style-tiles-logo.png";
 
-$header-height: $logo-height + ($standard-spacing * 2);
 $header-padding: $standard-spacing;
 $header-background-color: rgba(#929ca5, 1);
 

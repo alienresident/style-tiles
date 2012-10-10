@@ -12,11 +12,10 @@ $link-color: #FF5E00;
 $font-name: 'peraltaregular';
 $font-ttf: 'Peralta/peralta-regular-webfont.ttf';
 $font-woff: 'Peralta/peralta-regular-webfont.woff';
-$font-eot: 'Peralta/peralta-regular-webfont.eot';
-$font-svg: 'Peralta/peralta-regular-webfont.svg';
+
 
 $body-background-color: #fff;
-$body-background-image: "cotton-shirt.png"; //replace with linen tile
+$body-background-image: "textures/cotton-shirt.png"; //replace with linen tile
 $body-background-gradient-position-1: 90deg;
 $body-background-gradient-1: rgba(242,40,40,.5) 24%, rgba(0,180,255,.35) 25%,rgba(0,180,255,.35) 50%, rgba(0,0,83,.5) 51%, rgba(0,0,83,.5) 74%, transparent 75%;
 $body-background-gradient-position-2: 0deg;
@@ -25,7 +24,7 @@ $body-background-size: calc-em(80px, $base-font-size) calc-em(80px, $base-font-s
 $body-background-repeat: repeat;
 
 $page-background-color: #fff;
-$page-background-image: "denim.jpg";
+$page-background-image: "textures/denim.jpg";
 $page-box-shadow: calc-em(5px, $base-font-size) calc-em(5px, $base-font-size) calc-em(10px, $base-font-size) rgba(0,0,0,.75), calc-em(-5px, $base-font-size) calc-em(5px, $base-font-size) calc-em(10px, $base-font-size) rgba(0,0,0,.75);
 $page-corners: calc-em(5px, $base-font-size);
 $page-margin: 0 auto ($standard-spacing * 4) auto;
@@ -35,7 +34,6 @@ $page-text-color: #ccc;
 $logo-margin: 0 $standard-spacing $standard-spacing  0;
 $logo-box-shadow: false;
 
-$header-height: $logo-height + ($standard-spacing * 2);
 $header-padding: $standard-spacing;
 $header-background-color: false;
 $header-background-image: false;
@@ -55,7 +53,7 @@ $heading-h2-font-name: $font-name;
 $aside-margin: 0 0 ($standard-spacing * 2) 0;
 $aside-padding: $standard-spacing;
 $aside-background-color: none;
-$aside-background-image: "denim.jpg";
+$aside-background-image: "textures/denim.jpg";
 $aside-background-gradient-position-1: 135deg;
 $aside-background-gradient-1: false;
 $aside-background-gradient-position-2: 45deg;

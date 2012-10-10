@@ -29,9 +29,11 @@ $body-font-size: calc-em(14px, $base-font-size);
 $font-name: false;
 $font-ttf: false;
 $font-woff: false;
-$font-eot: false;
-$font-svg: false;
-$inline-font-files: true;
+$font-eot: false; // we don't need this as it's not production code
+$font-svg: false; // we don't need this either
+$inline-fonts: true;
+$font-weight: normal;
+$font-style: normal;
 
 /// Design Variables
 $link-color: #00f;
@@ -66,14 +68,11 @@ $page-text-color: #333;
 
 // Logo is added as a background to a transparent image. Adjust height and width and source
 $logo-margin: 0 $standard-spacing $standard-spacing  0; // TRBL: Top Right Bottom Left
-$logo-width: calc-em(200px, $base-font-size); 
-$logo-height: calc-em(150px, $base-font-size);
 $logo-float: left; // right OR none
-$logo-file: "sample-logo.png"; // e.g. "sample-logo.png"
+$logo-file: "logos/sample-logo.png"; // e.g. "sample-logo.png"
 $logo-box-shadow: false; // e.g. 5px 5px 10px rgba(0,0,0,.75)
-$logo-background-size: $logo-width $logo-height;
 
-$header-height: $logo-height + ($standard-spacing * 2); // allow some breathing room around the logo
+$header-height: calc-em(image-height($logo-file), $base-font-size) + ($standard-spacing * 2); // allow some breathing room around the logo
 $header-padding: $standard-spacing;
 $header-background-color: false;
 $header-background-image: false;
