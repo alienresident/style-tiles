@@ -1,35 +1,37 @@
-#Sassy Style Tiles#
-### Create HTML and CSS Style Tiles with Sass & Compass ###
+#Sassy Style Tiles
+### Create HTML and CSS Style Tiles with Sass & Compass
 **This is currently under development and is still very alpha!** Feedback is very welcome!
 
-## Background ##
-I loved Samantha Warren's idea of [style tiles](http://styletil.es/). It seemed like the best answer to moving away from time-draining pixel perfect comps. However, as I'm designing in the browser more and more I didn't want to go back into pixel based AdobeLand — Photoshop or Fireworks. Especially now that I am doing Responsive Web Design, I wanted to be designing in CSS and HTML. I thought this would be a perfect project for Sass and Compass. So here's style tiles in HTML & CSS! It's still a work in progress and I am open to ideas how to improve it.
+## Background
+I loved Samantha Warren's idea of [style tiles](http://styletil.es/). It seemed like the best answer to moving away from time-draining pixel perfect comps. However, as I'm designing in the browser more and more I didn't want to go back into pixel based AdobeLand — Photoshop or Fireworks. Especially now that I am doing  Responsive Web Design, I wanted to be designing in CSS and HTML. I thought this would be a perfect project for Sass and Compass. So here's Sass-ified style tiles in HTML & CSS! It's still a work in progress and I am open to ideas how to improve it.
 
-## Design Philosophy ##
+## Design Philosophy
 Style Tiles should be extremely easily deployed (i.e. easy to send to the client and easy for them to view). 
 
-#### Build for rapid iteration ####
+#### Build for rapid iteration
 
-+ Everything should be changeable using sass variables
-+ No need to edit the HTML
-+ Copy should also be variables (where possible—links don't work)  using the CSS `content: ""` property with  `:before` or `:after` pseudo classes 
++ Use sass variables where possible
++ Shouldn’t need to edit the HTML
++ Copy should also be variables
++ One file to control each iteration
 
-#### Use only HTML and CSS where possible ####
+
+#### Use only HTML and CSS where possible
 
 + No server-side technologies
-+ Modern browser support only (this isn't production code)
++ Modern browser support only (not production code)
 + Simple & clean HTML5
 + Use CSS3 selectors and pseudo-classes (avoid classes or ids)
 
 Style Tiles should be deployable as simple HTML and CSS (perhaps JavaScript if there's becomes a good reason). Style Tiles should be able to run in any folder on a desktop or any web server. Style Tiles need to be viewed in modern browsers: Firefox and Webkit based browsers. Wherever possible I am using CSS rather than some server solution. Therefore can't be reliant on any server side technologies.
 
-## How It Works ##
+## How It Works
 There's an index page that links to the 3 version pages. Each page has it's own stylesheet. The HTML is the exactly the same expect for the stylesheet link.
 
-### Deploying the Styles Tiles ###
+### Deploying the Styles Tiles
 You can zip up all the html files and the css folder folder with the images. By Default all the images will be inlined in the stylesheets. However if you don't want to inline your images. Set `$inline-images` to `false` in the sass/core/\_variables.scss and include the images folder.
  
-### Adding more Versions ###
+### Adding more Versions
 More pages can be easily added by duplicating these files
 
 + v3.html to v4.html
@@ -49,8 +51,11 @@ Then you'll need to make some easy edits
 The full list of variables that are available is in:
 sass/paritals/core/\_variables.scss
 
-###Code Examples###
-Here's an example of how the content-before-after mixin create the pseudo selector 
+### Code Examples
+
+#### How the copy variables are transformed into CSS  
+Here's an example of how the content-before-after mixin creates the pseudo selector and adds whats in the variables in to the content attribute.
+
 ##### HTML
 Source: _v1.html_  
 
@@ -102,9 +107,92 @@ Source: _css/screen-v1.css_
       content: "\2752\20 Designed by Grey Boxes \2751";
     }
 
-## Planned Features ##
+#### How the list of textures is transformed into the CSS
+
+##### HTML
+Source: _v1.html_  
+    <aside>
+      <h3>Textures</h3>
+        <figure>
+        </figure>
+        <figure>
+        </figure>
+        <figure>
+        </figure>
+          <figcaption></figcaption>
+    </aside>
+
+#### Sass Variables
+Source: _sass/partials/variations/\_v1.scss_  
+
+    $figure-width: calc-em(40px, $base-font-size);
+    $figure-height: calc-em(40px, $base-font-size);
+    $texture-width: $figure-width * 2; // double the color size to show the textures better
+    $texture-height: $figure-height * 2; // same
+
+$textures: "cotton-shirt.png", "denim.jpg";
+$inline-images: true; // can be set to false
+
+##### Sass Structure partial
+Source: _sass/partials/core/\_structure.scss_  
+
+    aside {
+      ...
+      &:nth-of-type(2) figure {
+        width: $texture-width;
+        height: $texture-height;
+        @include texture-boxes($textures, $inline-images);
+      }
+    }
+
+##### Sass Mixin partial
+Source: _sass/partials/core/\_mixins.scss_  
+
+
+    @mixin texture-boxes($textures, $inline-images: false) {
+      $i : 1;
+      @each $texture in $textures {
+        &:nth-of-type(#{$i}) {
+          border: $figure-border;
+          @if $inline-images { @include background-image(inline-image("textures/#{$texture}")); }
+          @else { background-image: image-url("textures/#{$texture}"); }
+        }
+        $i: $i + 1;
+      }
+    }
+
+##### Generated CSS
+Source: _css/screen-v1.css_
+
+    /// When inline image is set to false
+    aside:nth-of-type(2) figure:nth-of-type(1) {
+      border: 0.063em #888888 solid;
+      background-image: url('../images/textures/cotton-shirt.png?1346169991');
+    }
+    /* line 94, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
+    aside:nth-of-type(2) figure:nth-of-type(2) {
+      border: 0.063em #888888 solid;
+      background-image: url('../images/textures/denim.jpg?1345644552');
+    }
+
+    /// When inline image is set to true  
+    aside:nth-of-type(2) figure:nth-of-type(1) {
+      border: 0.063em #888888 solid;
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHgCAMAAABKCk6nAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wd6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4g.....');
+    }
+    aside:nth-of-type(2) figure:nth-of-type(2) {
+      border: 0.063em #888888 solid;
+      background-image: url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAZAAD/4QNvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6MzI6MDAgICAgICAgICI+IDxy.....');
+    }
+
+
+
+
+
+## Planned Features
 
 + Custom font support
 
-Currently, the examples utilize a few open source (available at Google Fonts). Would like to be able to inline the fonts. Perhaps some other type services.
- 
+Currently, the examples utilizes a few open source fonts  (that are available at Google Fonts). I have added the option to inline the fonts but they will significantly increase the size of the css (not a good solution for production). 
+
+If people are interested I may expand to incorporating some other type services.
