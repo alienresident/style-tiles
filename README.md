@@ -51,46 +51,46 @@ sass/paritals/core/\_variables.scss
 
 ###Code Examples###
 Here's an example of how the content-before-after mixin create the pseudo selector 
-####HTML
+####HTML####
 v1.html  
-`<hgroup>  
-  <h1>Project Name: </h1>  
-  <h2>Versions: </h2>  
-</hgroup>`  
-...  
-`<footer>  
-</footer>`  
+    `<hgroup>  
+      <h1>Project Name: </h1>
+      <h2>Versions: </h2>
+    </hgroup>`
+    ...
+    `<footer>
+    </footer>`
 
-####Sass Variables
-`$project-name: "Sassy Style Tiles";  
-$footer-text: '\2752\20 Designed by Grey Boxes \2751'; // ❒ Designed by Grey Boxes ❑`  
+####Sass Variables####
+    `$project-name: "Sassy Style Tiles";
+    $footer-text: '\2752\20 Designed by Grey Boxes \2751'; // ❒ Designed by Grey Boxes ❑`
 
 ####Sass Structure partial####
-`section:nth-of-type(1) header hgroup {  
-  ...  
-  h1 {  
-    ...  
-    @include content-before-after($project-name, false, true);  
-  }  
-}  
-footer {  
-  ...  
-  @include content-before-after($footer-text, false, true);  
-}`  
+    `section:nth-of-type(1) header hgroup {
+      ...
+      h1 {
+        ...
+        @include content-before-after($project-name, false, true);
+      }
+    }
+    footer {
+      ...
+      @include content-before-after($footer-text, false, true);
+    }`
 
 ####Sass Mixin partial####
-`@mixin content-before-after($content, $before: default, $after:false ) {  
-  @if $before { &:before { content: $content; } }  
-  @if $after { &:after { content: $content; } }  
-}`  
+    `@mixin content-before-after($content, $before: default, $after:false ) {
+      @if $before { &:before { content: $content; } }
+      @if $after { &:after { content: $content; } }
+    }`
 
 #### Generated CSS #### 
-`section:nth-of-type(1) header hgroup h1:after {  
-  content: "Sassy Style Tiles";  
-}  
-footer:after {  
-  content: "\2752\20 Designed by Grey Boxes \2751";  
-}`  
+    `section:nth-of-type(1) header hgroup h1:after {
+      content: "Sassy Style Tiles";
+    }
+    footer:after {
+      content: "\2752\20 Designed by Grey Boxes \2751";
+    }`
 
 ## Planned Features ##
 
