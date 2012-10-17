@@ -54,7 +54,7 @@ sass/paritals/core/\_variables.scss
 ### Code Examples
 
 #### How the copy variables are transformed into CSS  
-Here's an example of how the content-before-after mixin creates the pseudo selector and adds whats in the variables in to the content attribute.
+Here's an example of how the `content-before-after` mixin creates the pseudo selector and adds whats in the variables in to the content attribute.
 
 ##### HTML
 Source: _v1.html_  
@@ -108,9 +108,10 @@ Source: _css/screen-v1.css_
     }
 
 #### How the list of textures is transformed into the CSS
-
+The `texture-boxes` mixin takes an array (comma separated list) of image file names that are in the `images/textures` folder. It uses an [@each sass control directive](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#each-directive) to generate the CSS.
 ##### HTML
 Source: _v1.html_  
+
     <aside>
       <h3>Textures</h3>
         <figure>
@@ -125,11 +126,6 @@ Source: _v1.html_
 #### Sass Variables
 Source: _sass/partials/variations/\_v1.scss_  
 
-    $figure-width: calc-em(40px, $base-font-size);
-    $figure-height: calc-em(40px, $base-font-size);
-    $texture-width: $figure-width * 2; // double the color size to show the textures better
-    $texture-height: $figure-height * 2; // same
-
 $textures: "cotton-shirt.png", "denim.jpg";
 $inline-images: true; // can be set to false
 
@@ -139,8 +135,7 @@ Source: _sass/partials/core/\_structure.scss_
     aside {
       ...
       &:nth-of-type(2) figure {
-        width: $texture-width;
-        height: $texture-height;
+        ...
         @include texture-boxes($textures, $inline-images);
       }
     }
@@ -169,7 +164,6 @@ Source: _css/screen-v1.css_
       border: 0.063em #888888 solid;
       background-image: url('../images/textures/cotton-shirt.png?1346169991');
     }
-    /* line 94, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
     aside:nth-of-type(2) figure:nth-of-type(2) {
       border: 0.063em #888888 solid;
       background-image: url('../images/textures/denim.jpg?1345644552');
@@ -178,15 +172,12 @@ Source: _css/screen-v1.css_
     /// When inline image is set to true  
     aside:nth-of-type(2) figure:nth-of-type(1) {
       border: 0.063em #888888 solid;
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHgCAMAAABKCk6nAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wd6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4g.....');
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHgCAMAAABKCk6nAAAAGXRFWHRT  b2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHB  hY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG  1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wd6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzI  yLXJkZi1zeW50YXgtbnMjIj4g.....');
     }
     aside:nth-of-type(2) figure:nth-of-type(2) {
       border: 0.063em #888888 solid;
-      background-image: url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAZAAD/4QNvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6MzI6MDAgICAgICAgICI+IDxy.....');
+      background-image: url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQ  AAAAZAAD/4QNvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaW  Q9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ld  GEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6  MzI6MDAgICAgICAgICI+IDxy.....');
     }
-
-
-
 
 
 ## Planned Features
@@ -196,3 +187,7 @@ Source: _css/screen-v1.css_
 Currently, the examples utilizes a few open source fonts  (that are available at Google Fonts). I have added the option to inline the fonts but they will significantly increase the size of the css (not a good solution for production). 
 
 If people are interested I may expand to incorporating some other type services.
+
++ Way to control the what links are available on the index page.
+The idea is that you may want to control the visibility of the links on the index page. For example, on a second round of iteration you may not want the link to version 2 (if the the clients rejected it) to be still visible. 
+ 
