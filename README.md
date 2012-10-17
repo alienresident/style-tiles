@@ -52,7 +52,7 @@ sass/paritals/core/\_variables.scss
 ###Code Examples###
 Here's an example of how the content-before-after mixin create the pseudo selector 
 ##### HTML
-_v1.html_  
+Source: _v1.html_  
 
     <hgroup>  
       <h1>Project Name: </h1>
@@ -63,13 +63,13 @@ _v1.html_
     </footer>
 
 #### Sass Variables
-_"sass/partials/variations/\_v1.scss"_  
+Source: _sass/partials/variations/\_v1.scss_  
 
     $project-name: "Sassy Style Tiles";
     $footer-text: '\2752\20 Designed by Grey Boxes \2751'; // ❒ Designed by Grey Boxes ❑
 
 ##### Sass Structure partial
-_"sass/partials/core/\_structure.scss"_  
+Source: _sass/partials/core/\_structure.scss_  
 
     section:nth-of-type(1) header hgroup {
       ...
@@ -84,7 +84,7 @@ _"sass/partials/core/\_structure.scss"_
     }
 
 ##### Sass Mixin partial
-_"sass/partials/core/\_mixins.scss"_  
+Source: _sass/partials/core/\_mixins.scss_  
 
     @mixin content-before-after($content, $before: default, $after:false ) {
       @if $before { &:before { content: $content; } }
@@ -92,7 +92,8 @@ _"sass/partials/core/\_mixins.scss"_
     }
 
 ##### Generated CSS
-_css/screen-v1.css_
+Source: _css/screen-v1.css_  
+
     section:nth-of-type(1) header hgroup h1:after {
       content: "Sassy Style Tiles";
     }
