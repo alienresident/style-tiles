@@ -81,7 +81,7 @@ _"sass/partials/core/\_structure.scss"_
     }
 
 ##### Sass Mixin partial
-_"sass/partials/core/\_mixins.scss"_
+_"sass/partials/core/\_mixins.scss"_  
     @mixin content-before-after($content, $before: default, $after:false ) {
       @if $before { &:before { content: $content; } }
       @if $after { &:after { content: $content; } }
