@@ -51,22 +51,24 @@ sass/paritals/core/\_variables.scss
 
 ###Code Examples###
 Here's an example of how the content-before-after mixin create the pseudo selector 
-####HTML####
-v1.html  
-    `<hgroup>  
+##### HTML
+_v1.html_  
+    <hgroup>  
       <h1>Project Name: </h1>
       <h2>Versions: </h2>
-    </hgroup>`
+    </hgroup>
     ...
-    `<footer>
-    </footer>`
+    <footer>
+    </footer>
 
-####Sass Variables####
-    `$project-name: "Sassy Style Tiles";
-    $footer-text: '\2752\20 Designed by Grey Boxes \2751'; // ❒ Designed by Grey Boxes ❑`
+#### Sass Variables
+_"sass/partials/variations/\_v1.scss"_
+    $project-name: "Sassy Style Tiles";
+    $footer-text: '\2752\20 Designed by Grey Boxes \2751'; // ❒ Designed by Grey Boxes ❑
 
-####Sass Structure partial####
-    `section:nth-of-type(1) header hgroup {
+##### Sass Structure partial
+_"sass/partials/core/\_structure.scss"_
+    section:nth-of-type(1) header hgroup {
       ...
       h1 {
         ...
@@ -76,21 +78,24 @@ v1.html
     footer {
       ...
       @include content-before-after($footer-text, false, true);
-    }`
+    }
 
-####Sass Mixin partial####
-    `@mixin content-before-after($content, $before: default, $after:false ) {
+##### Sass Mixin partial
+_"sass/partials/core/\_mixins.scss"_
+    @mixin content-before-after($content, $before: default, $after:false ) {
       @if $before { &:before { content: $content; } }
       @if $after { &:after { content: $content; } }
-    }`
+    }
 
-#### Generated CSS #### 
-    `section:nth-of-type(1) header hgroup h1:after {
+##### Generated CSS
+_css/screen-v1.css_
+    section:nth-of-type(1) header hgroup h1:after {
       content: "Sassy Style Tiles";
     }
+    ...
     footer:after {
       content: "\2752\20 Designed by Grey Boxes \2751";
-    }`
+    }
 
 ## Planned Features ##
 
