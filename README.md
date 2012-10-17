@@ -108,7 +108,8 @@ Source: _css/screen-v1.css_
     }
 
 #### How the list of textures is transformed into the CSS
-The `texture-boxes` mixin takes an array (comma separated list) of image file names that are in the `images/textures` folder. It uses an [@each sass control directive](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#each-directive) to generate the CSS.
+The `texture-boxes` mixin takes an array (comma separated list) of image file names that are in the `images/textures` folder. It uses an [@each sass control directive](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#each-directive) to generate the CSS. It then uses an [@if sass control directive](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#id10) to see if you set the images to be inlined (base 64 encoded) into the CSS.
+ 
 ##### HTML
 Source: _v1.html_  
 
@@ -126,8 +127,8 @@ Source: _v1.html_
 #### Sass Variables
 Source: _sass/partials/variations/\_v1.scss_  
 
-$textures: "cotton-shirt.png", "denim.jpg";
-$inline-images: true; // can be set to false
+    $textures: "cotton-shirt.png", "denim.jpg";
+    $inline-images: true; // can be set to false
 
 ##### Sass Structure partial
 Source: _sass/partials/core/\_structure.scss_  
@@ -172,11 +173,19 @@ Source: _css/screen-v1.css_
     /// When inline image is set to true  
     aside:nth-of-type(2) figure:nth-of-type(1) {
       border: 0.063em #888888 solid;
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHgCAMAAABKCk6nAAAAGXRFWHRT  b2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHB  hY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG  1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wd6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzI  yLXJkZi1zeW50YXgtbnMjIj4g.....');
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHg
+      CAMAAABKCk6nAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2FpVFh0WE1MO
+      mNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cm
+      VTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wd6c
+      mRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4g.....');
     }
     aside:nth-of-type(2) figure:nth-of-type(2) {
       border: 0.063em #888888 solid;
-      background-image: url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQ  AAAAZAAD/4QNvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaW  Q9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ld  GEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6  MzI6MDAgICAgICAgICI+IDxy.....');
+      background-image: url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAA
+      sABFEdWNreQABAAQAAAAZAAD/4QNvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNr
+      ZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhI
+      HhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA
+      2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6  MzI6MDAgICAgICAgICI+IDxy.....');
     }
 
 
