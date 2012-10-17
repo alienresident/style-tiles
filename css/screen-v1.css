@@ -247,7 +247,7 @@ section:nth-of-type(1) header hgroup h1 {
 }
 /* line 48, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_mixins.scss */
 section:nth-of-type(1) header hgroup h1:after {
-  content: "Super Awesome Project";
+  content: "Sassy Style Tiles";
 }
 /* line 51, /Applications/MAMP/htdocs/style-tiles/sass/partials/core/_structure.scss */
 section:nth-of-type(1) header hgroup h2 {
