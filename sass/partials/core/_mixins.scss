@@ -7,10 +7,6 @@
     $link-color-over: adjust-lightness($link-color, $amount-1);
     $link-color-visited: adjust-lightness($link-color, $amount-2);
   }
-  @if $mode == hue { 
-    $link-color-over: adjust-lightness($link-color, $amount-1);
-    $link-color-visited: adjust-lightness($link-color, $amount-2);
-  }
   
   @include hover-link;
   @include link-colors( $link-color,

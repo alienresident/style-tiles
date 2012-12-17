@@ -22,6 +22,7 @@ Style Tiles should be extremely easily deployed (i.e. easy to send to the client
 + Modern browser support only (not production code)
 + Simple & clean HTML5
 + Use CSS3 selectors and pseudo-classes (avoid classes or ids)
++ No dependancies on other css frameworks (Bootstrap or Foundation)
 
 Style Tiles should be deployable as simple HTML and CSS (perhaps JavaScript if there's becomes a good reason). Style Tiles should be able to run in any folder on a desktop or any web server. Style Tiles need to be viewed in modern browsers: Firefox and Webkit based browsers. Wherever possible I am using CSS rather than some server solution. Therefore can't be reliant on any server side technologies.
 
