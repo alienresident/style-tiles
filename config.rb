@@ -26,21 +26,21 @@ relative_assets = true
 
 require 'nokogiri'
 
-html_dir = ""
+ignore_files = ["screen"]
 
-sa_targets = Hash.new { |h,k| h[k] = "#{k}"[7..-1] }
-sa_targets["screen"] = "index"
+html_dir = "html/"
+html_src = "template.html"
+
+doc = Nokogiri::HTML(File.read(html_dir + html_src))
+head = (doc/"head").first
+style = doc.create_element("style")
+head << style
 
 on_stylesheet_saved do | f |
   name = File.basename(f).chomp(File.extname(f))
-
-  doc = Nokogiri::HTML(File.read(html_dir + sa_targets[name] + ".html"))
-  head = (doc/"head").first
-  style = doc.create_element("style")
-
-  style.inner_html = File.read(f)
-  (head/"link [rel='stylesheet']").remove
-  head << style
-
-  File.open(html_dir + sa_targets[name] + ".sa.html", "w") {|fh| fh.write(doc)}
+  unless ignore_files.any? { |x| x == name }
+    puts "\tcreate #{html_dir}#{name}.html"
+    style.inner_html = File.read(f)
+    File.open(html_dir + name + ".html", "w") {|fh| fh.write(doc)}
+  end
 end
