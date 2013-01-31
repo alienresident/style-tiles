@@ -59,19 +59,18 @@ sass/core/\_variables.scss and include the images folder.
 
 More pages can be easily added by duplicating these files
 
-+ v3.html to v4.html
+<!--+ v3.html to v4.html-->
 + sass/screen-v3.scss to sass/screen-v4.scss
 + sass/paritals/screen/\_v3.scss to sass/paritals/screen/\_v4.scss
 
 Then you'll need to make some easy edits
 
-+ change `<link rel="stylesheet" href="css/screen-v3.css">` to
-`<link rel="stylesheet" href="css/screen-v4.css">` in v4.html.
-+ change
-@import "partials/variations/\_v3"; to @import "partials/variations/\_v4"; in sass/screen-v4.scss
++ change @import "partials/variations/\_v3"; to @import
+"partials/variations/\_v4"; in sass/screen-v4.scss
 + edit the variables you want to change in sass/paritals/screen/\_v4.scss.
 + finally add or change the link on the index page `<li><a
-href="v3.html">Version 3</a></li>` to `<li><a href="v4.html">Version 4</a></li>`
+href="html/v3.html">Version 3</a></li>` to `<li><a href="html/"v4.html">Version
+4</a></li>`
 
 ### What variables are available? ###
 
@@ -89,13 +88,15 @@ selector and adds whats in the variables in to the content attribute.
 
 Source: _v1.html_
 
-    <hgroup>
-      <h1>Project Name: </h1>
-      <h2>Versions: </h2>
-    </hgroup>
-    ...
-    <footer>
-    </footer>
+```html
+<hgroup>
+  <h1>Project Name: </h1>
+  <h2>Versions: </h2>
+</hgroup>
+...
+<footer>
+</footer>
+```
 
 #### Sass Variables
 
@@ -133,13 +134,15 @@ Source: _sass/partials/core/\_mixins.scss_
 
 Source: _css/screen-v1.css_
 
-    section:nth-of-type(1) header hgroup h1:after {
-      content: "Sassy Style Tiles";
-    }
-    ...
-    footer:after {
-      content: "\2752\20 Designed by Grey Boxes \2751";
-    }
+```css
+section:nth-of-type(1) header hgroup h1:after {
+  content: "Sassy Style Tiles";
+}
+...
+footer:after {
+  content: "\2752\20 Designed by Grey Boxes \2751";
+}
+```
 
 #### How the list of textures is transformed into the CSS
 
@@ -152,18 +155,20 @@ to see if you set the images to be inlined (base 64 encoded) into the CSS.
 
 ##### HTML
 
-Source: _v1.html_
+Source: _template.html_
 
-    <aside>
-      <h3>Textures</h3>
-        <figure>
-        </figure>
-        <figure>
-        </figure>
-        <figure>
-        </figure>
-          <figcaption></figcaption>
-    </aside>
+```html
+<aside>
+  <h3>Textures</h3>
+<figure>
+</figure>
+<figure>
+</figure>
+<figure>
+</figure>
+  <figcaption></figcaption>
+</aside>
+```
 
 #### Sass Variables
 
@@ -204,34 +209,35 @@ Source: _sass/partials/core/\_mixins.scss_
 
 Source: _css/screen-v1.css_
 
-    /// When inline image is set to false
-    aside:nth-of-type(2) figure:nth-of-type(1) {
-      border: 0.063em #888888 solid;
-      background-image: url('../images/textures/cotton-shirt.png?1346169991');
-    }
-    aside:nth-of-type(2) figure:nth-of-type(2) {
-      border: 0.063em #888888 solid;
-      background-image: url('../images/textures/denim.jpg?1345644552');
-    }
+```css
+/// When inline image is set to false
+aside:nth-of-type(2) figure:nth-of-type(1) {
+  border: 0.063em #888888 solid;
+  background-image: url('../images/textures/cotton-shirt.png?1346169991');
+}
+aside:nth-of-type(2) figure:nth-of-type(2) {
+  border: 0.063em #888888 solid;
+  background-image: url('../images/textures/denim.jpg?1345644552');
+}
 
-    /// When inline image is set to true
-    aside:nth-of-type(2) figure:nth-of-type(1) {
-      border: 0.063em #888888 solid;
-      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHg
-      CAMAAABKCk6nAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2FpVFh0WE1MO
-      mNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cm
-      VTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wd6c
-      mRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4g.....');
-    }
-    aside:nth-of-type(2) figure:nth-of-type(2) {
-      border: 0.063em #888888 solid;
-      background-image: url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAA
-      sABFEdWNreQABAAQAAAAZAAD/4QNvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNr
-      ZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhI
-      HhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA
-      2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6  MzI6MDAgICAgICAgICI+IDxy.....');
-    }
-
+/// When inline image is set to true
+aside:nth-of-type(2) figure:nth-of-type(1) {
+  border: 0.063em #888888 solid;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHg
+  CAMAAABKCk6nAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2FpVFh0WE1MO
+  mNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cm
+  VTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wd6c
+  mRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4g.....');
+}
+aside:nth-of-type(2) figure:nth-of-type(2) {
+  border: 0.063em #888888 solid;
+  background-image: url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAA
+  sABFEdWNreQABAAQAAAAZAAD/4QNvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNr
+  ZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhI
+  HhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA
+  2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6  MzI6MDAgICAgICAgICI+IDxy.....');
+}
+```
 
 ## Planned Features
 
