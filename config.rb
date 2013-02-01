@@ -24,23 +24,27 @@ relative_assets = true
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
 
-require 'nokogiri'
-
 ignore_files = ["screen"]
+
 
 html_dir = "html/"
 html_src = "template.html"
+html_style_target = "<@style>"
 
-doc = Nokogiri::HTML(File.read(html_dir + html_src))
-head = (doc/"head").first
-style = doc.create_element("style")
-head << style
 
-on_stylesheet_saved do | f |
+template = File.read(html_dir + html_src)
+lines = template.lines
+
+
+on_stylesheet_saved do |f|
   name = File.basename(f).chomp(File.extname(f))
   unless ignore_files.any? { |x| x == name }
-    puts "\tcreate #{html_dir}#{name}.html"
-    style.inner_html = File.read(f)
-    File.open(html_dir + name + ".html", "w") {|fh| fh.write(doc)}
+    puts "   create #{html_dir}#{name}.html"
+    File.open("#{html_dir}#{name}.html", "w") do |fh|
+      template.lines.each do |line|
+        fh.write((line =~ /#{html_style_target}/) ?
+                 "<style>\n#{File.read(f)}\n</style>\n" : line)
+      end
+    end
   end
 end
