@@ -23,18 +23,14 @@ relative_assets = true
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
-
-ignore_files = ["screen"]
-
+ignore_files = ["index"]
 
 html_dir = "html/"
 html_src = "template.html"
 html_style_target = "<@style>"
 
-
 template = File.read(html_dir + html_src)
 lines = template.lines
-
 
 on_stylesheet_saved do |f|
   name = File.basename(f).chomp(File.extname(f))

@@ -121,7 +121,7 @@
 }
 
 @mixin image-dimensions($image-url) {
-  $image-height: calc-em(image-height($image-url), $base-font-size) ;
+  $image-height: calc-em(image-height($image-url), $base-font-size);
   $image-width: calc-em(image-width($image-url), $base-font-size);
   height: $image-height;
   width: $image-width;
@@ -132,4 +132,3 @@
 @function calc-em($target-px, $context) {
   @return ($target-px / $context) * 1em;
 }
-
