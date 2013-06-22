@@ -2,7 +2,8 @@
 
 // Remove some legacy support since it's not really needed for style tiles (tell your clients to view style tiles a modern browser or send them a screenshot)
 $support-for-original-webkit-gradients: false;
-$legacy-support-for-mozilla: false; 
+$legacy-support-for-mozilla: false;
+$legacy-support-for-ie: false; 
 $experimental-support-for-microsoft: false;
 $experimental-support-for-opera: false;
 
