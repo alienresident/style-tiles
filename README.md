@@ -1,19 +1,25 @@
-# Sassy Style Tiles
+# Compass Style Tiles
 
-### Create HTML and CSS Style Tiles with Sass & Compass
+#### Create HTML and CSS Style Tiles with Sass & Compass
+_This is the development repo for the compass extension and rubygem: [style-tiles](https://rubygems.org/gems/style-tiles)._  
+**This is currently under active development** 
+Feedback is very welcome!
 
-**This is currently under development and is still very alpha!** Feedback is
-  very welcome!
+### *New* Style Tiles is now a Compass extension!
+Style Tiles has changed from a straight sass project to a compass extension. This makes it much easier to get started and to reuse. You can build a starter project using one line and start working on creating style tiles right away.
+
+See the **Installation** notes for details on getting started.
 
 ## Background
 
-I loved Samantha Warren's idea of [style tiles](http://styletil.es/). It seemed
-like the best answer to moving away from time-draining pixel perfect
-comps. However, as I'm designing in the browser more and more I didn't want to
-go back into pixel based AdobeLand — Photoshop or Fireworks. Especially now that
-I am doing Responsive Web Design, I wanted to be designing in CSS and HTML. I
-thought this would be a perfect project for Sass and Compass. So here's
-Sass-ified style tiles in HTML & CSS! It's still a work in progress and I am
+I loved Samantha Warren's idea of [style tiles](http://styletil.es/). It seemed like the best answer to moving away from time-draining pixel perfect comps. However, as I'm designing in the browser more and more I didn't want to go back into pixel based AdobeLand — Photoshop or Fireworks to create Style Tiles. Especially now that
+I am doing Responsive Web Design, I wanted to be designing and thinking in CSS and HTML. I
+thought this would be a perfect project for Sass and Compass. 
+
+At first this was a straight forward Sass p
+
+So here's
+Sass*-ified* style tiles in HTML & CSS! It's still a work in progress and I am
 open to ideas how to improve it.
 
 ## Design Philosophy
@@ -42,6 +48,14 @@ on a desktop or any web server. Style Tiles need to be viewed in modern
 browsers: Firefox and Webkit based browsers. Wherever possible I am using CSS
 rather than some server solution. Therefore can't be reliant on any server side
 technologies.
+
+## Installation
+Compass Pattern Primer is a compass extension bundled as a Ruby gem.
+   
+```bash
+gem install compass-pattern-primer
+```
+You'll need to install [Sass](http://sass-lang.com/) and [Compass](http://compass-style.org/) Ruby Gems too. Documentation for installing and using these gems is pretty extensive.
 
 ## How It Works
 
@@ -254,3 +268,6 @@ If people are interested I may expand to incorporating some other type services.
 The idea is that you may want to control the visibility of the links on the
 index page. For example, on a second round of iteration you may not want the
 link to version 2 (if the the clients rejected it) to be still visible.
+
+##### Requests? Feedback?
+Contact [me](mailto:mark@alienresident.net) or simply file an [issue](https://github.com/alienresident/style-tiles/issues/new)!
