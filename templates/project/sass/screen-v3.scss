@@ -1,0 +1,11 @@
+@import "compass/reset";
+@import "compass/typography";
+@import "compass/css3";
+
+@import "style-tiles";
+
+// Override default variables with version specific variables 
+@import "partials/variations/_v3";
+
+// import the Style Tiles css structure
+@import "style-tiles/core/_structure";

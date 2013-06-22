@@ -1,0 +1,9 @@
+@import "compass/reset";
+@import "compass/typography";
+@import "compass/css3";
+
+// Import the base and style-tiles
+@import "style-tiles/core/_content";
+@import "style-tiles/core/_mixins";
+@import "style-tiles/core/_variables";
+@import "style-tiles/core/_typography";

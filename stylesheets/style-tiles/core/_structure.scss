@@ -1,0 +1,168 @@
+// http://paulirish.com/2012/box-sizing-border-box-ftw/
+* { 
+  @include box-sizing(border-box);
+}
+@include st-font-face($font-name, $font-woff, $font-ttf, $inline-fonts, $font-weight, $font-style);
+
+body {
+  @include background($body-background-color, $body-background-image, $inline-images, $body-background-gradient-1, $body-background-gradient-position-1, $body-background-gradient-2, $body-background-gradient-position-2);
+  background-repeat: $body-background-repeat;
+  @include background-size($body-background-size);
+}
+
+a { 
+ @include set-link-colors($link-color);
+}
+body > div {
+  width: $page-width;
+  margin: $page-margin;
+  @include st-box-shadow($page-box-shadow);
+  @include background($page-background-color, $page-background-image, $inline-images, $page-background-gradient-1, $page-background-gradient-position-1, $page-background-gradient-2, $page-background-gradient-position-2);
+  background-repeat: $page-background-repeat;
+  @include background-size($page-background-size);
+  color: $page-text-color;
+  @include st-text-shadow($main-text-shadow);
+  @include border-radius($page-corners);
+}
+section:nth-of-type(1) {
+  header {
+    height: $header-height;
+    padding: $header-padding;
+    @include background($header-background-color, $header-background-image, $inline-images, $header-background-gradient-1, $header-background-gradient-position-1, $header-background-gradient-2, $header-background-gradient-position-2);
+    background-repeat: $header-background-repeat;
+    @include background-size($header-background-size);
+    color: $header-text-color;
+    figure {
+      @include image-dimensions($logo-file);
+      @include background(false, $logo-file, $inline-images);
+      background-repeat: no-repeat;
+      float: $logo-float;
+      margin: $logo-margin;
+      padding: $standard-spacing;
+      @include st-box-shadow($logo-box-shadow);
+    }
+     hgroup {
+       text-align: $header-text-align;
+      h1 {
+        @include reset-margin-padding-border(true, true, false);
+        @include type-size($project-name-font-size, $project-name-line-height);
+        @include content-before-after($project-name, false, true);
+      }
+      h2 {
+        @include reset-margin-padding-border(true, true, false);
+        @include type-size($version-font-size, $version-line-height);
+        @include content-before-after($version-number, false, true);
+      }
+    }
+  }
+}
+section:nth-of-type(2){
+  clear: both;
+  padding: $standard-spacing;  
+  article {
+    padding: $standard-spacing * 2;
+    width: $article-width;
+    float: left;
+  }
+  header {
+    h1 {
+      margin: $standard-spacing 0;
+      @include st-text-shadow($heading-h1-text-shadow);
+      @include bold-italic-uppercase($heading-h1-font-style);
+      @if $heading-h1-font-size { font-size:$heading-h1-font-size; }
+      @include st-font-faced($heading-h1-font-name);
+      color: $heading-h1-font-color;
+    }
+    h2 {
+      @include st-text-shadow($heading-h2-text-shadow);
+      @include bold-italic-uppercase($heading-h2-font-style);
+      @if $heading-h2-font-size { font-size:$heading-h2-font-size; }
+      @include st-font-faced($heading-h2-font-name);
+      color: $heading-h2-font-color; 
+    }
+    @if $heading-h1-font-name { @include content-before-after("font: "$heading-h1-font-name, false, true) };
+  }
+  p:nth-of-type(1) {
+    display: block;
+    @include content-before-after($para-1);
+  }  
+  p:nth-of-type(2) {
+    display: block;
+    @include content-before-after($para-2);
+  }
+  p:nth-of-type(3) {
+    display: block;
+    @include content-before-after($para-3);
+    }
+  p:nth-of-type(5) a {
+    @include button-style($button-background-color, $button-text-color, $button-corners, $button-border, $button-font-size, $button-gradient);
+    text-transform: capitalize;
+    &:hover, &:focus, &:active {
+      color: $button-text-color-over !important;
+      text-decoration: none;
+      background: $button-background-color-over;
+    }
+  }
+}
+
+aside {
+  display: block;
+  margin: $aside-margin;
+  padding: $aside-padding;
+  @include background($aside-background-color, $aside-background-image, $inline-images, $aside-background-gradient-1, $aside-background-gradient-position-1, $aside-background-gradient-2, $aside-background-gradient-position-2);
+  background-repeat: $aside-background-repeat;
+  @include background-size($aside-background-size);
+  @include border-radius($aside-border-radius);
+  outline: $aside-outline;
+  border: $aside-border;
+  @include st-box-shadow($aside-box-shadow);
+  color: $aside-text-color;
+  &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3) {
+    float: left;
+    width: $aside-width;
+  }
+  &:nth-of-type(3) {
+    ul {
+      list-style: none;
+      display: inline;
+      @include adjectives($adjectives);
+    }
+  }
+  figure {
+    float: left;
+    margin: 0 $standard-spacing 0 0;
+  }
+  &:nth-of-type(1) figure {
+    width: $figure-width;
+    height: $figure-height;
+    @include color-boxes($colors);
+  }
+  &:nth-of-type(2) figure {
+    width: $texture-width;
+    height: $texture-height;
+    @include texture-boxes($textures, $inline-images);
+  }
+}
+figcaption {
+  clear: both;
+  display: block;
+  @include type-size($figure-caption-text-size, false);
+  @include content-before-after($figure-caption);
+}
+footer {
+  clear: both;
+  text-align: $footer-text-align;
+  padding: $standard-spacing;
+  @include content-before-after($footer-text, false, true);
+  @include background($footer-background-color, $footer-background-image, $inline-images, $footer-background-gradient-1, $footer-background-gradient-position-1, $footer-background-gradient-2, $footer-background-gradient-position-2);
+   color: $footer-text-color;
+   @include st-text-shadow($footer-text-shadow);
+   figure {
+     width: $footer-logo-width;
+     height: $footer-logo-height;
+     @include background(false, $footer-logo-file, $inline-images);
+     background-repeat: no-repeat;
+     float: left;
+     padding: $standard-spacing;
+   }
+}

@@ -1,0 +1,134 @@
+@mixin set-link-colors($link-color, $mode: saturation default, $amount-1: 10%, $amount-2: -20%) {
+  
+  $link-color-over: adjust-saturation($link-color, $amount-1);
+  $link-color-visited: adjust-saturation($link-color, $amount-2);
+  
+  @if $mode == lightness { 
+    $link-color-over: adjust-lightness($link-color, $amount-1);
+    $link-color-visited: adjust-lightness($link-color, $amount-2);
+  }
+  
+  @include hover-link;
+  @include link-colors( $link-color,
+                        $hover: $link-color-over,
+                        $active: $link-color-over,
+                        $visited: $link-color-visited,
+                        $focus: $link-color-over
+                      );
+}
+
+@mixin st-text-shadow($text-shadow) {
+  @if $text-shadow { @include text-shadow( $text-shadow); }
+}
+
+@mixin type-size($size, $leading: false) {
+  font-size: $size;
+  @if $leading { line-height: $leading; }
+}
+
+@mixin st-font-face($font-name, $font-woff, $font-ttf, $inline-fonts: false, $font-style:normal, $font-weight:normal, $eot:false) {
+  @if $inline-fonts and $font-name { @include font-face($font-name, inline-font-files($font-woff, woff, $font-ttf, truetype), $eot, $font-weight, $font-style); }
+  @else if $font-name { @include font-face($font-name, font-files($font-woff, woff, $font-ttf, truetype), $eot, $font-weight, $font-style); }
+  
+}
+@mixin st-font-faced($font-name: false) {
+  @if $font-name { font-family: $font-name; }
+}
+
+@mixin st-box-shadow($box-shadow) {
+  @if $box-shadow { @include box-shadow($box-shadow) }
+}
+
+@mixin content-before-after($content, $before: default, $after:false ) {
+  @if $before { &:before { content: $content; } }
+  @if $after { &:after { content: $content; } }
+}
+
+@mixin background($background-color, $background-image: false, $inline-images:false, $body-background-gradient-1: false, $body-background-gradient-position-1: false, $body-background-gradient-2: false, $body-background-gradient-position-2: false) {
+  
+  @if $background-color { background-color: $background-color; }
+  
+  @if $inline-images and $background-image { $background-image: inline-image("#{$background-image}"); }
+  @else if $background-image { $background-image: image-url("#{$background-image}"); }  
+  
+  @if $background-image and $body-background-gradient-1 and $body-background-gradient-2 { @include background-image(linear-gradient( $body-background-gradient-position-1, $body-background-gradient-1 ), linear-gradient( $body-background-gradient-position-2, $body-background-gradient-2 ), $background-image); }
+  @else if $background-image and $body-background-gradient-1 { @include background-image(linear-gradient( $body-background-gradient-position-1, $body-background-gradient-1 ), $background-image); } 
+  @else if $body-background-gradient-1 and $body-background-gradient-2 { @include background-image(linear-gradient( $body-background-gradient-position-1, $body-background-gradient-1 ), linear-gradient( $body-background-gradient-position-2, $body-background-gradient-2 )); }
+  @else if $body-background-gradient-1 { @include background-image(linear-gradient( $body-background-gradient-position-1, $body-background-gradient-1 )); }
+  @else if $background-image { @include background-image($background-image) }
+}
+
+@mixin background-size($background-size: false) {
+  @if $background-size { background-size: $background-size; }
+}
+
+@mixin reset-margin-padding-border($margin :default, $padding: false, $border: false) {
+  @if $margin { margin: 0; }
+  @if $padding { padding: 0; }
+  @if $border { border: none; }
+}
+@mixin bold-italic-uppercase($bold :default, $italic: false, $uppercase: false) {
+  @if $bold { font-weight: bold; }
+  @if $italic { font-variant: italic; }
+  @if $uppercase { text-transform: uppercase; }
+}
+
+@mixin color-boxes($colors) {
+  $i : 1;
+  @each $color in $colors {
+    &:nth-of-type(#{$i}) {
+      border: $figure-border;
+      background:#{$color};
+    }
+    $i: $i + 1;
+  }
+}
+
+@mixin texture-boxes($textures, $inline-images: false) {
+  $i : 1;
+  @each $texture in $textures {
+    &:nth-of-type(#{$i}) {
+      border: $figure-border;
+      @if $inline-images { @include background-image(inline-image("textures/#{$texture}")); }
+      @else { background-image: image-url("textures/#{$texture}"); }
+    }
+    $i: $i + 1;
+  }
+}
+@mixin adjectives($adjectives) {
+  $i : 1;
+  @each $adjective in $adjectives {
+    li:nth-of-type(#{$i}):after {
+      content: "#{$adjective}";
+    }
+    $i: $i + 1;
+  }
+}
+
+@mixin button-style($button-background-color, $button-text-color, $button-corners: false, $button-border: false, $button-font-size: false, $button-gradient: false, $button-box-shadow: false) {
+  @if $button-corners { @include border-radius($button-corners) };
+  color: $button-text-color !important;
+  @if $button-gradient { 
+    background: $button-background-color;
+    @include background-image(linear-gradient( tint($button-background-color, 20%) 5%, $button-background-color 20%, $button-background-color 80%, shade($button-background-color, 20%) 100%)); 
+    } 
+  @else { background: $button-background-color; }
+  padding: ($standard-spacing / 2)  $standard-spacing;
+  @if $button-text-shadow { @include st-text-shadow($button-text-shadow) };
+  @if $button-box-shadow { @include box-shadow($button-box-shadow) };
+  @if $button-border { border: $button-border };
+  @if $button-font-size { font-size: $button-font-size};
+}
+
+@mixin image-dimensions($image-url) {
+  $image-height: calc-em(image-height($image-url), $base-font-size);
+  $image-width: calc-em(image-width($image-url), $base-font-size);
+  height: $image-height;
+  width: $image-width;
+  @include background-size($image-width $image-height);
+}
+
+// Functions
+@function calc-em($target-px, $context) {
+  @return ($target-px / $context) * 1em;
+}
