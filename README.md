@@ -66,10 +66,8 @@ compass create <MyProject> -r style-tiles -u style-tiles
 cd  <MyProject>
 compass complie
 ```
-* **Note:** replace <MyProject> with name of your project (without the  < >)*
+* **Note:** replace <MyProject> with name of your project (without the  `<` `>`)*
 This will generate four stylesheets and the paste the styles into four corresponding html files (index, screen-v1, screen-v2, and screen-v3).
-
-####
 
 ## How It Works
 
