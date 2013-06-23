@@ -1,6 +1,6 @@
 # Compass Style Tiles
 
-#### Create HTML and CSS Style Tiles with Sass & Compass
+### Create HTML and CSS Style Tiles with Sass & Compass
 _This is the development repo for the compass extension and rubygem: [style-tiles](https://rubygems.org/gems/style-tiles)._  
 **This is currently under active development** 
 Feedback is very welcome!
@@ -22,11 +22,11 @@ and easy for them to view). You should be able to send your designs as an attach
 
 #### Build for rapid iteration
 
-+ Use sass variables as much as possible
-+ Shouldn’t need to edit the HTML
-+ Body copy are also be sass variables
-+ One file to control each iteration
-+ Easily add more iterations
++ **Highly customizable** use sass variables wherever much as possible
++ **Reuse the HTML** No real need to edit the HTML
++ **Body copy** is also controlled by sass variables
++ **1 to 1 mapping** single file to control each iteration
++ **Easily iterated** simply duplicate the `.scss` files
 
 #### Use only HTML and CSS where possible
 
