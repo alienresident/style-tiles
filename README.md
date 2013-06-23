@@ -120,7 +120,7 @@ The full list of variables that are available is in the compass gem's stylesheet
 
 #### How the copy variables are transformed into CSS
 
-Here's an example of how the `content-before-after` mixin creates the pseudo
+Here's an example of how the `content-before-after` [mixin](https://github.com/alienresident/style-tiles/blob/master/stylesheets/style-tiles/core/_mixins.scss) creates the pseudo
 selector and adds whats in the variables in to the content attribute.
 
 ##### HTML
@@ -141,33 +141,39 @@ Source: _v1.html_
 
 Source: _sass/partials/variations/\_v1.scss_
 
-    $project-name: "Sassy Style Tiles";
+```scss
+$project-name: "Sassy Style Tiles";
     $footer-text: '\2752\20 Designed by Grey Boxes \2751'; // ❒ Designed by Grey Boxes ❑
+```
 
 ##### Sass Structure partial
 
 Source: _sass/partials/core/\_structure.scss_
 
-    section:nth-of-type(1) header hgroup {
-      ...
-      h1 {
-        ...
-        @include content-before-after($project-name, false, true);
-      }
-    }
-    footer {
-      ...
-      @include content-before-after($footer-text, false, true);
-    }
+```scss
+section:nth-of-type(1) header hgroup {
+  ...
+  h1 {
+    ...
+    @include content-before-after($project-name, false, true);
+  }
+}
+footer {
+  ...
+  @include content-before-after($footer-text, false, true);
+}
+```
 
 ##### Sass Mixin partial
 
 Source: _sass/partials/core/\_mixins.scss_
 
-    @mixin content-before-after($content, $before: default, $after:false ) {
-      @if $before { &:before { content: $content; } }
-      @if $after { &:after { content: $content; } }
-    }
+```scss
+@mixin content-before-after($content, $before: default, $after:false ) {
+  @if $before { &:before { content: $content; } }
+  @if $after { &:after { content: $content; } }
+}
+```
 
 ##### Generated CSS
 
@@ -213,37 +219,42 @@ Source: _template.html_
 
 Source: _sass/partials/variations/\_v1.scss_
 
-    $textures: "cotton-shirt.png", "denim.jpg";
-    $inline-images: true; // can be set to false
+```scss
+$textures: "cotton-shirt.png", "denim.jpg";
+$inline-images: true; // can be set to false
+````
 
 ##### Sass Structure partial
 
 Source: _sass/partials/core/\_structure.scss_
 
-    aside {
-      ...
-      &:nth-of-type(2) figure {
-        ...
-        @include texture-boxes($textures, $inline-images);
-      }
-    }
+```scss
+aside {
+  ...
+  &:nth-of-type(2) figure {
+    ...
+    @include texture-boxes($textures, $inline-images);
+  }
+}
+```
 
 ##### Sass Mixin partial
 
 Source: _sass/partials/core/\_mixins.scss_
 
-    @mixin texture-boxes($textures, $inline-images: false) {
-      $i : 1;
-      @each $texture in $textures {
-        &:nth-of-type(#{$i}) {
-          border: $figure-border;
-          @if $inline-images { @include background-image(inline-image("textures/#{$texture}")); }
-          @else { background-image: image-url("textures/#{$texture}"); }
-        }
-        $i: $i + 1;
-      }
+```scss
+@mixin texture-boxes($textures, $inline-images: false) {
+  $i : 1;
+  @each $texture in $textures {
+    &:nth-of-type(#{$i}) {
+      border: $figure-border;
+      @if $inline-images { @include background-image(inline-image("textures/#{$texture}")); }
+      @else { background-image: image-url("textures/#{$texture}"); }
     }
-
+    $i: $i + 1;
+  }
+}
+```
 ##### Generated CSS
 
 Source: _css/screen-v1.css_
