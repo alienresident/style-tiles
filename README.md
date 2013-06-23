@@ -1,6 +1,6 @@
 # Compass Style Tiles
 
-### Create HTML and CSS Style Tiles with Sass & Compass
+#### Create HTML and CSS Style Tiles with Sass & Compass
 _This is the development repo for the compass extension and rubygem: [style-tiles](https://rubygems.org/gems/style-tiles)._  
 **This is currently under active development** 
 Feedback is very welcome!
@@ -30,14 +30,22 @@ and easy for them to view). You should be able to send your designs as an attach
 
 #### Use only HTML and CSS where possible
 
-+ Viewable Everywhere! No server-side technologies
-+ Modern browser support only (not production code)
-+ Simple & clean HTML5
-+ Use CSS3 selectors and pseudo-classes (avoid classes or ids)
-+ No dependancies on other css frameworks (Bootstrap or Foundation etc.)
-+ Embed images and fonts in CSS (you don't need to zip up a lot of files and folders)
++ **Viewable Everywhere!** No server-side technologies
++ **Modern browser support only** (this ain't production code)
++ **Simple & clean HTML5**
++ **Use CSS3 selectors and pseudo-classes** (avoid classes or ids)
++ **No dependancies on other css frameworks** (Bootstrap or Foundation etc.)
++ **Embed images and fonts in CSS** (you don't need to zip up a lot of files and folders)
++ **Embed Styles in HTML** One file per iteration to send with no nested folders
 
 Style Tiles should be deployable as simple HTML and CSS. Style Tiles should be able to view from any folder on a desktop or any web server. To keep the CSS simple — Style Tiles *need* to be viewed in modern browsers: Firefox and Webkit based browsers. Viewable anywhere! I am using CSS rather than some server solution.
+
+### Project History
+The idea for creating HTML and CSS style tiles had been brewing in my head for awhile. I started the initial development on the bus ride to Design 4 Drupal 2012. I presented the idea in a BoF on Compass and got some positive feedback and interest.
+
+The first iteration was a straight-forward Sass-*ified* project \([archived here](https://github.com/alienresident/style-tiles/tree/archive)\). I was able to get the images and the fonts to using compass functions. However, I knew I need a custom function in the `config.rb` to copy the current css and add it to a `<style>` tag in the `<head>` of the HTML document. Thankfully, [Zellio](https://github.com/zellio) contributed his Ruby knowledge and created that exact [custom function](https://github.com/alienresident/style-tiles/blob/dryad/config.rb).
+
+I paused development for awhile to work on my [Pattern Primer](https://github.com/alienresident/compass-pattern-primer). That too started as a sass project and eventually it made sense to make it into a compass extension. Thanks to [Sam Richard](https://github.com/snugug)'s [Compass Extension Template](https://github.com/Team-Sass/Compass-Extension-Template) I was easily able to create my Compass Pattern Primer extension. Returning to Design 4 Drupal in 2013 on the bus, I thought it was time to convert Style Tiles to a compass extension.
 
 ## Installation
 Compass Pattern Primer is a compass extension bundled as a Ruby gem.
@@ -46,6 +54,22 @@ Compass Pattern Primer is a compass extension bundled as a Ruby gem.
 gem install compass-pattern-primer
 ```
 You'll need to install [Sass](http://sass-lang.com/) and [Compass](http://compass-style.org/) Ruby Gems too. Documentation for installing and using these gems is pretty extensive.
+
+## How to Use it
+There are a number of ways you can get started with Style Tiles. 
+
+#### Recommended: Create a new Compass project using Style Tiles scaffolding
+```bash
+compass create <MyProject> -r style-tiles -u style-tiles
+```
+```bash
+cd  <MyProject>
+compass complie
+```
+* **Note:** replace <MyProject> with name of your project (without the  < >)*
+This will generate four stylesheets and the paste the styles into four corresponding html files (index, screen-v1, screen-v2, and screen-v3).
+
+####
 
 ## How It Works
 
