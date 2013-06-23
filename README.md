@@ -295,15 +295,15 @@ aside:nth-of-type(2) figure:nth-of-type(2) {
 
 Currently, the examples utilizes a few open source fonts (that are available at
 Google Fonts). I have added the option to inline the fonts but they will
-significantly increase the size of the css (not a good solution for production).
+significantly increase the size of the css (rarely a good solution for production).
 
-If people are interested I may expand to incorporating some other type services.
+If people are interested I may expand to incorporating some other font services.
 
 + Way to control the what links are available on the index page.
 
 The idea is that you may want to control the visibility of the links on the
 index page. For example, on a second round of iteration you may not want the
-link to version 2 (if the the clients rejected it) to be still visible.
+link to version 2 (if the the clients rejected it) to be still visible. This will be forthcoming very soon.
 
 ##### Requests? Feedback?
 Contact [me](mailto:mark@alienresident.net) or simply file an [issue](https://github.com/alienresident/style-tiles/issues/new)!
