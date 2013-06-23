@@ -6,9 +6,7 @@ _This is the development repo for the compass extension and rubygem: [style-tile
 Feedback is very welcome!
 
 ### *New* Style Tiles is now a Compass extension!
-Style Tiles has changed from a straight sass project to a compass extension. This makes it much easier to get started and to reuse. You can build a starter project using one line and start working on creating style tiles right away.
-
-See the **Installation** notes for details on getting started.
+Style Tiles has changed from a straight sass project to a compass extension. This makes it much easier to get started and to reuse. You can build a starter project using one line and start working on creating style tiles right away. See the **Installation** notes for details on getting started.
 
 ## Background
 
@@ -17,8 +15,8 @@ I am doing Responsive Web Design, I wanted to be designing and thinking in CSS a
 
 ## Design Philosophy
 
-Style Tiles should be extremely easily deployed (i.e. easy to send to the client
-and easy for them to view). You should be able to send your designs as an attachment in an email or throw them up on any webserver and send out a link.
+Style Tiles should be primarily easy to share (i.e. easy for you to send to clients
+and easy for them to view it). You should be able to send your designs as easily as a static mockup image. Be it an email attachment or a link to _any_ webserver where you uploaded your designs.
 
 #### Build for rapid iteration
 
