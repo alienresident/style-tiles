@@ -69,6 +69,26 @@ compass complie
 * **Note:** replace <MyProject> with name of your project (without the  `<` `>`)*
 This will generate four stylesheets and the paste the styles into four corresponding html files (index, screen-v1, screen-v2, and screen-v3).
 
+#### Other ways to add Style Tiles to your compass project
+
+```bash
+compass create <MyProject> -r style-tiles 
+```
+
+This creates a new Compass project using the compass standard scaffolding and adds `require 'style-tiles'` to the `config.rb`. However without the custom config.rb and html file you lose the benefit of adding your styles to the HTML and you don't have a starter scaffolding with variables examples. 
+
+#### Add Style Tiles to an existing project by adding the following to config.rb
+
+```ruby
+require 'style-tiles'
+```
+Then import the Compass Pattern Primer partial by adding at the top of your working file
+
+```scss
+@import "style-tiles";
+```
+**Note:** *You'll need to restart* `compass watch` *if it's running*. And again without the custom config.rb and html file you lose the benefit of adding your styles to the HTML and you don't have a starter scaffolding with variables examples.
+
 ## How It Works
 
 There's an index page that links to the 3 version pages. Each page has it's own
@@ -82,21 +102,19 @@ The HTML files are self-contained. All the images, and fonts are embedded in the
 
 More pages can be easily added by duplicating these files
 
-<!--+ v3.html to v4.html-->
-+ sass/screen-v3.scss to sass/screen-v4.scss
-+ sass/paritals/screen/\_v3.scss to sass/paritals/screen/\_v4.scss
++ `sass/screen-v3.scss` to `sass/screen-v4.scss`  
++ `sass/paritals/variations/\_v3.scss` to `sass/paritals/variations/\_v4.scss`  
 
 Then you'll need to make some easy edits
 
 + change `@import "partials/variations/\_v3";` to `@import
-"partials/variations/\_v4";` in `sass/screen-v4.scss`
-+ edit the variables you want to change in sass/paritals/screen/\_v4.scss.
-+ finally add or change the link on the index page `<li><a href="html/v3.html">Version 3</a></li>` to `<li><a href="html/"v4.html">Version 4</a></li>`
+"partials/variations/\_v4";` in `sass/screen-v4.scss`  
++ edit the variables you want to change in `sass/paritals/variations/\_v4.scss`  
 
 ### What variables are available? ###
 
-The full list of variables that are available is in:
-sass/paritals/core/\_variables.scss
+The full list of variables that are available is in the compass gem's stylesheets folder:
+[style-tiles/core/\_variables.scss](https://github.com/alienresident/style-tiles/blob/master/stylesheets/style-tiles/core/_variables.scss)
 
 ### Code Examples
 
