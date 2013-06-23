@@ -12,7 +12,7 @@ See the **Installation** notes for details on getting started.
 
 ## Background
 
-I loved Samantha Warren's idea of [style tiles](http://styletil.es/). It seemed like the best answer to moving away from time-draining pixel perfect comps. However, as I'm designing in the browser more and more I didn't want to go back into pixel based AdobeLand — Photoshop or Fireworks to create Style Tiles. Especially now that
+I loved Samantha Warren's idea of [style tiles](http://styletil.es/). It seemed like the best answer to moving away from time-draining pixel perfect comps. However I'm designing in the browser more and more and I didn't want to go back into pixel based AdobeLand — Photoshop or Fireworks to create Style Tiles. Especially now that
 I am doing Responsive Web Design, I wanted to be designing and thinking in CSS and HTML. I thought this would be a perfect project for Sass and Compass. 
 
 ## Design Philosophy
@@ -45,7 +45,7 @@ The idea for creating HTML and CSS style tiles had been brewing in my head for a
 
 The first iteration was a straight-forward Sass-*ified* project \([archived here](https://github.com/alienresident/style-tiles/tree/archive)\). I was able to get the images and the fonts to using compass functions. However, I knew I need a custom function in the `config.rb` to copy the current css and add it to a `<style>` tag in the `<head>` of the HTML document. Thankfully, [Zellio](https://github.com/zellio) contributed his Ruby knowledge and created that exact [custom function](https://github.com/alienresident/style-tiles/blob/dryad/config.rb).
 
-I paused development for awhile to work on my [Pattern Primer](https://github.com/alienresident/compass-pattern-primer). That too started as a sass project and eventually it made sense to make it into a compass extension. Thanks to [Sam Richard](https://github.com/snugug)'s [Compass Extension Template](https://github.com/Team-Sass/Compass-Extension-Template) I was easily able to create my Compass Pattern Primer extension. Returning to Design 4 Drupal in 2013 on the bus, I thought it was time to convert Style Tiles to a compass extension.
+I paused development for awhile to work on my [Pattern Primer](https://github.com/alienresident/compass-pattern-primer). That too started as a sass project and eventually it made sense to make it into a compass extension. Thanks to [Sam Richard](https://github.com/snugug)'s [Compass Extension Template](https://github.com/Team-Sass/Compass-Extension-Template) I was easily able to create my Compass Pattern Primer extension. Returning to Design 4 Drupal in 2013 on the bus, I thought it was time to convert Style Tiles to a compass extension and here we are.
 
 ## Installation
 Compass Pattern Primer is a compass extension bundled as a Ruby gem.
@@ -72,15 +72,11 @@ This will generate four stylesheets and the paste the styles into four correspon
 ## How It Works
 
 There's an index page that links to the 3 version pages. Each page has it's own
-stylesheet. The HTML is the exactly the same expect for the stylesheet link.
+stylesheet. When you `compile compass` the CSS files are generated from the `.scss` files in the `sass` folder. The corresponding HTML files are generated from `template.html` and the CSS is added to the `<head>` of the HTNL files.
 
 
 ### Deploying the Styles Tiles
-
-You can zip up all the html files and the css folder folder with the images. By
-Default all the images will be inlined in the stylesheets. However if you don't
-want to inline your images. Set `$inline-images` to `false` in the
-sass/core/\_variables.scss and include the images folder.
+The HTML files are self-contained. All the images, and fonts are embedded in the style and the style is embedded in the HTML. However if you don't want to inline your images. Set `$inline-images` to `false` in your `partials/variations/_v*.scss` and include the images folder. The same goes for fonts, set `$inline-fonts` to `false`. 
 
 ### Adding more Versions
 
