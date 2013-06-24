@@ -56,7 +56,7 @@ section:nth-of-type(1) {
     }
   }
 }
-section:nth-of-type(2){
+section:nth-of-type(2) {
   clear: both;
   padding: $standard-spacing;  
   article {
@@ -105,6 +105,9 @@ section:nth-of-type(2){
   }
 }
 
+// display section:nth-of-type(3)
+  @include index-page($index);
+  
 aside {
   display: block;
   margin: $aside-margin;

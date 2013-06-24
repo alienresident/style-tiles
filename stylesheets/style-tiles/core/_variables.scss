@@ -7,154 +7,158 @@ $legacy-support-for-ie: false;
 $experimental-support-for-microsoft: false;
 $experimental-support-for-opera: false;
 
+// Only the _index.scss should be the index page.
+$index: false !default;  
+
 // Project Name and Version Header 
-$project-name: "Super Awesome Project";// You'll want to override this!
-$version-number: "1.0" default;
-$footer-text: '\2606\20 Designed by Rock Stars \2606'; // You'll want to override this!
+$project-name: "Super Awesome Project" !default;// You'll want to override this!
+$version-number: "1.0" !default;
+$footer-text: '\2606\20 Designed by Rock Stars \2606' !default; // You'll want to override this!
+$show-versions: 1, 2, 3 !default; 
 
 /// Global Variables
-$standard-spacing: calc-em(10px, $base-font-size);
-$page-width: calc-em(960px, $base-font-size);
-$article-width: calc-em(540px, $base-font-size);
-$aside-width: calc-em(300px, $base-font-size);
-$inline-images: true; // inline all images so you don't need to send them with the style sheet(s)
+$standard-spacing: calc-em(10px, $base-font-size) !default;;
+$page-width: calc-em(960px, $base-font-size) !default;;
+$article-width: calc-em(540px, $base-font-size) !default;;
+$aside-width: calc-em(300px, $base-font-size) !default;;
+$inline-images: true !default; // inline all images so you don't need to send them with the style sheet(s)
 
 
 // Typography 
-$primary-font: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
-$base-font-size: 16px;
-$base-line-height:1.5em;
-$body-font-size: calc-em(14px, $base-font-size);
+$primary-font: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif !default;;
+$base-font-size: 16px !default;;
+$base-line-height:1.5em !default;;
+$body-font-size: calc-em(14px, $base-font-size) !default;
 
 // @font-face fonts
-$font-name: false;
-$font-ttf: false;
-$font-woff: false;
-$font-eot: false; // we don't need this as it's not production code
-$font-svg: false; // we don't need this either
-$inline-fonts: true;
-$font-weight: normal;
-$font-style: normal;
+$font-name: false !default;
+$font-ttf: false !default;
+$font-woff: false !default;
+$font-eot: false !default; // we don't need this as it's not production code
+$font-svg: false !default; // we don't need this either
+$inline-fonts: true !default;
+$font-weight: normal !default;
+$font-style: normal !default;
 
 /// Design Variables
-$link-color: #00f;
+$link-color: #00f !default;
 
 
 // sample 5 colors and 3 textures (add figures to html for more)
-$colors: #929ca5, #a2af45, #405b6b,  #dfe1d1, #e5e5e5;
-$textures: "concrete.png", "dark-concrete.png", "asphalt.png";
-$adjectives:  current, conservative, whimiscal, contradictory; //
+$colors: #929ca5, #a2af45, #405b6b,  #dfe1d1, #e5e5e5 !default;
+$textures: "concrete.png", "dark-concrete.png", "asphalt.png" !default;
+$adjectives:  current, conservative, whimiscal, contradictory !default; //
 
-$body-background-color: #efefef; // for older browsers that don't support gradients
-$body-background-image: false; // e.g "asphalt.png"
-$body-background-gradient-position-1: false; // e.g. top OR 45deg
-$body-background-gradient-1: false; // rgba(0,0,0,.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%
-$body-background-gradient-position-2: false; // e.g. right OR 0deg
-$body-background-gradient-2: false; // $body-background-gradient-1 Or another gradient
-$body-background-size: false; // 40px 40px OR contain
-$body-background-repeat: repeat; // no-repeat OR repeat-x etc
+$body-background-color: #efefef !default; // for older browsers that don't support gradients
+$body-background-image: false !default; // e.g "asphalt.png"
+$body-background-gradient-position-1: false !default; // e.g. top OR 45deg
+$body-background-gradient-1: false !default; // rgba(0,0,0,.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%
+$body-background-gradient-position-2: false !default; // e.g. right OR 0deg
+$body-background-gradient-2: false !default; // $body-background-gradient-1 Or another gradient
+$body-background-size: false !default; // 40px 40px OR contain
+$body-background-repeat: repeat !default; // no-repeat OR repeat-x etc
 
-$page-background-color: #f2f2f2; // for older browsers that don't support gradients or just a solid color
-$page-background-image: false; // e.g "asphalt.png"
-$page-background-gradient-position-1: false; // e.g. top OR 45deg
-$page-background-gradient-1: false; // rgba(0,0,0,.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%
-$page-background-gradient-position-2: false; // e.g. right OR 0deg
-$page-background-gradient-2: false;
-$page-background-size: false; 
-$page-background-repeat: repeat;
-$page-box-shadow: false; // e.g. 5px 5px 10px rgba(0,0,0,.75), -5px 5px 10px rgba(0,0,0,.75)
-$page-corners: false; //  0 10px
-$page-margin: 0 auto ($standard-spacing * 4) auto; //
-$page-text-color: #333; 
+$page-background-color: #f2f2f2 !default; // for older browsers that don't support gradients or just a solid color
+$page-background-image: false !default; // e.g "asphalt.png"
+$page-background-gradient-position-1: false !default; // e.g. top OR 45deg
+$page-background-gradient-1: false !default; // rgba(0,0,0,.5) 0%, rgba(0,0,0,.25) 10%, rgba(0,0,0,0) 15%
+$page-background-gradient-position-2: false !default; // e.g. right OR 0deg
+$page-background-gradient-2: false !default;
+$page-background-size: false !default; 
+$page-background-repeat: repeat !default;
+$page-box-shadow: false !default; // e.g. 5px 5px 10px rgba(0,0,0,.75), -5px 5px 10px rgba(0,0,0,.75)
+$page-corners: false !default; //  0 10px
+$page-margin: 0 auto ($standard-spacing * 4) auto !default; //
+$page-text-color: #333 !default; 
 
 // Logo is added as a background to a transparent image. Adjust height and width and source
-$logo-margin: 0 $standard-spacing $standard-spacing  0; // TRBL: Top Right Bottom Left
-$logo-float: left; // right OR none
-$logo-file: "logos/sample-logo.png"; // e.g. "sample-logo.png"
-$logo-box-shadow: false; // e.g. 5px 5px 10px rgba(0,0,0,.75)
+$logo-margin: 0 $standard-spacing $standard-spacing  0 !default; // TRBL: Top Right Bottom Left
+$logo-float: left !default; // right OR none
+$logo-file: "logos/sample-logo.png" !default; // e.g. "sample-logo.png"
+$logo-box-shadow: false !default; // e.g. 5px 5px 10px rgba(0,0,0,.75)
 
-$header-height: calc-em(image-height($logo-file), $base-font-size) + ($standard-spacing * 2); // allow some breathing room around the logo
-$header-padding: $standard-spacing;
-$header-background-color: false;
-$header-background-image: false;
-$header-background-gradient-position-1: false;
-$header-background-gradient-1: false;
-$header-background-gradient-position-2: false;
-$header-background-gradient-2: false;
-$header-background-size: false;
-$header-background-repeat: repeat;
-$header-text-color: false;
-$header-text-align: right; // align the Project Name and Version Number text
+$header-height: calc-em(image-height($logo-file), $base-font-size) + ($standard-spacing * 2) !default; // allow some breathing room around the logo
+$header-padding: $standard-spacing !default;
+$header-background-color: false !default;
+$header-background-image: false !default;
+$header-background-gradient-position-1: false !default;
+$header-background-gradient-1: false !default;
+$header-background-gradient-position-2: false !default;
+$header-background-gradient-2: false !default;
+$header-background-size: false !default;
+$header-background-repeat: repeat !default;
+$header-text-color: false !default;
+$header-text-align: right !default; // align the Project Name and Version Number text
 
 // Project name and version font size / line-height
-$project-name-font-size: 1em; // Override the default H1 size
-$project-name-line-height: 1.5em;
-$version-font-size: .9em; // Override the default H2 size
-$version-line-height: 1em;
+$project-name-font-size: 1em !default; // Override the default H1 size
+$project-name-line-height: 1.5em !default;
+$version-font-size: .9em !default; // Override the default H2 size
+$version-line-height: 1em !default;
 
-$heading-h1-text-shadow: false;
-$heading-h1-font-style: false;
-$heading-h1-font-color: none;
-$heading-h1-font-name: false;
-$heading-h1-font-size: false;
+$heading-h1-text-shadow: false !default;
+$heading-h1-font-style: false !default;
+$heading-h1-font-color: none !default;
+$heading-h1-font-name: false !default;
+$heading-h1-font-size: false !default;
 
-$heading-h2-text-shadow: false;
-$heading-h2-font-style: false;
-$heading-h2-font-color: none;
-$heading-h2-font-name: false;
-$heading-h2-font-size: false;
+$heading-h2-text-shadow: false !default;
+$heading-h2-font-style: false !default;
+$heading-h2-font-color: none !default;
+$heading-h2-font-name: false !default;
+$heading-h2-font-size: false !default;
 
-$main-text-shadow: false; //
+$main-text-shadow: false !default; //
 
-$aside-margin: 0 0 $standard-spacing 0;
-$aside-padding: $standard-spacing;
-$aside-background-color: rgba(255,255,255,.25);
-$aside-background-image: false;
-$aside-background-gradient-position-1: false;
-$aside-background-gradient-1: false;
-$aside-background-gradient-position-2: false;
-$aside-background-gradient-2: false;
-$aside-background-size: false;
-$aside-background-repeat: repeat;
-$aside-box-shadow: none;
-$aside-border: $standard-spacing solid rgba(255,255,255,.35);
-$aside-border-radius: false; // 3px
-$aside-outline: calc-em(1px, $base-font-size) solid rgba(200,200,200,.25);
-$aside-text-color: #333;
+$aside-margin: 0 0 $standard-spacing 0 !default;
+$aside-padding: $standard-spacing !default;
+$aside-background-color: rgba(255,255,255,.25) !default;
+$aside-background-image: false !default;
+$aside-background-gradient-position-1: false !default;
+$aside-background-gradient-1: false !default;
+$aside-background-gradient-position-2: false !default;
+$aside-background-gradient-2: false !default;
+$aside-background-size: false !default;
+$aside-background-repeat: repeat !default;
+$aside-box-shadow: none !default;
+$aside-border: $standard-spacing solid rgba(255,255,255,.35) !default;
+$aside-border-radius: false !default; // 3px
+$aside-outline: calc-em(1px, $base-font-size) solid rgba(200,200,200,.25) !default;
+$aside-text-color: #333 !default;
 
 // Figure (colors and textures boxes)
-$figure-width: calc-em(40px, $base-font-size);
-$figure-height: calc-em(40px, $base-font-size);
-$texture-width: $figure-width * 2; // double the color size to show the textures better
-$texture-height: $figure-height * 2; // same
-$figure-border:  calc-em(1px, $base-font-size) #888 solid; // only if there's a color
+$figure-width: calc-em(40px, $base-font-size) !default;
+$figure-height: calc-em(40px, $base-font-size) !default;
+$texture-width: $figure-width * 2 !default; // double the color size to show the textures better
+$texture-height: $figure-height * 2 !default; // same
+$figure-border:  calc-em(1px, $base-font-size) #888 solid !default; // only if there's a color
 
-$figure-caption-text-size: calc-em(12px, $base-font-size); // if you want to credit eternal texture sources or add notes
+$figure-caption-text-size: calc-em(12px, $base-font-size) !default; // if you want to credit eternal texture sources or add notes
 
-$button-corners: calc-em(10px, $base-font-size);  //
-$button-background-color: #57068c;
+$button-corners: calc-em(10px, $base-font-size) !default;  //
+$button-background-color: #57068c !default;
 $button-gradient: false; // automatic gradients
-$button-text-color: #eee;
-$button-font-size: 1.2em;
+$button-text-color: #eee !default;
+$button-font-size: 1.2em !default;
 $button-text-shadow: false; // e.g 0px 1px 1px rgba(0,0,0,.5)
-$button-border: calc-em(1px, $base-font-size) #eee solid;
+$button-border: calc-em(1px, $base-font-size) #eee solid !default;
 $button-box-shadow: none; // e.g. 1px 1px 2px rgba(0,0,0,.5)
-$button-text-color-over: adjust-lightness($button-text-color, 10%);
-$button-background-color-over: adjust-lightness($button-background-color, 10%);
+$button-text-color-over: adjust-lightness($button-text-color, 10%) !default;
+$button-background-color-over: adjust-lightness($button-background-color, 10%) !default;
 
 $footer-background-color: false ; // e.g. rgba(0,0,0,.75)
-$footer-background-image: false;
-$footer-background-gradient-position-1: false;
-$footer-background-gradient-1: false;
-$footer-background-gradient-position-2: false;
-$footer-background-gradient-2: false;
-$footer-background-size: false;
-$footer-background-repeat: repeat;
+$footer-background-image: false !default;
+$footer-background-gradient-position-1: false !default;
+$footer-background-gradient-1: false !default;
+$footer-background-gradient-position-2: false !default;
+$footer-background-gradient-2: false !default;
+$footer-background-size: false !default;
+$footer-background-repeat: repeat !default;
 
-$footer-text-color: rgba(255,255,255,.75);
-$footer-text-align: right;
-$footer-text-shadow: calc-em(-1px, $base-font-size) 0 calc-em(1px, $base-font-size) rgba(0,0,0,.5), 0 calc-em(1px, $base-font-size) calc-em(1px, $base-font-size) rgba(255,255,255,.35);
+$footer-text-color: rgba(255,255,255,.75) !default;
+$footer-text-align: right !default;
+$footer-text-shadow: calc-em(-1px, $base-font-size) 0 calc-em(1px, $base-font-size) rgba(0,0,0,.5), 0 calc-em(1px, $base-font-size) calc-em(1px, $base-font-size) rgba(255,255,255,.35) !default;
 
-$footer-logo-file: false;
-$footer-logo-width: calc-em(66px, $base-font-size);
-$footer-logo-height: calc-em(24px, $base-font-size);
+$footer-logo-file: false !default;
+$footer-logo-width: calc-em(66px, $base-font-size) !default;
+$footer-logo-height: calc-em(24px, $base-font-size) !default;

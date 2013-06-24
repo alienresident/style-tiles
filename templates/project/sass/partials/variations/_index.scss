@@ -1,5 +1,17 @@
-// Project Name and Version Header 
+//////////////////////////////
+// Full list of all available variables: https://github.com/alienresident/style-tiles/blob/master/stylesheets/style-tiles/core/_variables.scss
+//////////////////////////////
 
+
+// Display different Content and list of links to versions on Index page (hides section 2 and dispalys section 3)
+$index: true;
+
+// Control the display of versions links on the homepage
+$show-versions: 1, 2, 3;
+// Possible values as is (1 thru 9) change template.html for more
+// $show-versions: 1, 2, 3, 4, 5, 6, 7, 8, 9;
+
+// Project Name and Version Header 
 $project-name: "Sassy Style Tiles";
 $version-number: "1.0, 2.0, 3.0";
 
@@ -7,7 +19,8 @@ $para-1: $project-name "! HTML & CSS style tiles powered by SASS and Compass.";
 
 $para-2: "Style Tiles are a design deliverable consisting of fonts, colors and interface elements that communicate the essence of a visual brand for the web. Style tiles are for when a moodboard is too vague and a comp is too literal. Style tiles establish a direct connection with actual interface elements without defining layout.";
 
-$para-3:"View the styles tiles:";
+$para-3:"View the styles tiles:"; 
+
 
 /// Global Variables
 $standard-spacing: calc-em(20px, $base-font-size);
@@ -30,4 +43,3 @@ $main-text-shadow: 0 calc-em(1px, $base-font-size) calc-em(1px, $base-font-size)
 $footer-background-color: rgba(#a2af45, 1);
 $footer-text-color: rgba($link-color,.75);
 $footer-background-image: false;
-

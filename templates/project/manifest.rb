@@ -1,5 +1,5 @@
 # Description
-description "This builds the basic scaffolding for your style tiles  project"
+description "This builds the basic scaffolding for your Style Tiles project"
 
 no_configuration_file!
 skip_compilation!
@@ -8,9 +8,9 @@ file 'config.rb', :like => :file, :to => "config.rb"
 
 # Stylesheets Import
 file 'sass/index.scss', :like => :stylesheet, :media => 'screen, projection', :to => 'index.scss' 
-file 'sass/screen-v1.scss', :like => :stylesheet, :media => 'screen, projection', :to => 'screen-v1.scss' 
-file 'sass/screen-v2.scss', :like => :stylesheet, :media => 'screen, projection', :to => 'screen-v2.scss' 
-file 'sass/screen-v3.scss', :like => :stylesheet, :media => 'screen, projection', :to => 'screen-v3.scss' 
+file 'sass/v1.scss', :like => :stylesheet, :media => 'screen, projection', :to => 'v1.scss' 
+file 'sass/v2.scss', :like => :stylesheet, :media => 'screen, projection', :to => 'v2.scss' 
+file 'sass/v3.scss', :like => :stylesheet, :media => 'screen, projection', :to => 'v3.scss' 
 
 # Partials
 file 'sass/partials/variations/_index.scss', :like => :stylesheet, :to => 'partials/variations/_index.scss'
@@ -29,7 +29,8 @@ file 'images/textures/denim.jpg', :like => :image, :to => 'textures/denim.jpg'
 file 'images/textures/scratched-metal.png', :like => :image, :to => 'textures/scratched-metal.png'
 file 'images/textures/scratched-metal2.png', :like => :image, :to => 'textures/scratched-metal2.png'
 
-# Font Import
+# Font Import 
+# Note: Using :font put the files in stylesheets/fonts despite setting fonts_dir
 file "fonts/DroidSerif/DroidSerif-Bold-webfont.eot", :like => :file, :to => "fonts/DroidSerif/DroidSerif-Bold-webfont.eot"
 file "fonts/DroidSerif/DroidSerif-Bold-webfont.svg", :like => :file, :to => "fonts/DroidSerif/DroidSerif-Bold-webfont.svg"
 file "fonts/DroidSerif/DroidSerif-Bold-webfont.ttf", :like => :file, :to => "fonts/DroidSerif/DroidSerif-Bold-webfont.ttf"

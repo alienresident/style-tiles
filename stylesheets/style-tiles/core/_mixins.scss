@@ -104,6 +104,15 @@
     $i: $i + 1;
   }
 }
+@mixin versions($show-versions) {
+  $i : 1;
+  @each $show-version in $show-versions {
+    li:nth-of-type(#{$show-version}) {
+      display: block;
+    }
+    $i: $i + 1;
+  }
+}
 
 @mixin button-style($button-background-color, $button-text-color, $button-corners: false, $button-border: false, $button-font-size: false, $button-gradient: false, $button-box-shadow: false) {
   @if $button-corners { @include border-radius($button-corners) };
@@ -128,6 +137,69 @@
   @include background-size($image-width $image-height);
 }
 
+@mixin index-page( $index: false ) {
+  @if not $index { section:nth-of-type(3) { display: none; } }
+  @else {
+    section:nth-of-type(2) { display: none; }
+    section:nth-of-type(3) {
+      // reformat section:nth-of-type(2) & :nth-of-type(2) as %extendable?
+      clear: both;
+      padding: $standard-spacing;  
+      article {
+        padding: $standard-spacing * 2;
+        width: $article-width;
+        float: left;
+      }
+      header {
+        h1 {
+          margin: $standard-spacing 0;
+          @include st-text-shadow($heading-h1-text-shadow);
+          @include bold-italic-uppercase($heading-h1-font-style);
+          @if $heading-h1-font-size { font-size:$heading-h1-font-size; }
+          @include st-font-faced($heading-h1-font-name);
+          color: $heading-h1-font-color;
+        }
+        h2 {
+          @include st-text-shadow($heading-h2-text-shadow);
+          @include bold-italic-uppercase($heading-h2-font-style);
+          @if $heading-h2-font-size { font-size:$heading-h2-font-size; }
+          @include st-font-faced($heading-h2-font-name);
+          color: $heading-h2-font-color; 
+        }
+        @if $heading-h1-font-name { @include content-before-after("font: "$heading-h1-font-name, false, true) };
+      }
+      p:nth-of-type(1) {
+        display: block;
+        @include content-before-after($para-1);
+      }  
+      p:nth-of-type(2) {
+        display: block;
+        @include content-before-after($para-2);
+      }
+      p:nth-of-type(3) {
+        display: block;
+        @include content-before-after($para-3);
+        }
+      p:nth-of-type(5) a {
+        @include button-style($button-background-color, $button-text-color, $button-corners, $button-border, $button-font-size, $button-gradient);
+        text-transform: capitalize;
+        &:hover, &:focus, &:active {
+          color: $button-text-color-over !important;
+          text-decoration: none;
+          background: $button-background-color-over;
+        }
+      } 
+      ul {
+        li {
+          display: none;
+        }
+        @include versions($show-versions);
+      } 
+    }
+    aside { display: none !important; } // !dirty - but not prodution code
+  }
+}
+                            
 // Functions
 @function calc-em($target-px, $context) {
   @return ($target-px / $context) * 1em;
