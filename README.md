@@ -86,13 +86,12 @@ Then import the Compass Pattern Primer partial by adding at the top of your work
 ## How It Works
 
 There's an index page that links to the 3 version pages. Each page has it's own
-stylesheet. When you `compile compass` the CSS files are generated from the `.scss` files in the `sass` folder. The corresponding HTML files are generated from `template.html` and the CSS is added to the `<head>` of the HTNL files.
+stylesheet. When you `compile compass` the CSS files are generated from the `.scss` files in the `sass` folder. The corresponding HTML files are generated from `template.html` and the CSS is added to the `<head>` of the HTML files.
 
 ### Deploying the Styles Tiles
 The HTML files are self-contained. All the images, and fonts are embedded in the style and the style is embedded in the HTML. However if you don't want to inline your images. Set `$inline-images` to `false` in your `partials/variations/_v*.scss` and include the images folder. The same goes for fonts, set `$inline-fonts` to `false`. 
 
 ### Adding more Versions
-
 More pages can be easily added by duplicating these files
 
 + `sass/v3.scss` to `sass/v4.scss`  
@@ -106,10 +105,12 @@ Then you'll need to make some easy edits
 
 ### Displaying updated versions on the homepage
 Update what versions are displayed by updating the $show-versions variables.   
-`$show-versions: 1, 2, 3;` to  
-`$show-versions: 1, 2, 3, 4;`
+`$show-versions: 1, 2, 3;`  
+to    
+`$show-versions: 1, 2, 3, 4;`  
 or  
-`$show-versions: 1, 3, 4;` etc.  
+`$show-versions: 1, 3, 4;`  
+etc.  
 
 ### What variables are available? ###
 
