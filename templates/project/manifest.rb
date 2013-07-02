@@ -76,9 +76,9 @@ help %Q{
 # Compass Extension Welcome Message
 #  Users will see this when they create a new project using this template.
 welcome_message %Q{
-  Welcome to my Style Tiles. 
+  Welcome to Style Tiles. 
   Congratulations! You just have built the basic scaffolding for getting started.
   To get started 'cd' into your project and run 'compass compile'.
   Documentation is on Github: https://github.com/alienresident/style-tiles
-  Contact: mark@alienresident.net or use the Issue Queue on Github. 
+  Contact: mark@alienresident.net or use the Style Tiles issue queue on Github. 
 }

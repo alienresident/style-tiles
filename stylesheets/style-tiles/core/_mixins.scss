@@ -26,12 +26,36 @@
   @if $leading { line-height: $leading; }
 }
 
-@mixin st-font-face($font-name, $font-woff, $font-ttf, $inline-fonts: false, $font-style:normal, $font-weight:normal, $eot:false) {
-  @if $inline-fonts and $font-name { @include font-face($font-name, inline-font-files($font-woff, woff, $font-ttf, truetype), $eot, $font-weight, $font-style); }
-  @else if $font-name { @include font-face($font-name, font-files($font-woff, woff, $font-ttf, truetype), $eot, $font-weight, $font-style); }
-  
+@mixin web-font-face($font-name, $font-file-name, $font-weight: normal, $font-style: normal, $inline-fonts: false) { 
+  @if $inline-fonts and $font-name {
+  @include font-face(
+    $font-name, 
+    inline-font-files(
+      "#{$font-file-name}.woff", woff, 
+      "#{$font-file-name}.ttf", truetype, 
+      "#{$font-file-name}.svg", svg
+    ), 
+    "#{$font-file-name}.eot",  
+    $font-weight, 
+    $font-style
+  );
+  }
+  @else if $font-name { 
+    @include font-face(
+      $font-name, 
+      font-files(
+        "#{$font-file-name}.woff", woff, 
+        "#{$font-file-name}.ttf", truetype,
+        "#{$font-file-name}.svg##{$font-name}", svg
+      ), 
+      "#{$font-file-name}.eot", 
+      $font-weight, 
+      $font-style
+    );
+  }
 }
-@mixin st-font-faced($font-name: false) {
+
+@mixin web-font-family($font-name: false) {
   @if $font-name { font-family: $font-name; }
 }
 
@@ -156,14 +180,14 @@
           @include st-text-shadow($heading-h1-text-shadow);
           @include bold-italic-uppercase($heading-h1-font-style);
           @if $heading-h1-font-size { font-size:$heading-h1-font-size; }
-          @include st-font-faced($heading-h1-font-name);
+          @include web-font-family($heading-h1-font-name);
           color: $heading-h1-font-color;
         }
         h2 {
           @include st-text-shadow($heading-h2-text-shadow);
           @include bold-italic-uppercase($heading-h2-font-style);
           @if $heading-h2-font-size { font-size:$heading-h2-font-size; }
-          @include st-font-faced($heading-h2-font-name);
+          @include web-font-family($heading-h2-font-name);
           color: $heading-h2-font-color; 
         }
         @if $heading-h1-font-name { @include content-before-after("font: "$heading-h1-font-name, false, true) };

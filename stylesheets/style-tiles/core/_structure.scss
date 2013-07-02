@@ -2,7 +2,7 @@
 * { 
   @include box-sizing(border-box);
 }
-@include st-font-face($font-name, $font-woff, $font-ttf, $inline-fonts, $font-weight, $font-style);
+@include web-font-face($font-name, $font-file-name, $font-weight, $font-style, $inline-fonts);
 
 body {
   @include background($body-background-color, $body-background-image, $inline-images, $body-background-gradient-1, $body-background-gradient-position-1, $body-background-gradient-2, $body-background-gradient-position-2);
@@ -70,14 +70,14 @@ section:nth-of-type(2) {
       @include st-text-shadow($heading-h1-text-shadow);
       @include bold-italic-uppercase($heading-h1-font-style);
       @if $heading-h1-font-size { font-size:$heading-h1-font-size; }
-      @include st-font-faced($heading-h1-font-name);
+      @include web-font-family($heading-h1-font-name);
       color: $heading-h1-font-color;
     }
     h2 {
       @include st-text-shadow($heading-h2-text-shadow);
       @include bold-italic-uppercase($heading-h2-font-style);
       @if $heading-h2-font-size { font-size:$heading-h2-font-size; }
-      @include st-font-faced($heading-h2-font-name);
+      @include web-font-family($heading-h2-font-name);
       color: $heading-h2-font-color; 
     }
     @if $heading-h1-font-name { @include content-before-after("font: "$heading-h1-font-name, false, true) };
@@ -117,6 +117,7 @@ aside {
   @include background-size($aside-background-size);
   @include border-radius($aside-border-radius);
   outline: $aside-outline;
+  outline-offset: $aside-outline-offset;
   border: $aside-border;
   @include st-box-shadow($aside-box-shadow);
   color: $aside-text-color;

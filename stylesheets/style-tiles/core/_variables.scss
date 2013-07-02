@@ -32,10 +32,7 @@ $body-font-size: calc-em(14px, $base-font-size) !default;
 
 // @font-face fonts
 $font-name: false !default;
-$font-ttf: false !default;
-$font-woff: false !default;
-$font-eot: false !default; // we don't need this as it's not production code
-$font-svg: false !default; // we don't need this either
+$font-file-name: false !default;
 $inline-fonts: true !default;
 $font-weight: normal !default;
 $font-style: normal !default;
@@ -124,6 +121,7 @@ $aside-box-shadow: none !default;
 $aside-border: $standard-spacing solid rgba(255,255,255,.35) !default;
 $aside-border-radius: false !default; // 3px
 $aside-outline: calc-em(1px, $base-font-size) solid rgba(200,200,200,.25) !default;
+$aside-outline-offset: 0 !default;
 $aside-text-color: #333 !default;
 
 // Figure (colors and textures boxes)
