@@ -91,10 +91,11 @@
   @if $padding { padding: 0; }
   @if $border { border: none; }
 }
-@mixin bold-italic-uppercase($bold :default, $italic: false, $uppercase: false) {
-  @if $bold { font-weight: bold; }
-  @if $italic { font-variant: italic; }
+@mixin bold-italic-uppercase-variant($bold :default, $italic: false, $uppercase: false, $variant: false) {
+  @if $bold { font-weight: bold; } @else { font-weight: normal; }
+  @if $italic { font-style: italic; }
   @if $uppercase { text-transform: uppercase; }
+  @if $variant { font-variant: small-caps; }
 }
 
 @mixin color-boxes($colors) {
@@ -178,14 +179,14 @@
         h1 {
           margin: $standard-spacing 0;
           @include st-text-shadow($heading-h1-text-shadow);
-          @include bold-italic-uppercase($heading-h1-font-style);
+          @include bold-italic-uppercase-variant($heading-h1-font-style);
           @if $heading-h1-font-size { font-size:$heading-h1-font-size; }
           @include web-font-family($heading-h1-font-name);
           color: $heading-h1-font-color;
         }
         h2 {
           @include st-text-shadow($heading-h2-text-shadow);
-          @include bold-italic-uppercase($heading-h2-font-style);
+          @include bold-italic-uppercase-variant($heading-h2-font-style);
           @if $heading-h2-font-size { font-size:$heading-h2-font-size; }
           @include web-font-family($heading-h2-font-name);
           color: $heading-h2-font-color; 

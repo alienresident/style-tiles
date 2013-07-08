@@ -30,7 +30,7 @@ file 'images/textures/scratched-metal.png', :like => :image, :to => 'textures/sc
 file 'images/textures/scratched-metal2.png', :like => :image, :to => 'textures/scratched-metal2.png'
 
 # Font Import 
-# Note: Using :font put the files in stylesheets/fonts despite setting fonts_dir
+# Note: Using :font puts the files in stylesheets/fonts despite setting fonts_dir in config.rb
 file "fonts/DroidSerif/DroidSerif-Bold-webfont.eot", :like => :file, :to => "fonts/DroidSerif/DroidSerif-Bold-webfont.eot"
 file "fonts/DroidSerif/DroidSerif-Bold-webfont.svg", :like => :file, :to => "fonts/DroidSerif/DroidSerif-Bold-webfont.svg"
 file "fonts/DroidSerif/DroidSerif-Bold-webfont.ttf", :like => :file, :to => "fonts/DroidSerif/DroidSerif-Bold-webfont.ttf"
@@ -70,15 +70,15 @@ file 'html/template.html', :like => :html, :to => "template.html"
 
 # Compass Extension Help
 help %Q{
-  For documentation for Style Tiles compass extension / gem see: https://github.com/alienresident/style-tiles
+For documentation for Style Tiles compass extension / gem see: https://github.com/alienresident/style-tiles
 }
 
 # Compass Extension Welcome Message
 #  Users will see this when they create a new project using this template.
 welcome_message %Q{
-  Welcome to Style Tiles. 
-  Congratulations! You just have built the basic scaffolding for getting started.
-  To get started 'cd' into your project and run 'compass compile'.
-  Documentation is on Github: https://github.com/alienresident/style-tiles
-  Contact: mark@alienresident.net or use the Style Tiles issue queue on Github. 
+Welcome to Style Tiles. 
+Congratulations! You just have built the basic scaffolding for getting started.
+To get started 'cd' into your project and run 'compass compile'.
+Documentation is on Github: https://github.com/alienresident/style-tiles
+Contact: mark@alienresident.net or use the Style Tiles issue queue on Github. 
 }

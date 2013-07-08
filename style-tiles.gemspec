@@ -30,10 +30,10 @@ Gem::Specification.new do |s|
   # Uncomment those that you use.
 
   # README file
-  # s.files = ["README.md"]
+  s.files = ["README.md"]
 
   # CHANGELOG
-  # s.files += ["CHANGELOG.md"]
+  s.files += ["CHANGELOG.md"]
 
   # Library Files
   s.files += Dir.glob("lib/**/*.*")
