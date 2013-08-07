@@ -56,4 +56,5 @@ Gem::Specification.new do |s|
   #  user's system when installing your gem.
   s.add_dependency("sass",      [">=3.2.0"])
   s.add_dependency("compass",   [">= 0.12.1"])
+  s.licenses = ['MIT', 'GPL-3']
 end
