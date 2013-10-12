@@ -6,7 +6,7 @@ _This is the development repo for the compass extension and rubygem: [style-tile
 Feedback is very welcome!
 
 ### *New* Style Tiles is now a Compass extension!
-Style Tiles has changed from a sass project to a compass extension. This makes it much easier to get started and to reuse. You can build a starter project using one line and start working on creating style tiles right away. See the **Installation** notes for details on getting started.
+Style Tiles has changed from a sass project to a compass extension. This makes it much easier to get started and to reuse. You can build a starter project using one line and start working on creating style tiles right away. See the [installation](#installation) section for details on getting started.
 
 ## Background
 I loved Samantha Warren's idea of [style tiles](http://styletil.es/). It seemed like the best answer to moving away from time-draining pixel perfect comps. However I'm designing in the browser more and more and I didn't want to go back into pixel based AdobeLand — Photoshop or Fireworks to create Style Tiles. Especially now that
@@ -42,10 +42,10 @@ The first iteration was a straight-forward Sass-*ified* project \([archived here
 I paused development for awhile to work on my [Pattern Primer](https://github.com/alienresident/compass-pattern-primer). That too started as a sass project and eventually it made sense to make it into a compass extension. Thanks to [Sam Richard](https://github.com/snugug)'s [Compass Extension Template](https://github.com/Team-Sass/Compass-Extension-Template) I was easily able to create my Compass Pattern Primer extension. Returning to Design 4 Drupal in 2013 on the bus, I thought it was time to convert Style Tiles to a compass extension and here we are.
 
 ## Installation
-Compass Pattern Primer is a compass extension bundled as a Ruby gem.
+Style Tiles is a compass extension bundled as a Ruby gem.
    
 ```bash
-gem install compass-pattern-primer
+gem install style-tiles
 ```
 You'll need to install [Sass](http://sass-lang.com/) and [Compass](http://compass-style.org/) Ruby Gems too. Documentation for installing and using these gems is pretty extensive.
 
@@ -58,7 +58,7 @@ compass create <MyProject> -r style-tiles -u style-tiles
 ```
 ```bash
 cd  <MyProject>
-compass complie
+compass compile
 ```
 * **Note:** replace `<MyProject>` with name of your project (without the  `<` `>`)*
 This will generate four stylesheets and the paste the styles into four corresponding html files (index, v1, v2, and v3).
@@ -76,7 +76,7 @@ This creates a new Compass project using the compass standard scaffolding and ad
 ```ruby
 require 'style-tiles'
 ```
-Then import the Compass Pattern Primer partial by adding at the top of your working file
+Then import the Style Tile partial by adding at the top of your working file
 
 ```scss
 @import "style-tiles";
