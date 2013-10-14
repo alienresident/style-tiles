@@ -306,6 +306,12 @@ If people are interested I may expand to incorporating some other font services.
 index page. For example, on a second round of iteration you may not want the
 link to version 2 (if the the clients rejected it) to be still visible. This will be forthcoming very soon.~~
 
+### To Dos
+
+* Create two scaffolding options. One with a unique index.html file.
+* Have better designed example files and that stretches the system
+* Be able to control the font and font-size of the adjectives to allow  emphasis on certain words
+
 ##### Requests? Feedback?
 Contact [me](mailto:mark@alienresident.net) or simply file an [issue](https://github.com/alienresident/style-tiles/issues/new)!
 
