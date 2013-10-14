@@ -78,7 +78,9 @@ For documentation for Style Tiles compass extension / gem see: https://github.co
 welcome_message %Q{
 Welcome to Style Tiles. 
 Congratulations! You just have built the basic scaffolding for getting started.
-To get started 'cd' into your project and run 'compass compile'.
+
+To get started 'cd' into your project and run 'compass compile' or 'compass watch' to compile your css and html.
+
 Documentation is on Github: https://github.com/alienresident/style-tiles
 Contact: mark@alienresident.net or use the Style Tiles issue queue on Github. 
 }
