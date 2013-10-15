@@ -24,46 +24,39 @@ body > div {
   @include st-text-shadow($main-text-shadow);
   @include border-radius($page-corners);
 }
-section:nth-of-type(1) {
-  header {
-    height: $header-height;
-    padding: $header-padding;
-    @include background($header-background-color, $header-background-image, $inline-images, $header-background-gradient-1, $header-background-gradient-position-1, $header-background-gradient-2, $header-background-gradient-position-2);
-    background-repeat: $header-background-repeat;
-    @include background-size($header-background-size);
-    color: $header-text-color;
-    figure {
-      @include image-dimensions($logo-file);
-      @include background(false, $logo-file, $inline-images);
-      background-repeat: no-repeat;
-      float: $logo-float;
-      margin: $logo-margin;
-      padding: $standard-spacing;
-      @include st-box-shadow($logo-box-shadow);
-    }
-     hgroup {
-       text-align: $header-text-align;
-      h1 {
-        @include reset-margin-padding-border(true, true, false);
-        @include type-size($project-name-font-size, $project-name-line-height);
-        @include content-before-after($project-name, false, true);
-      }
-      h2 {
-        @include reset-margin-padding-border(true, true, false);
-        @include type-size($version-font-size, $version-line-height);
-        @include content-before-after($version-number, false, true);
-      }
-    }
+header[role="banner"] {
+  height: $header-height;
+  padding: $header-padding;
+  @include background($header-background-color, $header-background-image, $inline-images, $header-background-gradient-1, $header-background-gradient-position-1, $header-background-gradient-2, $header-background-gradient-position-2);
+  background-repeat: $header-background-repeat;
+  @include background-size($header-background-size);
+  color: $header-text-color;
+  text-align: $header-text-align;
+  span {
+    @include image-dimensions($logo-file);
+    @include background(false, $logo-file, $inline-images);
+    background-repeat: no-repeat;
+    float: $logo-float;
+    margin: $logo-margin;
+    padding: $standard-spacing;
+    @include st-box-shadow($logo-box-shadow);
   }
-}
-section:nth-of-type(2) {
-  clear: both;
-  padding: $standard-spacing;  
-  article {
-    padding: $standard-spacing * 2;
-    width: $article-width;
-    float: left;
+  h1 {
+    @include reset-margin-padding-border(true, true, false);
+    @include type-size($project-name-font-size, $project-name-line-height);
+    @include content-before-after($project-name, false, true);
   }
+  h2 {
+    @include reset-margin-padding-border(true, true, false);
+    @include type-size($version-font-size, $version-line-height);
+    @include content-before-after($version-number, false, true);
+  }
+} 
+ 
+article {
+  padding: $standard-spacing * 2;
+  width: $article-width;
+  float: left;
   header {
     h1 {
       margin: $standard-spacing 0;
@@ -132,7 +125,8 @@ aside {
   &:nth-of-type(1) {
     h3 {
       @include content-before-after($aside-h3-text-aside-1, false, true);
-    } figure {
+    } li {
+      display: inline-block;
       width: $figure-width;
       height: $figure-height;
       @include color-boxes($colors);
