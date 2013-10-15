@@ -3,20 +3,19 @@
 //////////////////////////////
 
 // Project Name and Version Header 
-$project-name: "Sassy Style Tiles";
+$project-name: "Stitched";
 $version-number: "1.0";
 
 /// Design Variables
 // sample 5 colors and 3 textures (add figures to html for more)
 $colors: #BEE8E0, #373C40, #2E2621, #73320B, #FF5E00;
 $textures: "cotton-shirt.png", "denim.jpg";
-$adjectives:  current, clean, sleek, technical ;
+$adjectives: casual, warm, relaxed;
 
 $link-color: #FF5E00;
 
 $font-name: 'peraltaregular';
 $font-file-name: 'Peralta/peralta-regular-webfont';
-
 
 $body-background-color: #fff;
 $body-background-image: "textures/cotton-shirt.png"; //replace with linen tile
@@ -29,6 +28,10 @@ $body-background-repeat: repeat;
 
 $page-background-color: #fff;
 $page-background-image: "textures/denim.jpg";
+$page-background-gradient-position-1: top; // e.g. top OR 45deg
+$page-background-gradient-1: rgba(0,0,0,.5) 0%, rgba(0,0,0,.25) 30%, rgba(0,0,0,.33) 90%;
+$page-background-gradient-position-2: false !default; // e.g. right OR 0deg
+$page-background-gradient-2: false !default;
 $page-box-shadow: calc-em(5px, $base-font-size) calc-em(5px, $base-font-size) calc-em(10px, $base-font-size) rgba(0,0,0,.75), calc-em(-5px, $base-font-size) calc-em(5px, $base-font-size) calc-em(10px, $base-font-size) rgba(0,0,0,.75);
 $page-corners: calc-em(5px, $base-font-size);
 $page-margin: 0 auto ($standard-spacing * 4) auto;
@@ -58,13 +61,13 @@ $aside-margin: 0 0 ($standard-spacing * 2) 0;
 $aside-padding: ($standard-spacing * 2);
 $aside-background-color: none;
 $aside-background-image: "textures/denim.jpg";
-$aside-background-gradient-position-1: 135deg;
-$aside-background-gradient-1: false;
+$aside-background-gradient-position-1: -15deg;
+$aside-background-gradient-1: rgba(0,0,0,.6) 0%, rgba(0,0,0,.33) 50%, rgba(127,127,157,.05) 90%;
 $aside-background-gradient-position-2: 45deg;
 $aside-background-gradient-2: false;
 $aside-background-size: false;
 $aside-background-repeat: repeat;
-$aside-box-shadow: calc-em(3px, $base-font-size) calc-em(6px, $base-font-size) calc-em(5px, $base-font-size) rgba(0,0,0,.5), calc-em(-3px, $base-font-size) calc-em(-1px, $base-font-size) calc-em(5px, $base-font-size) rgba(0,0,0,.5);
+$aside-box-shadow: calc-em(3px, $base-font-size) calc-em(6px, $base-font-size) calc-em(5px, $base-font-size) rgba(0,0,0,.33), calc-em(-3px, $base-font-size) calc-em(-1px, $base-font-size) calc-em(5px, $base-font-size) rgba(0,0,0,.33);
 $aside-border: calc-em(1px, $base-font-size) dashed rgba(255,160,20,.5);
 $aside-border-radius: calc-em(5px, $base-font-size) calc-em(5px, $base-font-size) calc-em(12px, $base-font-size) calc-em(12px, $base-font-size);
 $aside-outline: $aside-border;
@@ -90,7 +93,7 @@ $button-box-shadow: inset calc-em(2px, $base-font-size) calc-em(4px, $base-font-
 $button-text-color-over: adjust-lightness($button-text-color, 10%);
 $button-background-color-over: tint($button-background-color, 10%);
 
-$footer-background-color: rgba(0,0,0,.25);
+$footer-background-color: rgba(0,0,0,.33);
 $footer-background-image: false;
 $footer-text-color: rgba(255,255,255,.75);
 $footer-text-shadow: calc-em(1px, $base-font-size) 0 calc-em(1px, $base-font-size) rgba(0,0,0,.5), 0 calc-em(1px, $base-font-size) calc-em(1px, $base-font-size) rgba(255,255,255,.35);
