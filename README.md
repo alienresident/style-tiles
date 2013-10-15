@@ -308,8 +308,8 @@ link to version 2 (if the the clients rejected it) to be still visible. This wil
 
 ### To Dos
 
-* Create two scaffolding options. One with a unique index.html file.
-* Have better designed example files and that stretches the system
+* Create two scaffolding options. One with a unique `index.html` file so that it can be customized.
+* Have better designed example files that stretches the system
 * Be able to control the font and font-size of the adjectives to allow  emphasis on certain words
 
 ##### Requests? Feedback?
