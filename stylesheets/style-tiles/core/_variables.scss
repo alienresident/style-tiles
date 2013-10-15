@@ -124,6 +124,11 @@ $aside-outline: calc-em(1px, $base-font-size) solid rgba(200,200,200,.25) !defau
 $aside-outline-offset: 0 !default;
 $aside-text-color: #333 !default;
 
+$aside-h3-text-aside-1: Colors !default;
+$aside-h3-text-aside-2: Textures !default;
+$aside-h3-text-aside-3: Adjectives !default;
+
+
 // Figure (colors and textures boxes)
 $figure-width: calc-em(40px, $base-font-size) !default;
 $figure-height: calc-em(40px, $base-font-size) !default;

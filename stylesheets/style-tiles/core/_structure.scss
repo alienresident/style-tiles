@@ -125,26 +125,36 @@ aside {
     float: left;
     width: $aside-width;
   }
-  &:nth-of-type(3) {
-    ul {
-      list-style: none;
-      display: inline;
-      @include adjectives($adjectives);
-    }
-  }
   figure {
     float: left;
     margin: 0 $standard-spacing 0 0;
   }
-  &:nth-of-type(1) figure {
-    width: $figure-width;
-    height: $figure-height;
-    @include color-boxes($colors);
+  &:nth-of-type(1) {
+    h3 {
+      @include content-before-after($aside-h3-text-aside-1, false, true);
+    } figure {
+      width: $figure-width;
+      height: $figure-height;
+      @include color-boxes($colors);
+    }
   }
-  &:nth-of-type(2) figure {
-    width: $texture-width;
-    height: $texture-height;
-    @include texture-boxes($textures, $inline-images);
+  &:nth-of-type(2) {
+    h3 {
+      @include content-before-after($aside-h3-text-aside-2, false, true);
+    } figure { 
+      width: $texture-width;
+      height: $texture-height;
+      @include texture-boxes($textures, $inline-images);
+    } 
+  }
+  &:nth-of-type(3) {
+    h3 {
+      @include content-before-after($aside-h3-text-aside-3, false, true);
+    } ul {
+      list-style: none;
+      display: inline;
+      @include adjectives($adjectives);
+    }
   }
 }
 figcaption {
