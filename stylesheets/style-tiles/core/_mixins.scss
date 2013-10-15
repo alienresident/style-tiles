@@ -163,10 +163,10 @@
 }
 
 @mixin index-page( $index: false ) {
-  @if not $index { section:nth-of-type(3) { display: none; } }
+  @if not $index { article:nth-of-type(2) { display: none; } }
   @else {
-    section:nth-of-type(2) { display: none; }
-    section:nth-of-type(3) {
+    article:nth-of-type(1) { display: none; }
+    article:nth-of-type(2) {
       // reformat section:nth-of-type(2) & :nth-of-type(2) as %extendable?
       clear: both;
       padding: $standard-spacing;  
