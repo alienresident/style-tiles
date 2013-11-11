@@ -28,8 +28,8 @@ relative_assets = true
 # Copies the contents of the stylesheet and add it to the top of the html page. This allows you to email just the html file to a client and they can view it in a browser. It's a more fool proof option for emailing as it no longer relies on also sending a separate css folder that may get misplaced. It saves you zipping up a bunch of files to send to a client too.
 
 # use this to ignore html files  
-# ignore_files = ["index"]
-ignore_files = [""]
+# ignore_files = [""]
+ignore_files = ["index"]
 
  
 # html_dir = "html/"
