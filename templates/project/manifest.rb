@@ -19,11 +19,11 @@ file 'sass/partials/variations/_v2.scss', :like => :stylesheet, :to => 'partials
 file 'sass/partials/variations/_v3.scss', :like => :stylesheet, :to => 'partials/variations/_v3.scss'
 
 # Core
-file "sass/core/_content.scss" , :like => :stylesheet, :to "core/_content.scss"
-file "sass/core/_mixins.scss" , :like => :stylesheet, :to "core/_mixins.scss"
-file "sass/core/_structure.scss" , :like => :stylesheet, :to "core/_structure.scss"
-file "sass/core/_typography.scss" , :like => :stylesheet, :to "core/_typography.scss"
-file "sass/core/_variables.scss" , :like => :stylesheet, :to "core/_variables.scss"
+file "sass/core/_content.scss" , :like => :stylesheet, :to  => "core/_content.scss"
+file "sass/core/_mixins.scss" , :like => :stylesheet, :to  => "core/_mixins.scss"
+file "sass/core/_structure.scss" , :like => :stylesheet, :to  => "core/_structure.scss"
+file "sass/core/_typography.scss" , :like => :stylesheet, :to  => "core/_typography.scss"
+file "sass/core/_variables.scss" , :like => :stylesheet, :to  => "core/_variables.scss"
 
 # Image Import
 file 'images/logos/sample-logo.png', :like => :image, :to => 'logos/sample-logo.png'
