@@ -17,8 +17,8 @@ Compass::Frameworks.register('style-tiles', :path => extension_path)
 #    a prerelease version
 #  Date is in the form of YYYY-MM-DD
 module Style_Tiles
-  VERSION = "0.2alpha2"
-  DATE = "2013-11-08"
+  VERSION = "0.2alpha3"
+  DATE = "2013-11-11"
 end
 
 # This is where any custom SassScript should be placed. The functions will be  
