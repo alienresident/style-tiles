@@ -5,7 +5,7 @@ _This is the development repo for the compass extension and rubygem: [style-tile
 **This is currently under active development** 
 Feedback is very welcome!
 
-### *New* Style Tiles is now a Compass extension!
+### Style Tiles is a Compass extension!
 Style Tiles has changed from a sass project to a compass extension. This makes it much easier to get started and to reuse. You can build a starter project using one line and start working on creating style tiles right away. See the [installation](#installation) section for details on getting started.
 
 ## Background
@@ -46,7 +46,8 @@ Style Tiles is a compass extension bundled as a Ruby gem.
    
 ```bash
 gem install style-tiles
-```
+```   
+
 You'll need to install [Sass](http://sass-lang.com/) and [Compass](http://compass-style.org/) Ruby Gems too. Documentation for installing and using these gems is pretty extensive.
 
 ## How to Use it
@@ -54,34 +55,23 @@ There are a number of ways you can get started with Style Tiles.
 
 #### Recommended: Create a new Compass project using Style Tiles scaffolding
 ```bash
-compass create <MyProject> -r style-tiles -u style-tiles
-```
+compass create <MyProject> -u style-tiles
+```   
+__OR__ if you don't want a separate index file use:   
+
+```bash
+compass create <MyProject> -u style-tiles/no-index   
+```   
+
 ```bash
 cd  <MyProject>
 compass compile
-```
-* **Note:** replace `<MyProject>` with name of your project (without the  `<` `>`)*
-This will generate four stylesheets and the paste the styles into four corresponding html files (index, v1, v2, and v3).
+```   
+* **Note:** replace `<MyProject>` with name of your project (without the  `<` `>`)   
+* This will generate four stylesheets and the paste the styles into four corresponding html files (index, v1, v2, and v3).
 
-#### Other ways to add Style Tiles to your compass project
+This creates a new Compass project using the compass standard scaffolding and adds  to the `config.rb`. However without the custom config.rb and html file you lose the benefit of adding your styles to the HTML and you don't have a starter scaffolding with variables examples. 
 
-```bash
-compass create <MyProject> -r style-tiles 
-```
-
-This creates a new Compass project using the compass standard scaffolding and adds `require 'style-tiles'` to the `config.rb`. However without the custom config.rb and html file you lose the benefit of adding your styles to the HTML and you don't have a starter scaffolding with variables examples. 
-
-#### Add Style Tiles to an existing project by adding the following to config.rb
-
-```ruby
-require 'style-tiles'
-```
-Then import the Style Tile partial by adding at the top of your working file
-
-```scss
-@import "style-tiles";
-```
-**Note:** *You'll need to restart* `compass watch` *if it's running*. And again without the custom config.rb and html file you lose the benefit of adding your styles to the HTML and you don't have a starter scaffolding with variables examples.
 
 ## How It Works
 
